@@ -24,6 +24,6 @@ app.post("/api/generate", async (req, res) => {
   res.json(data);
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.use(express.static('dist'));\napp.listen(process.env.PORT || 3000, () => {
   console.log("Server running!");
 });
