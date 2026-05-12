@@ -97,7 +97,7 @@ Réponds UNIQUEMENT en JSON valide (tableau de 7 objets), sans texte avant ni ap
 [{"format":"Reels ou Carrousel ou Citation ou Story ou Post photo","angle":"titre accrocheur en 1 ligne","description":"2-3 phrases sur le contenu à créer","slides":["Slide 1 : ...", "Slide 2 : ..."],"caption":"légende prête avec émojis et call-to-action max 120 mots","hashtags":"6 hashtags pertinents"}]`;
 
       try {
-        const res = await fetch("/api/generate", {
+        const res = await fetch("/.netlify/functions/generate", {
           method:"POST", headers:{"Content-Type":"application/json"},
           body: JSON.stringify({ prompt })
         });
@@ -122,7 +122,7 @@ Réponds UNIQUEMENT en JSON valide, sans texte avant ni après :
 {"weeks":[{"week":1,"days":[{"day":"Lun","theme":"thème court","format":"Reels ou Carrousel ou Story ou Post ou Citation","angle":"idée de post en 1 ligne"},{"day":"Mar",...},{"day":"Mer",...},{"day":"Jeu",...},{"day":"Ven",...}]},{"week":2,...},{"week":3,...},{"week":4,...}]}`;
 
       try {
-        const res = await fetch("/api/generate", {
+        const res = await fetch("/.netlify/functions/generate", {
           method:"POST", headers:{"Content-Type":"application/json"},
           body: JSON.stringify({ prompt })
         });
