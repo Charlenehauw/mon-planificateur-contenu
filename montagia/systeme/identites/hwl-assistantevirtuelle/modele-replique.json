@@ -1,0 +1,33 @@
+{
+ "_lisez-moi": "Style de Charlène (mon-framework.md) : titres Anton en haut au-dessus de la tête, petits mots Lato blancs, mot fort en jaune doré #E8BD3C, sous-titres Lato sur la poitrine.",
+ "polices": {
+  "titre": {"fichier": "Anton-Regular.ttf"},
+  "texte": {"fichier": "Lato-Black.ttf"}
+ },
+ "styles": {
+  "sous_titre": {"police": "texte", "taille": 68, "couleur": "#FFFFFF", "ombre": ["#1E2A33", 0.8, 10, 3]},
+  "petit": {"police": "texte", "taille": 76, "couleur": "#FFFFFF", "ombre": ["#1E2A33", 0.85, 10, 3]},
+  "creme": {"police": "titre", "taille": 150, "couleur": "#F0EFEE", "ombre": ["#1E2A33", 0.45, 12, 5]},
+  "cle": {"police": "titre", "taille": 170, "couleur": "#E8BD3C", "ombre": ["#3A2E0A", 0.45, 12, 5], "halo": ["#DBCC9B", 0.35, 16]}
+ },
+ "sous_titres": {"actif": false, "style": "sous_titre", "y": 1260},
+ "blocs_y": 330,
+ "largeur_max": 0.8,
+ "animation": {"rebond": 0.06, "avance": 0.03},
+ "blocs": [
+  {"type": "video", "fin": "@pour", "lignes": [
+   {"dx": -60, "mots": [["Allez,", "petit", "@allez"], ["let's go", "petit", "@let's"]]},
+   {"dx": 40, "chevauche": 0.05, "mots": [["je fais le", "creme", "@je"]]},
+   {"dx": 0, "chevauche": 0.18, "mots": [["TEST", "cle", "@test"]]}
+  ]},
+  {"type": "video", "fin": "@me", "lignes": [
+   {"dx": -40, "mots": [["le montage", "creme", "@montage#2"], ["IA", "creme", "@ia"]]},
+   {"dx": 30, "chevauche": 0.12, "mots": [["de", "petit", "@de"], ["Claude", "cle", "@claude"]]}
+  ]},
+  {"type": "video", "fin": "@caca>+1.1", "lignes": [
+   {"dx": -50, "mots": [["ou si c'est du", "petit", "@ou"]]},
+   {"dx": 0, "chevauche": -0.08, "mots": [["GROS CACA", "cle", "@gros"]]}
+  ]}
+ ],
+ "zooms": [{"debut": "@tonnerre", "fin": "@ou", "echelle": 1.08, "y": 820}]
+}

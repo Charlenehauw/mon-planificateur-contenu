@@ -1,0 +1,15 @@
+{
+ "emojis": [
+  {"t": "@caca", "emoji": "💩", "x": 900, "y": 640, "taille": 250, "duree": 1.6, "son": "pop", "volume": 0.6}
+ ],
+ "etoiles": [
+  {"t": "@test", "x": 330, "y": 470, "taille": 85, "duree": 1.4, "son": "ding", "volume": 0.25},
+  {"t": "@test+0.12", "x": 760, "y": 460, "taille": 65, "duree": 1.3},
+  {"t": "@test+0.24", "x": 880, "y": 170, "taille": 50, "duree": 1.2}
+ ],
+ "sons": [
+  {"t": "@allez", "son": "whoosh", "volume": 0.3},
+  {"t": "@gros", "son": "impact", "volume": 0.35}
+ ],
+ "sous_titres": {"mots_forts": ["tonnerre", "montage"], "y": 1260, "taille": 70, "mots": 3}
+}

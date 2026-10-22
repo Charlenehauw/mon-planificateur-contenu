@@ -1,4 +1,5 @@
 # Mon framework de montage
+Identité : hwl-assistantevirtuelle (@hwl.assistantevirtuelle). Plusieurs identités (comptes, clients) : voir « Identités » en bas.
 Modèle analysé : Vidéos à monter/Modèle/modele-1.mp4 (reel Instagram, 1 min 03, 720 x 1280), le 22/10/2026
 Analyse visuelle (planches image par image, détection des coupes). Transcription du modèle à faire dès que le modèle de transcription est disponible.
 Statut : validé par Charlène après le premier reel (reel-1), avec ses demandes ajoutées le 22/10/2026.
@@ -56,6 +57,8 @@ Charlène a demandé ces trois finitions sur toutes ses prochaines vidéos :
 
 ## Comment on le fabrique (outils)
 1. `nouveau` → relire coupes et transcription (corrections.json si un mot est faux).
+1 bis. **Étalonnage** (Charlène trouvait l'image trop jaune) : `systeme/.venv/bin/python systeme/ma-bibliotheque/etalonner.py <projet> --apercu`,
+   regarder `etalonnage-avant-apres.jpg`, puis sans `--apercu`. Balance des blancs automatique, réglage par défaut `--chaleur -3`.
 2. `replique.json` : blocs titres en Anton (police « titre », fichier Anton-Regular.ttf) et Lato (Lato-Black.ttf), à blocs_y ≈ 330 (au-dessus de la tête),
    avec `"sous_titres": {"actif": false}` (les sous-titres sont faits par les finitions, pour avoir les mots forts en couleur).
    Modèles à copier puis adapter aux mots de la vidéo : `systeme/ma-bibliotheque/modele-replique.json` et `modele-finitions.json` (issus de reel-1).
@@ -69,3 +72,11 @@ Polices : Anton et Lato se téléchargent gratuitement (Google Fonts, licence OF
 ## Ce qu'on ne reproduit pas
 Le contenu, la musique, les logos et les visuels de la vidéo modèle appartiennent à leur auteur.
 On s'inspire de la façon de monter, jamais du contenu.
+
+## Identités
+Charlène travaille pour plusieurs comptes et clients : chacun a sa propre identité (charte, framework, modèles).
+- Voir les identités : `python systeme/ma-bibliotheque/identite.py liste` (l'étoile = l'identité active)
+- **Au début de chaque montage, demander pour quel compte ou client est la vidéo**, puis `identite.py activer <nom>`.
+- Nouvelle identité : `identite.py creer <nom>` (part d'une copie de l'active), puis faire l'accueil de `montage-ia`
+  (couleurs, police, ambiance, sous-titres, B-roll, pseudo, modèle éventuel) et réécrire le framework pour ce client, puis `identite.py sauver`.
+- Après tout changement de charte ou de style : `identite.py sauver`.
