@@ -59,6 +59,8 @@ Charlène a demandé ces trois finitions sur toutes ses prochaines vidéos :
 1. `nouveau` → relire coupes et transcription (corrections.json si un mot est faux).
 1 bis. **Étalonnage** (Charlène trouvait l'image trop jaune) : `systeme/.venv/bin/python systeme/ma-bibliotheque/etalonner.py <projet> --apercu`,
    regarder `etalonnage-avant-apres.jpg`, puis sans `--apercu`. Balance des blancs automatique, réglage par défaut `--chaleur -3`.
+   Filmé le soir sous une lampe jaune : `--blanc x0,y0,x1,y1` sur un bout de mur blanc (repère 1080 x 1920) et `--force 0.65`
+   (garde un peu de chaleur, peau naturelle). Exemple reel-3 : `--blanc 940,620,1070,780 --force 0.65 --lisser 2`.
    Vidéo WhatsApp ou un peu bruitée : ajouter `--lisser 2` (peau lissée, bruit de compression enlevé, contours nets). Validé par Charlène sur reel-2.
 1 ter. **Les « euh » et les blancs** (Charlène veut qu'on les coupe) : la transcription « avale » souvent les « euh » dans le mot d'avant
    (mot anormalement long, ex. « et » qui dure 0,8 s). Repérer les mots de plus de 0,45 s, regarder l'énergie du son dessus

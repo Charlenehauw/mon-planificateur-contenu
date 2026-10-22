@@ -5,6 +5,8 @@ APRÈS « preparer » et AVANT « replique » (les couleurs des titres restent a
 Usage : python systeme/ma-bibliotheque/etalonner.py <projet> [--force 0.8] [--chaleur -3] [--apercu]
   --force    0 à 1 : part de la correction appliquée (1 par défaut, 1 = blancs parfaitement neutres)
   --chaleur  -10 à +10 : petit réglage au goût après correction (négatif = plus froid, positif = plus chaud ; -3 par défaut, le réglage choisi par Charlène)
+  --blanc    x0,y0,x1,y1 : zone qui DEVRAIT être blanche (mur…), dans le repère 1080 x 1920. À utiliser sous une lampe
+             jaune (soirée) : la mesure automatique ne trouve alors plus de zone neutre. Corrections fortes permises.
   --lisser   0 à 3 : lissage doux de la peau et du bruit (compression WhatsApp…) + netteté des contours (0 par défaut ;
              1 léger, 2 conseillé pour une vidéo WhatsApp, 3 fort)
   --apercu   écrit seulement <projet>/etalonnage-avant-apres.jpg, sans toucher à la vidéo
@@ -47,6 +49,14 @@ def duree(video):
     return float(sortie.strip())
 
 
+def gains_zone(video, zone):
+    """Moyenne d'une zone censée être blanche, sur 8 images (la médiane évite une main qui passe)."""
+    x0, y0, x1, y1 = [int(v) // 4 for v in zone.split(",")]
+    d = duree(video)
+    m = np.median([image(video, d * (k + .5) / 8, 270, 480)[y0:y1, x0:x1].reshape(-1, 3).mean(0) for k in range(8)], axis=0)
+    return m.max() / m, m
+
+
 def gains(video):
     """Moyenne des zones claires et peu colorées (murs, plafond, tissus blancs) sur 8 images : elles devraient être grises."""
     d = duree(video)
@@ -71,10 +81,11 @@ def main():
         p = RACINE / "projets" / sys.argv[1]
     base, origine = p / "base.mp4", p / "base-origine.mp4"
     source = origine if origine.exists() else base
-    g, m = gains(source)
-    force, chaleur = option("--force", 1.0), option("--chaleur", -3) / 100
+    zone = sys.argv[sys.argv.index("--blanc") + 1] if "--blanc" in sys.argv else None
+    g, m = gains_zone(source, zone) if zone else gains(source)
+    force, chaleur = option("--force", 0.7 if zone else 1.0), option("--chaleur", -3) / 100
     g = 1 + (g - 1) * force
-    g = np.clip(g * np.array([1 + chaleur, 1, 1 - chaleur]), 0.85, 1.15)
+    g = np.clip(g * np.array([1 + chaleur, 1, 1 - chaleur]), *((0.7, 1.9) if zone else (0.85, 1.15)))
     print(f"Blancs mesurés R {m[0]:.0f} V {m[1]:.0f} B {m[2]:.0f} -> correction R x{g[0]:.3f} V x{g[1]:.3f} B x{g[2]:.3f}")
     filtre = f"colorchannelmixer=rr={g[0]:.4f}:gg={g[1]:.4f}:bb={g[2]:.4f},eq=contrast=1.03:saturation=1.04"
     lisser = int(option("--lisser", 0))
