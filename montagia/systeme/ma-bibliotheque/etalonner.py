@@ -5,6 +5,8 @@ APRÈS « preparer » et AVANT « replique » (les couleurs des titres restent a
 Usage : python systeme/ma-bibliotheque/etalonner.py <projet> [--force 0.8] [--chaleur -3] [--apercu]
   --force    0 à 1 : part de la correction appliquée (1 par défaut, 1 = blancs parfaitement neutres)
   --chaleur  -10 à +10 : petit réglage au goût après correction (négatif = plus froid, positif = plus chaud ; -3 par défaut, le réglage choisi par Charlène)
+  --lisser   0 à 3 : lissage doux de la peau et du bruit (compression WhatsApp…) + netteté des contours (0 par défaut ;
+             1 léger, 2 conseillé pour une vidéo WhatsApp, 3 fort)
   --apercu   écrit seulement <projet>/etalonnage-avant-apres.jpg, sans toucher à la vidéo
 Lit / écrit : <projet>/base.mp4 (l'original est gardé une fois dans base-origine.mp4 ; relancer repart toujours de l'original).
 Après un nouveau « preparer », supprime base-origine.mp4 puis relance l'étalonnage.
@@ -75,6 +77,13 @@ def main():
     g = np.clip(g * np.array([1 + chaleur, 1, 1 - chaleur]), 0.85, 1.15)
     print(f"Blancs mesurés R {m[0]:.0f} V {m[1]:.0f} B {m[2]:.0f} -> correction R x{g[0]:.3f} V x{g[1]:.3f} B x{g[2]:.3f}")
     filtre = f"colorchannelmixer=rr={g[0]:.4f}:gg={g[1]:.4f}:bb={g[2]:.4f},eq=contrast=1.03:saturation=1.04"
+    lisser = int(option("--lisser", 0))
+    if lisser > 0:
+        # bruit et blocs de compression (hqdn3d), peau lissée sans toucher aux contours (bilateral), puis netteté (cas)
+        filtre += [None, ",hqdn3d=2:1.5:3:3,bilateral=sigmaS=2:sigmaR=0.04,cas=0.45",
+                   ",hqdn3d=3:2:5:5,bilateral=sigmaS=3:sigmaR=0.06,cas=0.6",
+                   ",hqdn3d=4:3:6:6,bilateral=sigmaS=4:sigmaR=0.08,cas=0.7"][min(lisser, 3)]
+        print(f"Lissage niveau {min(lisser, 3)}")
     if "--apercu" in sys.argv:
         t = duree(source) / 2
         sortie = p / "etalonnage-avant-apres.jpg"

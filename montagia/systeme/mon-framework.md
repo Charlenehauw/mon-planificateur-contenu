@@ -59,6 +59,12 @@ Charlène a demandé ces trois finitions sur toutes ses prochaines vidéos :
 1. `nouveau` → relire coupes et transcription (corrections.json si un mot est faux).
 1 bis. **Étalonnage** (Charlène trouvait l'image trop jaune) : `systeme/.venv/bin/python systeme/ma-bibliotheque/etalonner.py <projet> --apercu`,
    regarder `etalonnage-avant-apres.jpg`, puis sans `--apercu`. Balance des blancs automatique, réglage par défaut `--chaleur -3`.
+   Vidéo WhatsApp ou un peu bruitée : ajouter `--lisser 2` (peau lissée, bruit de compression enlevé, contours nets). Validé par Charlène sur reel-2.
+1 ter. **Les « euh » et les blancs** (Charlène veut qu'on les coupe) : la transcription « avale » souvent les « euh » dans le mot d'avant
+   (mot anormalement long, ex. « et » qui dure 0,8 s). Repérer les mots de plus de 0,45 s, regarder l'énergie du son dessus
+   (silence = blanc, son faible et continu = « euh »), couper ces trous dans `coupes.json` (plages en temps de la vidéo source,
+   garder 0,05 s autour des vrais mots), puis `preparer`. Vérifier ensuite que les petits mots n'ont pas disparu de `mots.json`
+   (comparer avec transcript.json) et les remettre avec leurs temps recalés s'il le faut. Exemple : reel-2, 6 coupes, 2,65 s gagnées.
 2. `replique.json` : blocs titres en Anton (police « titre », fichier Anton-Regular.ttf) et Lato (Lato-Black.ttf), à blocs_y ≈ 330 (au-dessus de la tête),
    avec `"sous_titres": {"actif": false}` (les sous-titres sont faits par les finitions, pour avoir les mots forts en couleur).
    Modèles à copier puis adapter aux mots de la vidéo : `systeme/ma-bibliotheque/modele-replique.json` et `modele-finitions.json` (issus de reel-1).
