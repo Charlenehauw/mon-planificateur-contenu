@@ -1,7 +1,7 @@
 # Mon framework de montage
 Modèle analysé : Vidéos à monter/Modèle/modele-1.mp4 (reel Instagram, 1 min 03, 720 x 1280), le 22/10/2026
 Analyse visuelle (planches image par image, détection des coupes). Transcription du modèle à faire dès que le modèle de transcription est disponible.
-Statut : brouillon, à valider par Charlène.
+Statut : validé par Charlène après le premier reel (reel-1), avec ses demandes ajoutées le 22/10/2026.
 
 ## Accroche
 Titre de 2 à 3 lignes empilées en haut de l'écran (y ≈ 280-480), au-dessus de la tête, pendant les 3 à 5 premières secondes.
@@ -16,8 +16,8 @@ Pas de zooms marqués ; léger recadrage à chaque nouvelle phrase.
 
 ## Sous-titres
 2 à 4 mots, en minuscules, blancs, petits et gras, centrés sur la poitrine (y ≈ 1050-1150), sur 1 ou 2 lignes serrées, ombre douce.
-Pas de karaoké, pas de mots en couleur dans les sous-titres (la couleur est réservée aux titres).
-→ Montag'IA : sous-titres `classique`, police Lato gras, couleur blanche, mots_cles limités (0 à 3).
+Pas de karaoké. Différence voulue par Charlène : les mots forts passent en jaune doré.
+→ Sous-titres faits par les finitions : 2 à 3 mots, Lato Black blanc, ombre douce, mots forts en jaune #E8BD3C (voir « Ses demandes »).
 
 ## Animations et visuels
 - Captures d'écran / enregistrements d'écran dans une carte arrondie qui flotte au centre (cadre blanc ou sombre, coins arrondis, ombre), souvent avec un fond flouté derrière quand l'écran prend toute la place.
@@ -44,6 +44,27 @@ Modèle : crème/sable pour les titres, blanc pour le texte, fond naturel de la 
 Charlène : jaune doré #E8BD3C (accent), crème #F0EFEE (fonds), bleu #77A2BA (texte sur fond clair), sable #DBCC9B, bleus poudrés #B2CEDF et #CCDFEC.
 Polices voulues : Anton (titres, accroche) et Lato (sous-titres, petits textes), via le moteur de réplique (polices Google gratuites).
 Charte classique en attendant : Bebas Neue (la plus proche d'Anton).
+
+## Ses demandes (À CHAQUE VIDÉO)
+Charlène a demandé ces trois finitions sur toutes ses prochaines vidéos :
+1. **Petites étoiles crème** (#F0EFEE, halo sable) qui scintillent autour du mot fort de l'accroche, 2 ou 3 étoiles décalées de 0,1 s, + un « ding » très léger (volume 0.25).
+   Puis 1 ou 2 fois dans la vidéo sur un titre ou une carte importante.
+2. **Mots forts en couleur** dans les sous-titres : jaune doré #E8BD3C, 1 à 2 par phrase (résultat, outil, émotion, chiffre).
+3. **Gros émojis avec bruitage** sur les mots drôles ou chargés d'émotion (ex. « caca » → 💩 + « pop »). Taille 220 à 280, à côté du visage
+   (jamais dessus), pop qui rebondit et léger balancement, 1,2 à 1,6 s. 1 émoji toutes les 4 s au maximum.
+   Bruitages discrets (volume 0.3 à 0.6) : « pop » pour un émoji, « whoosh » à l'entrée de l'accroche, « impact » sur la chute, « ding » sur les étoiles.
+
+## Comment on le fabrique (outils)
+1. `nouveau` → relire coupes et transcription (corrections.json si un mot est faux).
+2. `replique.json` : blocs titres en Anton (police « titre », fichier Anton-Regular.ttf) et Lato (Lato-Black.ttf), à blocs_y ≈ 330 (au-dessus de la tête),
+   avec `"sous_titres": {"actif": false}` (les sous-titres sont faits par les finitions, pour avoir les mots forts en couleur).
+   Modèle à copier : `systeme/projets/reel-1/replique.json` (s'il existe encore) ou cette description.
+3. `python systeme/montagia.py replique <projet>`.
+4. `finitions.json` (émojis, étoiles, bruitages, sous-titres avec mots_forts), puis
+   `systeme/.venv/bin/python systeme/ma-bibliotheque/finitions.py <projet> --apercu t1,t2` (regarder les images), puis sans `--apercu` pour le rendu final.
+   La vidéo finie remplace celle de « Mes vidéos montées ». Mode d'emploi complet en tête du fichier finitions.py.
+Polices : Anton et Lato se téléchargent gratuitement (Google Fonts, licence OFL) dans `systeme/.outils/polices/` si elles manquent.
+Émojis : Apple Color Emoji sur Mac, Segoe UI Emoji sur Windows (déjà sur l'ordinateur).
 
 ## Ce qu'on ne reproduit pas
 Le contenu, la musique, les logos et les visuels de la vidéo modèle appartiennent à leur auteur.
