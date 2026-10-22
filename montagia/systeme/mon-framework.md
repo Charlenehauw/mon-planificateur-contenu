@@ -58,7 +58,7 @@ Charlène a demandé ces trois finitions sur toutes ses prochaines vidéos :
 1. `nouveau` → relire coupes et transcription (corrections.json si un mot est faux).
 2. `replique.json` : blocs titres en Anton (police « titre », fichier Anton-Regular.ttf) et Lato (Lato-Black.ttf), à blocs_y ≈ 330 (au-dessus de la tête),
    avec `"sous_titres": {"actif": false}` (les sous-titres sont faits par les finitions, pour avoir les mots forts en couleur).
-   Modèle à copier : `systeme/projets/reel-1/replique.json` (s'il existe encore) ou cette description.
+   Modèles à copier puis adapter aux mots de la vidéo : `systeme/ma-bibliotheque/modele-replique.json` et `modele-finitions.json` (issus de reel-1).
 3. `python systeme/montagia.py replique <projet>`.
 4. `finitions.json` (émojis, étoiles, bruitages, sous-titres avec mots_forts), puis
    `systeme/.venv/bin/python systeme/ma-bibliotheque/finitions.py <projet> --apercu t1,t2` (regarder les images), puis sans `--apercu` pour le rendu final.
