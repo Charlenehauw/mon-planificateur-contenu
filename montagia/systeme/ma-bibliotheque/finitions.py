@@ -182,7 +182,7 @@ class Finitions:
             groupe.append(m)
             suivant = libres[k + 1] if k + 1 < len(libres) else None
             coupe = (len(groupe) >= maxi or suivant is None or suivant["s"] - m["e"] > .35
-                     or m["w"].rstrip()[-1:] in ".,!?" or len(" ".join(g["w"] for g in groupe)) > 16)
+                     or m["w"].rstrip()[-1:] in ".,!?" or len(" ".join(g["w"] for g in groupe + [suivant])) > 18)
             if coupe:
                 caps.append(dict(mots=[(g["w"].strip("«» "), norm(g["w"]) in forts) for g in groupe],
                                  t0=groupe[0]["s"], t1=groupe[-1]["e"] + .25))
