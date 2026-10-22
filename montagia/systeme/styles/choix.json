@@ -1,0 +1,176 @@
+{
+ "palettes": {
+  "blanc-premium": {
+   "nom": "Blanc premium",
+   "accent": "#2F6BFF",
+   "clair": "#FFFFFF",
+   "sombre": "#111111",
+   "mode": "clair"
+  },
+  "orange-signature": {
+   "nom": "Orange signature",
+   "accent": "#F04B00",
+   "clair": "#F8F3ED",
+   "sombre": "#160D07"
+  },
+  "bleu-electrique": {
+   "nom": "Bleu électrique",
+   "accent": "#3D7BFF",
+   "clair": "#FFFFFF",
+   "sombre": "#0B0D12"
+  },
+  "jaune-impact": {
+   "nom": "Jaune impact",
+   "accent": "#FFD60A",
+   "clair": "#FFFFFF",
+   "sombre": "#0A0A0A"
+  },
+  "vert-sauge": {
+   "nom": "Vert sauge",
+   "accent": "#7FA88B",
+   "clair": "#F3F1EA",
+   "sombre": "#1E2A22"
+  },
+  "rose-poudre": {
+   "nom": "Rose poudré",
+   "accent": "#E8899A",
+   "clair": "#FFF4F2",
+   "sombre": "#2A1A1E"
+  },
+  "bordeaux-or": {
+   "nom": "Bordeaux et or",
+   "accent": "#C9A24B",
+   "clair": "#F7F0E6",
+   "sombre": "#4A1020"
+  },
+  "noir-blanc": {
+   "nom": "Noir et blanc",
+   "accent": "#FFFFFF",
+   "clair": "#FFFFFF",
+   "sombre": "#000000"
+  },
+  "violet": {
+   "nom": "Violet",
+   "accent": "#8B5CF6",
+   "clair": "#F5F3FF",
+   "sombre": "#140F24"
+  },
+  "creme-terracotta": {
+   "nom": "Crème et terracotta",
+   "accent": "#C8643B",
+   "clair": "#F6EFE6",
+   "sombre": "#2B1D16",
+   "mode": "clair"
+  },
+  "blanc-marine": {
+   "nom": "Blanc et bleu marine",
+   "accent": "#1F4FD8",
+   "clair": "#FFFFFF",
+   "sombre": "#0E1B3D",
+   "mode": "clair"
+  },
+  "sable-vert": {
+   "nom": "Sable et vert",
+   "accent": "#3F7D5A",
+   "clair": "#F1EDE3",
+   "sombre": "#1C2A22",
+   "mode": "clair"
+  },
+  "blanc-rose": {
+   "nom": "Blanc et rose",
+   "accent": "#D9577A",
+   "clair": "#FFF7F8",
+   "sombre": "#2A1A1E",
+   "mode": "clair"
+  }
+ },
+ "polices": {
+  "elegante": {
+   "nom": "Élégante (Playfair Display)",
+   "sous_titres": "Playfair Display",
+   "graisse": 700,
+   "titre": "Playfair Display",
+   "taille": 56
+  },
+  "moderne": {
+   "nom": "Moderne (Sora)",
+   "sous_titres": "Sora",
+   "graisse": 700,
+   "titre": "Sora",
+   "taille": 56
+  },
+  "percutante": {
+   "nom": "Percutante (Archivo Black)",
+   "sous_titres": "Archivo Black",
+   "graisse": 400,
+   "titre": "Archivo Black",
+   "taille": 60
+  },
+  "editoriale": {
+   "nom": "Éditoriale (Archivo étroit)",
+   "sous_titres": "Archivo",
+   "graisse": 800,
+   "titre": "Archivo",
+   "taille": 60
+  },
+  "geometrique": {
+   "nom": "Géométrique (Montserrat)",
+   "sous_titres": "Montserrat",
+   "graisse": 800,
+   "titre": "Montserrat",
+   "taille": 56
+  },
+  "ronde": {
+   "nom": "Ronde et douce (Poppins)",
+   "sous_titres": "Poppins",
+   "graisse": 700,
+   "titre": "Poppins",
+   "taille": 56
+  },
+  "affiche": {
+   "nom": "Affiche (Bebas Neue)",
+   "sous_titres": "Bebas Neue",
+   "graisse": 400,
+   "titre": "Bebas Neue",
+   "taille": 72
+  },
+  "manuscrite": {
+   "nom": "Manuscrite (Caveat)",
+   "sous_titres": "Caveat",
+   "graisse": 700,
+   "titre": "Caveat",
+   "taille": 68
+  }
+ },
+ "sous_titres": {
+  "un-mot": {
+   "nom": "Un mot à la fois, au centre",
+   "mots_par_bloc": 1,
+   "position": 0.6,
+   "animation": "pop",
+   "taille_bonus": 14
+  },
+  "classique": {
+   "nom": "2 à 3 mots, sur la poitrine",
+   "mots_par_bloc": 3,
+   "position": 0.7,
+   "animation": "pop",
+   "taille_bonus": 0
+  },
+  "dynamique": {
+   "nom": "2 mots qui rebondissent",
+   "mots_par_bloc": 2,
+   "position": 0.68,
+   "animation": "rebond",
+   "taille_bonus": 6
+  },
+  "karaoke": {
+   "nom": "Karaoké : le mot prononcé passe en couleur",
+   "mots_par_bloc": 3,
+   "position": 0.7,
+   "animation": "pop",
+   "taille_bonus": 4,
+   "karaoke": true
+  }
+ }
+}

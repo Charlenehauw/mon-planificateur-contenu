@@ -1,0 +1,1 @@
+Les effets sur mesure que tu décides de garder arrivent ici (python montagia.py garder ...).

@@ -1,0 +1,38 @@
+{
+ "nom": "Impact",
+ "description": "Énergique et viral. Majuscules massives, accent jaune.",
+ "polices": {
+  "titre": "Archivo Black",
+  "texte": "Sora",
+  "fort": "Archivo Black"
+ },
+ "couleurs": {
+  "accent": "#FFD60A",
+  "clair": "#FFFFFF",
+  "sombre": "#0A0A0A",
+  "texte": "#FFFFFF",
+  "succes": "#22C55E"
+ },
+ "sous_titres": {
+  "police": "Archivo Black",
+  "graisse": 400,
+  "taille": 62,
+  "couleur": "#FFFFFF",
+  "couleur_mot_cle": "#FFD60A",
+  "ombre": "0 0 0 #000, 3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000",
+  "mots_par_bloc": 2,
+  "position": 0.68,
+  "casse": "majuscules",
+  "fond": "aucun",
+  "animation": "rebond"
+ },
+ "accroche": {
+  "fond": "#FFD60A",
+  "couleur": "#0A0A0A",
+  "police": "Archivo Black",
+  "taille": 62,
+  "rayon": 14
+ },
+ "sons": true,
+ "musique_volume": 0.1
+}

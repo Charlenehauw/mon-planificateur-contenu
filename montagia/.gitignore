@@ -1,0 +1,13 @@
+# Fichiers créés par l'installation (propres à chaque ordinateur)
+systeme/.venv/
+systeme/bin/
+systeme/.outils/
+systeme/config-machine.json
+systeme/projets/*
+!systeme/projets/LISEZ-MOI.txt
+# Vidéos (trop lourdes pour Git)
+*.mp4
+*.mov
+*.m4v
+*.webm
+__pycache__/

@@ -1,0 +1,19 @@
+{
+ "visage": {"x": 490, "y": 800},
+ "sous_titres": {"actif": true, "karaoke": true, "couleur_karaoke": "#FFD60A", "mots_cles": ["IA", "Opus", "Astra", "Fable", "son", "couleurs", "jaune", "côte", "commun", "route", "pixel", "trois"]},
+ "effets": [
+  {"type": "accroche", "texte": "Quelle IA monte *le mieux* ?", "fin": "@mieux>+0.1"},
+  {"type": "etiquettes", "debut": "@Opus", "fin": "@résultats.>", "y": 1180, "items": [{"texte": "Opus 5.5", "icone": "etoile", "debut": "@Opus"}, {"texte": "Astra", "icone": "etoile", "debut": "@Astra"}, {"texte": "Fable", "icone": "etoile", "debut": "@Fable"}]},
+  {"type": "illustration", "icone": "clapperboard", "texte": "Même *vidéo*", "sous_texte": "pour les trois", "debut": "@même", "fin": "@résultats.>+0.2", "cote": "droite"},
+  {"type": "illustration", "icone": "audio-lines", "texte": "Son *propre*", "debut": "@nettoient", "fin": "@couleurs", "cote": "gauche"},
+  {"type": "illustration", "icone": "palette", "texte": "Couleurs *corrigées*", "debut": "@couleurs", "fin": "@sous-titres.>", "cote": "droite"},
+  {"type": "illustration", "icone": "captions", "texte": "Sous-titres", "debut": "@ajoutent", "fin": "@jaune>", "cote": "gauche"},
+  {"type": "zoom", "debut": "@jaune", "fin": "@faire.>", "echelle": 1.12, "x": 490, "y": 800, "doux": true},
+  {"type": "comparaison", "debut": "@compare", "fin": "@côte.>+0.25", "gauche": {"icone": "scissors", "texte": "Montage *à la main*", "sous_texte": "3 heures"}, "droite": {"icone": "sparkles", "texte": "Montage *IA*", "sous_texte": "10 minutes"}},
+  {"type": "venn", "debut": "@montre-moi", "fin": "@veine.>+0.25", "titre": "Ce qu'ils ont *en commun*", "cercles": [{"texte": "Monteur", "debut": "@montre-moi+0.3"}, {"texte": "IA", "debut": "@commun,"}], "commun": "Ton style", "au": "@diagramme"},
+  {"type": "feuille_route", "debut": "@processus,", "fin": "@parle.#2>+0.2", "titre": "Ta *feuille de route*", "etapes": [{"texte": "Filmer", "debut": "@processus,"}, {"texte": "Monter", "debut": "@feuille"}, {"texte": "Publier", "debut": "@avance"}, {"texte": "Signer", "debut": "@parle.#2"}]},
+  {"type": "pixel_art", "debut": "@petite", "fin": "@ajoute>", "image_au": 12.0, "y": 1000},
+  {"type": "illustration", "chiffre": 3, "texte": "montages *IA*", "sous_texte": "même consigne", "debut": "@trois", "fin": "@choisis.>+0.3", "cote": "droite"},
+  {"type": "cta_commentaire", "kicker": "LAQUELLE TU CHOISIS ?", "mot": "1, 2 OU 3", "debut": "@laquelle", "fin": "@choisis.>+0.6"}
+ ]
+}

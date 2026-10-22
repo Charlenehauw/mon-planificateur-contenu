@@ -1,0 +1,38 @@
+{
+ "nom": "Épuré",
+ "description": "Minimal et moderne. Sans serif blanc, accent bleu électrique.",
+ "polices": {
+  "titre": "Sora",
+  "texte": "Sora",
+  "fort": "Sora"
+ },
+ "couleurs": {
+  "accent": "#3D7BFF",
+  "clair": "#FFFFFF",
+  "sombre": "#0B0D12",
+  "texte": "#FFFFFF",
+  "succes": "#22C55E"
+ },
+ "sous_titres": {
+  "police": "Sora",
+  "graisse": 700,
+  "taille": 58,
+  "couleur": "#FFFFFF",
+  "couleur_mot_cle": "#3D7BFF",
+  "ombre": "0 2px 10px rgba(0,0,0,0.55)",
+  "mots_par_bloc": 2,
+  "position": 0.7,
+  "casse": "normale",
+  "fond": "aucun",
+  "animation": "pop"
+ },
+ "accroche": {
+  "fond": "#FFFFFF",
+  "couleur": "#0B0D12",
+  "police": "Sora",
+  "taille": 60,
+  "rayon": 22
+ },
+ "sons": true,
+ "musique_volume": 0.08
+}

@@ -1,0 +1,574 @@
+{
+ "_lisez-moi": [
+  "Exemple réel : réplique du style d'un reel « éditorial » (cartons lilas, mots clés en italique magenta, sous-titres mot à mot).",
+  "Positions et tailles dans le repère 1080 x 1920 (doublées automatiquement en 4K). Temps : @mot, @mot#2 (2e fois), @mot> (fin du mot), @mot+0.3.",
+  "polices : fichier (police de l'ordinateur ou du projet) + style (sous-famille d'un .ttc), ou google (nom dans moteur/reference.py) + axes (police variable).",
+  "styles : ombre = [couleur, opacité, flou, décalage vers le bas], halo = [couleur, opacité, flou], contour = [couleur, épaisseur].",
+  "blocs : type video (sur l'image) ou carton (plein écran, couleur de carton). Chaque ligne : dx = décalage depuis le centre, chevauche = part de la hauteur posée sur la ligne du dessus, mots = [texte, style, temps d'apparition].",
+  "debut facultatif (sinon le premier mot), fin obligatoire. zooms : zoom sec de debut à fin (ou jusqu'au bout)."
+ ],
+ "reference": "https://www.instagram.com/reel/DU-vtCNiGiz/ (@divacareer)",
+ "polices": {
+  "sans": {
+   "fichier": "HelveticaNeue.ttc",
+   "style": "Bold"
+  },
+  "sans_moyen": {
+   "fichier": "HelveticaNeue.ttc",
+   "style": "Medium"
+  },
+  "serif": {
+   "google": "Bodoni Moda Italic",
+   "axes": {
+    "Weight": 700,
+    "Optical size": 28
+   }
+  }
+ },
+ "styles": {
+  "sous_titre": {
+   "police": "sans",
+   "taille": 74,
+   "couleur": "#FFFFFF",
+   "ombre": [
+    "#000000",
+    0.55,
+    7,
+    3
+   ]
+  },
+  "petit": {
+   "police": "sans_moyen",
+   "taille": 61,
+   "couleur": "#FFFFFF",
+   "ombre": [
+    "#000000",
+    0.55,
+    6,
+    2
+   ]
+  },
+  "cle": {
+   "police": "serif",
+   "taille": 170,
+   "couleur": "#E074F8",
+   "ombre": [
+    "#28003C",
+    0.5,
+    8,
+    4
+   ],
+   "halo": [
+    "#AA3CDC",
+    0.55,
+    14
+   ]
+  },
+  "carton_sans": {
+   "police": "sans",
+   "taille": 140,
+   "couleur": "#682E7C",
+   "ombre": [
+    "#78378F",
+    0.65,
+    16,
+    18
+   ]
+  },
+  "carton_sans_petit": {
+   "police": "sans_moyen",
+   "taille": 92,
+   "couleur": "#682E7C",
+   "ombre": [
+    "#78378F",
+    0.65,
+    14,
+    16
+   ]
+  },
+  "carton_serif": {
+   "police": "serif",
+   "taille": 192,
+   "couleur": "#682E7C",
+   "ombre": [
+    "#78378F",
+    0.7,
+    16,
+    18
+   ]
+  },
+  "carton_blanc": {
+   "police": "sans",
+   "taille": 111,
+   "couleur": "#FFFFFF",
+   "ombre": [
+    "#965FAF",
+    0.45,
+    10,
+    4
+   ]
+  },
+  "carton_blanc_petit": {
+   "police": "sans_moyen",
+   "taille": 59,
+   "couleur": "#FFFFFF",
+   "ombre": [
+    "#965FAF",
+    0.45,
+    8,
+    3
+   ]
+  }
+ },
+ "sous_titres": {
+  "style": "sous_titre",
+  "y": 1250,
+  "tenue_max": 0.6,
+  "max_caracteres": 11
+ },
+ "carton": {
+  "couleur": "#EDC8FC",
+  "y": 900
+ },
+ "blocs_y": 1250,
+ "animation": {
+  "rebond": 0.06,
+  "avance": 0.035
+ },
+ "blocs": [
+  {
+   "type": "video",
+   "fin": "@comment",
+   "lignes": [
+    {
+     "dx": -190,
+     "mots": [
+      [
+       "de la",
+       "petit",
+       "@de"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.16,
+     "mots": [
+      [
+       "répartie",
+       "cle",
+       "@répartie"
+      ]
+     ]
+    },
+    {
+     "dx": 40,
+     "chevauche": 0.1,
+     "mots": [
+      [
+       "avec mon",
+       "petit",
+       "@avec"
+      ],
+      [
+       "manager,",
+       "petit",
+       "@manager"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "carton",
+   "fin": "@professionnelle#2",
+   "lignes": [
+    {
+     "dx": 120,
+     "mots": [
+      [
+       "pour avoir",
+       "carton_blanc_petit",
+       "@pour#2"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.35,
+     "mots": [
+      [
+       "Alors",
+       "carton_blanc",
+       "@alors"
+      ]
+     ]
+    },
+    {
+     "dx": -60,
+     "chevauche": 0.1,
+     "mots": [
+      [
+       "plus de",
+       "carton_sans_petit",
+       "@plus#2"
+      ]
+     ]
+    },
+    {
+     "dx": 30,
+     "chevauche": 0.25,
+     "mots": [
+      [
+       "répartie",
+       "carton_serif",
+       "@répartie#3"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@la#3",
+   "lignes": [
+    {
+     "dx": -200,
+     "mots": [
+      [
+       "la plus",
+       "petit",
+       "@la#2"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.16,
+     "mots": [
+      [
+       "parfaite",
+       "cle",
+       "@parfaite"
+      ]
+     ]
+    },
+    {
+     "dx": 60,
+     "chevauche": 0.1,
+     "mots": [
+      [
+       "des réparties,",
+       "petit",
+       "@des"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@il#2",
+   "lignes": [
+    {
+     "dx": -90,
+     "mots": [
+      [
+       "la phrase",
+       "petit",
+       "@la#3"
+      ],
+      [
+       "la plus",
+       "petit",
+       "@la#4"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.16,
+     "mots": [
+      [
+       "punchy",
+       "cle",
+       "@punchy"
+      ]
+     ]
+    },
+    {
+     "dx": 70,
+     "chevauche": 0.1,
+     "mots": [
+      [
+       "qui soit.",
+       "petit",
+       "@qui"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "carton",
+   "fin": "@surtout",
+   "lignes": [
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "déjà que",
+       "carton_sans_petit",
+       "@déjà#2"
+      ]
+     ]
+    },
+    {
+     "dx": -10,
+     "chevauche": 0.35,
+     "mots": [
+      [
+       "Il faut",
+       "carton_sans",
+       "@il#2"
+      ]
+     ]
+    },
+    {
+     "dx": 40,
+     "chevauche": 0.3,
+     "mots": [
+      [
+       "t'entraînes",
+       "carton_serif",
+       "@t'entraînes"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@ne#2",
+   "lignes": [
+    {
+     "dx": -40,
+     "mots": [
+      [
+       "la première",
+       "petit",
+       "@première"
+      ],
+      [
+       "des choses,",
+       "petit",
+       "@des#2"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.16,
+     "mots": [
+      [
+       "réponds.",
+       "cle",
+       "@réponds"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "carton",
+   "debut": "@souvent>",
+   "fin": "@et#3",
+   "lignes": [
+    {
+     "dx": -120,
+     "mots": [
+      [
+       "Et donc,",
+       "carton_blanc",
+       "@souvent>"
+      ]
+     ]
+    },
+    {
+     "dx": 30,
+     "chevauche": 0.3,
+     "mots": [
+      [
+       "réponds.",
+       "carton_serif",
+       "@réponds#2"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@et#4",
+   "lignes": [
+    {
+     "dx": -140,
+     "mots": [
+      [
+       "beaucoup",
+       "petit",
+       "@beaucoup"
+      ],
+      [
+       "plus",
+       "petit",
+       "@plus#5"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.16,
+     "mots": [
+      [
+       "à l'aise",
+       "cle",
+       "@l'aise-0.2"
+      ]
+     ]
+    },
+    {
+     "dx": 60,
+     "chevauche": 0.1,
+     "mots": [
+      [
+       "dans l'exercice.",
+       "petit",
+       "@dans#2"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "carton",
+   "fin": "@ok",
+   "lignes": [
+    {
+     "dx": -170,
+     "mots": [
+      [
+       "ton",
+       "carton_sans",
+       "@ton"
+      ]
+     ]
+    },
+    {
+     "dx": 40,
+     "chevauche": 0.08,
+     "mots": [
+      [
+       "interlocuteur",
+       "carton_sans_petit",
+       "@interlocuteur"
+      ]
+     ]
+    },
+    {
+     "dx": -150,
+     "chevauche": 0.02,
+     "mots": [
+      [
+       "dans son",
+       "carton_sans_petit",
+       "@dans#3"
+      ]
+     ]
+    },
+    {
+     "dx": 70,
+     "chevauche": 0.18,
+     "mots": [
+      [
+       "cœur.",
+       "carton_serif",
+       "@cœur"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@ressources>+0.1",
+   "lignes": [
+    {
+     "dx": -120,
+     "mots": [
+      [
+       "je t'ai créé",
+       "petit",
+       "@je#2"
+      ],
+      [
+       "des",
+       "petit",
+       "@des#3"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "chevauche": 0.16,
+     "mots": [
+      [
+       "ressources.",
+       "cle",
+       "@ressources"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@commentaires>+0.15",
+   "lignes": [
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "SLAP",
+       "cle",
+       "@slap"
+      ]
+     ]
+    },
+    {
+     "dx": 60,
+     "chevauche": 0.1,
+     "mots": [
+      [
+       "dans les",
+       "petit",
+       "@dans#4"
+      ],
+      [
+       "commentaires",
+       "petit",
+       "@commentaires"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "zooms": [
+  {
+   "debut": "@et#6",
+   "echelle": 1.1,
+   "y": 760
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "nom": "Signature",
+ "description": "Élégant et premium. Titres serif, accent orange, blocs crème.",
+ "polices": {
+  "titre": "Playfair Display",
+  "texte": "Sora",
+  "fort": "Archivo Black"
+ },
+ "couleurs": {
+  "accent": "#F04B00",
+  "clair": "#F8F3ED",
+  "sombre": "#160D07",
+  "texte": "#FFFFFF",
+  "succes": "#2E7D4F"
+ },
+ "sous_titres": {
+  "police": "Playfair Display",
+  "graisse": 700,
+  "taille": 54,
+  "couleur": "#FFFFFF",
+  "couleur_mot_cle": "#F04B00",
+  "ombre": "0 3px 14px rgba(0,0,0,0.7)",
+  "mots_par_bloc": 3,
+  "position": 0.7,
+  "casse": "normale",
+  "fond": "aucun",
+  "animation": "pop"
+ },
+ "accroche": {
+  "fond": "#F8F3ED",
+  "couleur": "#160D07",
+  "police": "Playfair Display",
+  "taille": 64,
+  "rayon": 28
+ },
+ "sons": true,
+ "musique_volume": 0.08
+}
