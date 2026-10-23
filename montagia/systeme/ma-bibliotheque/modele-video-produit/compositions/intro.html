@@ -3,7 +3,7 @@
     @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
     #root { position: absolute; inset: 0; }
     #intro-bloc { position: absolute; left: 0; right: 0; top: 560px; text-align: center; }
-    #intro-l1 { font-family: "Anton"; font-size: 150px; line-height: 1; color: #141210; letter-spacing: 0.01em; }
+    #intro-l1 { font-family: "Anton"; font-size: 170px; line-height: 1; color: #141210; letter-spacing: 0.01em; }
     #intro-l1 span { display: inline-block; }
     #intro-l2 {
       font-family: "Anton"; font-size: 250px; line-height: 1.02; letter-spacing: 0.01em;
@@ -17,12 +17,12 @@
   <div id="root" data-composition-id="intro" data-width="1080" data-height="1920">
     <div id="intro-bloc" class="clip" data-start="0" data-duration="3.6" data-layout-allow-overlap>
       <div id="intro-haut">
-        <div id="intro-l1"><span>T</span><span>A</span><span>B</span><span>L</span><span>E</span><span>A</span><span>U</span><span>&nbsp;</span><span>D</span><span>E</span><span>&nbsp;</span><span>B</span><span>O</span><span>R</span><span>D</span></div>
+        <div id="intro-l1"><span>C</span><span>O</span><span>A</span><span>C</span><span>H</span></div>
       </div>
       <div id="intro-bas">
-        <div id="intro-l2">LIBERTÉ</div>
+        <div id="intro-l2">CHACHOU</div>
         <div id="intro-trait"></div>
-        <div id="intro-sous"><span>Ton</span><span>business,</span><span>enfin</span><span>organisé.</span></div>
+        <div id="intro-sous"><span>Ton</span><span>coach</span><span>dans</span><span>la</span><span>poche.</span></div>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@
     tl.fromTo("#intro-trait", { width: 0 }, { width: 380, duration: 0.6, ease: "expo.out" }, 1.0);
     tl.fromTo("#intro-sous span", { opacity: 0, filter: "blur(6px)" },
       { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power2.out", stagger: 0.07 }, 1.35);
-    // les deux mots s'écartent pour laisser passer le tableau de bord
+    // les deux mots s'écartent pour laisser passer l'appli
     tl.to("#intro-haut", { y: -520, filter: "blur(8px)", opacity: 0, duration: 0.45, ease: "power3.in" }, 3.05);
     tl.to("#intro-bas", { y: 620, filter: "blur(8px)", opacity: 0, duration: 0.45, ease: "power3.in" }, 3.05);
     window.__timelines["intro"] = tl;

@@ -1,5 +1,5 @@
 # Modèle « vidéo produit » (motion design, sans face caméra)
-Fait pour « Tableau de bord Liberté » (23/10/2026), inspiré de `analyse-modele.md`. Outil : HyperFrames (hyperframes@0.8.96).
+Fait pour « Coach Chachou, ton coach dans la poche » (appli en artefact Claude, 23/10/2026 ; pas de logo, pas de musique, Charlène n'apparaît pas), inspiré de `analyse-modele.md`. Outil : HyperFrames (hyperframes@0.8.96).
 Pour un nouveau produit : `npx hyperframes@0.8.96 init video` dans le projet, copier `index.html` et `compositions/` ici,
 mettre les visuels dans `video/assets/` (img/, video/ recadrées sans les barres du navigateur et accélérées, fonts/Anton-Regular.ttf,
 gsap.min.js depuis systeme/runtime, sons/ depuis systeme/assets/sons), changer les textes, puis `check`, `snapshot`, `render`.
