@@ -6,4 +6,5 @@ gsap.min.js depuis systeme/runtime, sons/ depuis systeme/assets/sons), changer l
 Tous les écrans sont dans un téléphone (cadre noir + îlot ; contenu décalé de 56 px sous l'îlot).
 Scènes : intro (titre qui se construit) → tableau (téléphone qui bascule en 3D + 4 mots-clés) → objectif (plongée dans l'écran, visite de l'appli)
 → outils (4 outils qui s'allument en or, le téléphone reste en place) → messages et plan (téléphone + enregistrement d'écran) → semaine (cases cochées) → fin (REJOINS + LIEN EN BIO).
+Émojis (PNG faits avec Pillow, assets/img/emoji-*.png) qui surgissent dans les espaces vides à gauche et à droite du téléphone, un « pop » chacun.
 Pas de musique dans le fichier : Charlène ajoute un son tendance dans TikTok / Instagram. Bruitages Montag'IA sur chaque action.

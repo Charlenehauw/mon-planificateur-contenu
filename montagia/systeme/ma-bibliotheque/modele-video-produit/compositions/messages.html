@@ -13,6 +13,7 @@
     #msg-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3;  padding-top: 56px; }
     #msg-video { width: 580px; height: 856px; object-fit: cover; display: block; }
     .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .emo { position: absolute; width: 130px; }
   </style>
   <div id="root" data-composition-id="messages" data-width="1080" data-height="1920">
     <div id="msg-scene" class="clip" data-start="0" data-duration="4.8" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
@@ -24,6 +25,9 @@
         <video id="msg-video" class="clip" src="assets/video/messages.mp4" data-start="0" data-duration="4.75" muted playsinline></video>
         <div class="tel-ilot"></div>
       </div></div>
+      <img id="msg-emo1" class="emo" src="assets/img/emoji-bulle.png" alt="" style="left: 50px; top: 655px;" />
+      <img id="msg-emo2" class="emo" src="assets/img/emoji-enveloppe.png" alt="" style="left: 900px; top: 895px;" />
+      <img id="msg-emo3" class="emo" src="assets/img/emoji-feu.png" alt="" style="left: 50px; top: 1115px;" />
     </div>
   </div>
   <script>
@@ -33,6 +37,10 @@
     tl.fromTo("#msg-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.55);
     // balayage vers la gauche vers le plan 30 jours
     tl.to("#msg-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 4.42);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#msg-emo1", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.8);
+    tl.fromTo("#msg-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.6);
+    tl.fromTo("#msg-emo3", { scale: 0, rotation: 18, opacity: 0 }, { scale: 1, rotation: -6, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 2.6);
     window.__timelines["messages"] = tl;
   </script>
 </template>

@@ -18,6 +18,7 @@
     #out-k2 { left: 292px; top: 285px; width: 270px; height: 196px; }
     #out-k3 { left: 18px; top: 486px; width: 270px; height: 166px; }
     #out-k4 { left: 292px; top: 486px; width: 270px; height: 166px; }
+    .emo { position: absolute; width: 130px; }
   </style>
   <div id="root" data-composition-id="outils" data-width="1080" data-height="1920">
     <div id="out-scene" class="clip" data-start="0" data-duration="4.2" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
@@ -30,6 +31,10 @@
         <div class="tel-ilot"></div>
         <div id="out-k1" class="out-cadre"></div><div id="out-k2" class="out-cadre"></div><div id="out-k3" class="out-cadre"></div><div id="out-k4" class="out-cadre"></div>
       </div></div>
+      <img id="out-emo1" class="emo" src="assets/img/emoji-etincelles.png" alt="" style="left: 50px; top: 695px;" />
+      <img id="out-emo2" class="emo" src="assets/img/emoji-lettre.png" alt="" style="left: 900px; top: 695px;" />
+      <img id="out-emo3" class="emo" src="assets/img/emoji-sac.png" alt="" style="left: 50px; top: 995px;" />
+      <img id="out-emo4" class="emo" src="assets/img/emoji-agenda.png" alt="" style="left: 900px; top: 995px;" />
     </div>
   </div>
   <script>
@@ -43,6 +48,12 @@
     tl.to(".out-cadre", { opacity: 0, duration: 0.25, ease: "power2.in" }, 3.6);
     // le titre s'efface, le téléphone reste : la scène suivante change seulement l'écran
     tl.to("#out-titre", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 3.95);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#out-emo1", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.0);
+    tl.fromTo("#out-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.35);
+    tl.fromTo("#out-emo3", { scale: 0, rotation: 18, opacity: 0 }, { scale: 1, rotation: -6, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.7);
+    tl.fromTo("#out-emo4", { scale: 0, rotation: -21, opacity: 0 }, { scale: 1, rotation: 7, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 2.05);
+    tl.to(".emo", { scale: 0.6, opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power2.in" }, 3.9);
     window.__timelines["outils"] = tl;
   </script>
 </template>

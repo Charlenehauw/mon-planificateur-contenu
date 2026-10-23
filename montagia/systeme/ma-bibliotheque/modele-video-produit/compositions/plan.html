@@ -13,6 +13,7 @@
     #plan-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3;  padding-top: 56px; }
     #plan-video { width: 580px; height: 856px; object-fit: cover; display: block; }
     .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .emo { position: absolute; width: 130px; }
   </style>
   <div id="root" data-composition-id="plan" data-width="1080" data-height="1920">
     <div id="plan-scene" class="clip" data-start="0" data-duration="4.6" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
@@ -24,6 +25,9 @@
         <video id="plan-video" class="clip" src="assets/video/plan30.mp4" data-start="0" data-duration="4.5" muted playsinline></video>
         <div class="tel-ilot"></div>
       </div></div>
+      <img id="plan-emo1" class="emo" src="assets/img/emoji-calendrier.png" alt="" style="left: 50px; top: 655px;" />
+      <img id="plan-emo2" class="emo" src="assets/img/emoji-coche.png" alt="" style="left: 900px; top: 875px;" />
+      <img id="plan-emo3" class="emo" src="assets/img/emoji-fusee.png" alt="" style="left: 50px; top: 1115px;" />
     </div>
   </div>
   <script>
@@ -32,6 +36,10 @@
     tl.fromTo("#plan-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.5);
     // le téléphone recule et se fond : place à la semaine
     tl.to("#plan-scene", { scale: 0.85, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power3.in" }, 4.28);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#plan-emo1", { scale: 0, rotation: 21, opacity: 0 }, { scale: 1, rotation: -7, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.7);
+    tl.fromTo("#plan-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.5);
+    tl.fromTo("#plan-emo3", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 2.5);
     window.__timelines["plan"] = tl;
   </script>
 </template>
