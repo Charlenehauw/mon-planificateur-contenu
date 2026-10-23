@@ -1,0 +1,43 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #pro-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #pro-t1 { font-family: "Anton"; font-size: 92px; line-height: 1; color: #141210; }
+    #pro-t1 b { font-weight: 400; color: #e8bd3c; }
+    #pro-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+    .tel { position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .emo { position: absolute; width: 130px; }
+  </style>
+  <div id="root" data-composition-id="prospects" data-width="1080" data-height="1920">
+    <div id="pro-scene" class="clip" data-start="0" data-duration="4.2" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
+      <div id="pro-titre">
+        <div id="pro-t1">TON BUSINESS <b>STRUCTURÉ.</b></div>
+        <div id="pro-t2">tes prospects suivis, relancés au bon moment.</div>
+      </div>
+      <div id="pro-tel" class="tel"><div class="tel-ecran">
+        <video id="pro-video" class="clip" src="assets/video/app-prospects.mp4" data-start="0" data-duration="4.2" muted playsinline></video>
+        <div class="tel-ilot"></div>
+      </div></div>
+      <img id="pro-emo1" class="emo" src="assets/img/emoji-cible.png" alt="" style="left: 50px; top: 655px;" />
+      <img id="pro-emo2" class="emo" src="assets/img/emoji-telephone.png" alt="" style="left: 900px; top: 895px;" />
+      <img id="pro-emo3" class="emo" src="assets/img/emoji-poignee.png" alt="" style="left: 50px; top: 1115px;" />
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // arrivée en balayage depuis la droite, sortie vers la gauche
+    tl.fromTo("#pro-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
+    tl.fromTo("#pro-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.5);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#pro-emo1", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.7);
+    tl.fromTo("#pro-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.5);
+    tl.fromTo("#pro-emo3", { scale: 0, rotation: 18, opacity: 0 }, { scale: 1, rotation: -6, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 2.4);
+    tl.to("#pro-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 3.82);
+    window.__timelines["prospects"] = tl;
+  </script>
+</template>

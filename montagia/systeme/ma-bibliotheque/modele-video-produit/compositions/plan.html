@@ -34,8 +34,8 @@
     const tl = gsap.timeline({ paused: true });
     tl.fromTo("#plan-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
     tl.fromTo("#plan-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.5);
-    // le téléphone recule et se fond : place à la semaine
-    tl.to("#plan-scene", { scale: 0.85, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power3.in" }, 4.28);
+    // balayage vers la gauche vers les prospects
+    tl.to("#plan-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 4.22);
     // émojis qui surgissent dans les espaces vides autour du téléphone
     tl.fromTo("#plan-emo1", { scale: 0, rotation: 21, opacity: 0 }, { scale: 1, rotation: -7, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.7);
     tl.fromTo("#plan-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.5);

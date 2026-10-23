@@ -8,3 +8,8 @@ Scènes : intro (titre qui se construit) → tableau (téléphone qui bascule en
 → outils (4 outils qui s'allument en or, le téléphone reste en place) → messages et plan (téléphone + enregistrement d'écran) → semaine (cases cochées) → fin (REJOINS + LIEN EN BIO).
 Émojis (PNG faits avec Pillow, assets/img/emoji-*.png) qui surgissent dans les espaces vides à gauche et à droite du téléphone, un « pop » chacun.
 Pas de musique dans le fichier : Charlène ajoute un son tendance dans TikTok / Instagram. Bruitages Montag'IA sur chaque action.
+
+Version du 23/10/2026 (« espace complet ») : 12 scènes, 48,6 s. Après messages et plan 30 jours, l'enregistrement complet de l'appli
+(exemple « Léa », 384 x 848) est découpé en séquences : prospects (« TON BUSINESS STRUCTURÉ. »), clientes & ventes, réseaux,
+motivation, victoires. Découpe : crop=384:724:0:124 (sans la barre du haut), agrandi en 720 de large (lanczos + netteté légère),
+vitesse ajustée pour remplir chaque scène. La scène « semaine » a été retirée (le mini plan apparaît dans « une vision claire »).

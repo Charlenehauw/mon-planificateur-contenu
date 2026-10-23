@@ -1,0 +1,41 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #res-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #res-t1 { font-family: "Anton"; font-size: 104px; line-height: 1; color: #141210; }
+    #res-t1 b { font-weight: 400; color: #e8bd3c; }
+    #res-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+    .tel { position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .emo { position: absolute; width: 130px; }
+  </style>
+  <div id="root" data-composition-id="reseaux" data-width="1080" data-height="1920">
+    <div id="res-scene" class="clip" data-start="0" data-duration="3.4" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
+      <div id="res-titre">
+        <div id="res-t1">TES <b>RÉSEAUX</b></div>
+        <div id="res-t2">ta progression en un coup d'œil.</div>
+      </div>
+      <div id="res-tel" class="tel"><div class="tel-ecran">
+        <video id="res-video" class="clip" src="assets/video/app-reseaux.mp4" data-start="0" data-duration="3.4" muted playsinline></video>
+        <div class="tel-ilot"></div>
+      </div></div>
+      <img id="res-emo1" class="emo" src="assets/img/emoji-hausse.png" alt="" style="left: 50px; top: 695px;" />
+      <img id="res-emo2" class="emo" src="assets/img/emoji-tel.png" alt="" style="left: 900px; top: 995px;" />
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // arrivée en balayage depuis la droite, sortie vers la gauche
+    tl.fromTo("#res-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
+    tl.fromTo("#res-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.5);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#res-emo1", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.7);
+    tl.fromTo("#res-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.4);
+    tl.to("#res-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 3.02);
+    window.__timelines["reseaux"] = tl;
+  </script>
+</template>
