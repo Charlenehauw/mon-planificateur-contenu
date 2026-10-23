@@ -2,38 +2,36 @@
   <style>
     @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
     #root { position: absolute; inset: 0; }
-    #obj-titre { position: absolute; left: 0; right: 0; top: 250px; text-align: center; }
-    #obj-t1 { font-family: "Anton"; font-size: 132px; line-height: 1; color: #141210; }
+    #obj-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #obj-t1 { font-family: "Anton"; font-size: 104px; line-height: 1; color: #141210; }
     #obj-t1 b { font-weight: 400; color: #e8bd3c; }
-    #obj-t2 { margin-top: 18px; font-family: "Lato"; font-style: italic; font-size: 50px; color: #4a433c; }
-    #obj-carte {
-      position: absolute; left: 60px; top: 560px; width: 960px; height: 421px; border-radius: 44px; overflow: hidden;
-      box-shadow: 0 40px 80px rgba(20, 14, 6, 0.3);
-    }
-    #obj-carte img { width: 100%; height: 100%; display: block; }
-    #obj-souligne { position: absolute; left: 369px; top: 312px; height: 6px; width: 528px; background: #e8bd3c; border-radius: 3px; transform-origin: left center; }
-    #obj-stats { position: absolute; left: 220px; top: 1010px; width: 640px; height: 323px; border-radius: 24px; overflow: hidden; }
-    #obj-stats img { width: 100%; height: 100%; display: block; }
+    #obj-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+
+    .tel { position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; }
+    .tel-ecran { padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
   </style>
   <div id="root" data-composition-id="objectif" data-width="1080" data-height="1920">
-    <div id="obj-scene" class="clip" data-start="0" data-duration="3.6" data-layout-allow-overlap data-layout-allow-occlusion>
+    <div id="obj-scene" class="clip" data-start="0" data-duration="3.6" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
       <div id="obj-titre">
         <div id="obj-t1">UNE VISION <b>CLAIRE</b></div>
-        <div id="obj-t2">ton objectif toujours sous les yeux.</div>
+        <div id="obj-t2">tout ton business sous les yeux.</div>
       </div>
-      <div id="obj-carte"><img src="assets/img/objectif.png" alt="Objectif du mois" /><div id="obj-souligne"></div></div>
-      <div id="obj-stats"><img src="assets/img/stats.png" alt="Prospects, clientes, abonnés" /></div>
+      <div id="obj-tel" class="tel"><div class="tel-ecran">
+        <video id="obj-video" class="clip" src="assets/video/tableau-scroll.mp4" data-start="0" data-duration="3.6" muted playsinline></video>
+        <div class="tel-ilot"></div>
+      </div></div>
     </div>
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    // la carte arrive un peu grande et se pose (raccord avec la plongée)
-    tl.fromTo("#obj-carte", { scale: 1.35, opacity: 0.4, filter: "blur(12px)" },
-      { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0.0);
+    // le téléphone arrive un peu grand et se pose (raccord avec la plongée)
+    tl.fromTo("#obj-tel", { scale: 1.3, opacity: 0.4, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0.0);
     tl.fromTo("#obj-t1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.35);
     tl.fromTo("#obj-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.6);
-    tl.fromTo("#obj-souligne", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "expo.out" }, 1.0);
-    tl.fromTo("#obj-stats", { y: 120, opacity: 0, filter: "blur(8px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 1.5);
     // sortie en balayage vers la gauche
     tl.to("#obj-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 3.22);
     window.__timelines["objectif"] = tl;

@@ -2,39 +2,47 @@
   <style>
     @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
     #root { position: absolute; inset: 0; }
-    #out-titre { position: absolute; left: 0; right: 0; top: 240px; text-align: center; }
-    #out-t1 { font-family: "Anton"; font-size: 150px; line-height: 1; color: #141210; }
+    #out-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #out-t1 { font-family: "Anton"; font-size: 104px; line-height: 1; color: #141210; }
     #out-t1 b { font-weight: 400; color: #e8bd3c; }
-    #out-t2 { margin-top: 16px; font-family: "Lato"; font-style: italic; font-size: 50px; color: #4a433c; }
-    .out-carte { position: absolute; width: 444px; border-radius: 30px; overflow: hidden; box-shadow: 0 24px 50px rgba(60, 42, 20, 0.18); }
-    .out-carte img { width: 100%; display: block; }
-    #out-c1 { left: 76px; top: 600px; }
-    #out-c2 { left: 560px; top: 600px; }
-    #out-c3 { left: 76px; top: 960px; }
-    #out-c4 { left: 560px; top: 960px; }
+    #out-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+
+    .tel { position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; }
+    .tel-ecran { padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .out-cadre { position: absolute; border: 6px solid #e8bd3c; border-radius: 22px; box-shadow: 0 0 24px rgba(232, 189, 60, 0.55); }
+    #out-k1 { left: 18px; top: 285px; width: 270px; height: 196px; }
+    #out-k2 { left: 292px; top: 285px; width: 270px; height: 196px; }
+    #out-k3 { left: 18px; top: 486px; width: 270px; height: 166px; }
+    #out-k4 { left: 292px; top: 486px; width: 270px; height: 166px; }
   </style>
   <div id="root" data-composition-id="outils" data-width="1080" data-height="1920">
-    <div id="out-scene" class="clip" data-start="0" data-duration="4.2" data-layout-allow-overlap data-layout-allow-occlusion>
+    <div id="out-scene" class="clip" data-start="0" data-duration="4.2" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
       <div id="out-titre">
         <div id="out-t1"><b>4</b> OUTILS</div>
         <div id="out-t2">prêts à l'emploi.</div>
       </div>
-      <div id="out-c1" class="out-carte"><img src="assets/img/outil-tl.png" alt="Idées de contenu" /></div>
-      <div id="out-c2" class="out-carte"><img src="assets/img/outil-tr.png" alt="Messages" /></div>
-      <div id="out-c3" class="out-carte"><img src="assets/img/outil-bl.png" alt="Tarif juste" /></div>
-      <div id="out-c4" class="out-carte"><img src="assets/img/outil-br.png" alt="Plan 30 jours" /></div>
+      <div id="out-tel" class="tel"><div class="tel-ecran">
+        <img id="out-img" src="assets/img/tel-outils.jpg" alt="Mes outils" />
+        <div class="tel-ilot"></div>
+        <div id="out-k1" class="out-cadre"></div><div id="out-k2" class="out-cadre"></div><div id="out-k3" class="out-cadre"></div><div id="out-k4" class="out-cadre"></div>
+      </div></div>
     </div>
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
     tl.fromTo("#out-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
     tl.fromTo("#out-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.45);
-    tl.fromTo(".out-carte", { opacity: 0, y: 50, scale: 0.9, filter: "blur(8px)" },
-      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out", stagger: 0.17 }, 0.7);
-    // la carte « Messages » devient le monde suivant
-    tl.to(["#out-c1", "#out-c3", "#out-c4", "#out-titre"], { opacity: 0, filter: "blur(15px)", duration: 0.3, ease: "power2.in" }, 3.35);
-    tl.to("#out-c2", { x: -258, y: 140, scale: 2.4, duration: 0.65, ease: "power2.inOut" }, 3.4);
-    tl.to("#out-c2", { opacity: 0, duration: 0.2, ease: "power2.in" }, 3.85);
+    // chaque outil s'allume en or, un par un
+    ["#out-k1", "#out-k2", "#out-k3", "#out-k4"].forEach((k, i) => {
+      tl.fromTo(k, { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.25, ease: "expo.out" }, 1.0 + i * 0.35);
+    });
+    tl.to(".out-cadre", { opacity: 0, duration: 0.25, ease: "power2.in" }, 3.6);
+    // le titre s'efface, le téléphone reste : la scène suivante change seulement l'écran
+    tl.to("#out-titre", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 3.95);
     window.__timelines["outils"] = tl;
   </script>
 </template>

@@ -1,12 +1,13 @@
 <template>
   <style>
     #root { position: absolute; inset: 0; perspective: 1800px; }
-    #tab-carte {
-      position: absolute; left: 110px; top: 470px; width: 860px; height: 1027px;
-      border-radius: 40px; overflow: hidden; background: #ede8e3;
-      box-shadow: 0 50px 90px rgba(60, 42, 20, 0.28), 0 12px 24px rgba(60, 42, 20, 0.12);
-    }
-    #tab-carte img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    #tab-tel { position: absolute; left: 230px; top: 470px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; }
+    .tel-ecran { padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
     .tab-mot {
       position: absolute; font-family: "Lato"; font-weight: 900; font-size: 44px; letter-spacing: 0.28em; color: #141210;
     }
@@ -19,7 +20,7 @@
   </style>
   <div id="root" data-composition-id="tableau" data-width="1080" data-height="1920">
     <div id="tab-scene" class="clip" data-start="0" data-duration="4.8" data-layout-allow-overlap data-layout-allow-occlusion>
-      <div id="tab-carte"><img src="assets/img/tableau.jpg" alt="Coach Chachou" /></div>
+      <div id="tab-tel" class="tel"><div class="tel-ecran"><img src="assets/img/tel-accueil.jpg" alt="Coach Chachou, accueil" /><div class="tel-ilot"></div></div></div>
       <div id="tab-m1" class="tab-mot">SUIVRE<i></i></div>
       <div id="tab-m2" class="tab-mot">PROSPECTER<i></i></div>
       <div id="tab-m3" class="tab-mot">PUBLIER<i></i></div>
@@ -28,19 +29,19 @@
   </div>
   <script>
     const tl = gsap.timeline({ paused: true });
-    // le tableau arrive entre les deux mots, puis bascule en 3D
-    tl.fromTo("#tab-carte", { y: 260, scale: 0.55, opacity: 0, rotationX: 0, rotationZ: 0, filter: "blur(10px)" },
+    // le téléphone arrive entre les deux mots, puis bascule en 3D
+    tl.fromTo("#tab-tel", { y: 260, scale: 0.55, opacity: 0, rotationX: 0, rotationZ: 0, filter: "blur(10px)" },
       { y: 0, scale: 0.86, opacity: 1, filter: "blur(0px)", duration: 0.75, ease: "expo.out" }, 0.0);
-    tl.to("#tab-carte", { rotationX: 22, rotationZ: -7, rotationY: 8, y: -40, scale: 0.78, duration: 1.0, ease: "power2.inOut", transformPerspective: 1800 }, 0.85);
+    tl.to("#tab-tel", { rotationX: 22, rotationZ: -7, rotationY: 8, y: -40, scale: 0.78, duration: 1.0, ease: "power2.inOut", transformPerspective: 1800 }, 0.85);
     // mots-clés un par un autour de l'écran incliné
     ["#tab-m1", "#tab-m2", "#tab-m3", "#tab-m4"].forEach((s, i) => {
       const t = 1.3 + i * 0.6;
       tl.fromTo(s, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, t);
       tl.fromTo(s + " i", { width: 0 }, { width: 120, duration: 0.45, ease: "expo.out" }, t + 0.08);
     });
-    // plongée dans la carte « objectif »
+    // plongée dans l'écran du téléphone
     tl.to(".tab-mot", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in", stagger: 0.03 }, 3.9);
-    tl.to("#tab-carte", { rotationX: 0, rotationZ: 0, rotationY: 0, scale: 2.1, y: 330, duration: 0.7, ease: "power3.in" }, 4.05);
+    tl.to("#tab-tel", { rotationX: 0, rotationZ: 0, rotationY: 0, scale: 1.6, y: -40, duration: 0.7, ease: "power3.in" }, 4.05);
     window.__timelines["tableau"] = tl;
   </script>
 </template>

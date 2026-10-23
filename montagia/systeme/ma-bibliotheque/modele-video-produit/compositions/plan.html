@@ -10,8 +10,9 @@
       position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
       background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32);
     }
-    #plan-ecran { width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; }
-    #plan-video { width: 580px; height: 923px; object-fit: cover; display: block; }
+    #plan-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3;  padding-top: 56px; }
+    #plan-video { width: 580px; height: 856px; object-fit: cover; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
   </style>
   <div id="root" data-composition-id="plan" data-width="1080" data-height="1920">
     <div id="plan-scene" class="clip" data-start="0" data-duration="4.6" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
@@ -21,6 +22,7 @@
       </div>
       <div id="plan-tel"><div id="plan-ecran">
         <video id="plan-video" class="clip" src="assets/video/plan30.mp4" data-start="0" data-duration="4.5" muted playsinline></video>
+        <div class="tel-ilot"></div>
       </div></div>
     </div>
   </div>
