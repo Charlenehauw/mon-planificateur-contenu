@@ -1,0 +1,37 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #msg-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #msg-t1 { font-family: "Anton"; font-size: 104px; line-height: 1; color: #141210; }
+    #msg-t1 b { font-weight: 400; color: #e8bd3c; }
+    #msg-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+    #msg-tel {
+      position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32);
+    }
+    #msg-ecran { width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; }
+    #msg-video { width: 580px; height: 923px; object-fit: cover; display: block; }
+  </style>
+  <div id="root" data-composition-id="messages" data-width="1080" data-height="1920">
+    <div id="msg-scene" class="clip" data-start="0" data-duration="4.8" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
+      <div id="msg-titre">
+        <div id="msg-t1">TES <b>MESSAGES</b></div>
+        <div id="msg-t2">de prospection, prêts à envoyer.</div>
+      </div>
+      <div id="msg-tel"><div id="msg-ecran">
+        <video id="msg-video" class="clip" src="assets/video/messages.mp4" data-start="0" data-duration="4.75" muted playsinline></video>
+      </div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // le téléphone sort de la carte « Messages »
+    tl.fromTo("#msg-tel", { scale: 1.25, opacity: 0, filter: "blur(10px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0.0);
+    tl.fromTo("#msg-t1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.3);
+    tl.fromTo("#msg-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.55);
+    // balayage vers la gauche vers le plan 30 jours
+    tl.to("#msg-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 4.42);
+    window.__timelines["messages"] = tl;
+  </script>
+</template>

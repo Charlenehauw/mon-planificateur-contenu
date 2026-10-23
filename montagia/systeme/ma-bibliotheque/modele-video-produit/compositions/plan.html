@@ -1,0 +1,35 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #plan-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #plan-t1 { font-family: "Anton"; font-size: 104px; line-height: 1; color: #141210; }
+    #plan-t1 b { font-weight: 400; color: #e8bd3c; }
+    #plan-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+    #plan-tel {
+      position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32);
+    }
+    #plan-ecran { width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; }
+    #plan-video { width: 580px; height: 923px; object-fit: cover; display: block; }
+  </style>
+  <div id="root" data-composition-id="plan" data-width="1080" data-height="1920">
+    <div id="plan-scene" class="clip" data-start="0" data-duration="4.6" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
+      <div id="plan-titre">
+        <div id="plan-t1">UN PLAN <b>30 JOURS</b></div>
+        <div id="plan-t2">une action par jour.</div>
+      </div>
+      <div id="plan-tel"><div id="plan-ecran">
+        <video id="plan-video" class="clip" src="assets/video/plan30.mp4" data-start="0" data-duration="4.5" muted playsinline></video>
+      </div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#plan-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
+    tl.fromTo("#plan-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.5);
+    // le téléphone recule et se fond : place à la semaine
+    tl.to("#plan-scene", { scale: 0.85, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power3.in" }, 4.28);
+    window.__timelines["plan"] = tl;
+  </script>
+</template>

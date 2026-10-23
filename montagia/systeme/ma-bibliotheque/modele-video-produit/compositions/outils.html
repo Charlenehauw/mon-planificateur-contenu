@@ -1,0 +1,40 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #out-titre { position: absolute; left: 0; right: 0; top: 240px; text-align: center; }
+    #out-t1 { font-family: "Anton"; font-size: 150px; line-height: 1; color: #141210; }
+    #out-t1 b { font-weight: 400; color: #e8bd3c; }
+    #out-t2 { margin-top: 16px; font-family: "Lato"; font-style: italic; font-size: 50px; color: #4a433c; }
+    .out-carte { position: absolute; width: 444px; border-radius: 30px; overflow: hidden; box-shadow: 0 24px 50px rgba(60, 42, 20, 0.18); }
+    .out-carte img { width: 100%; display: block; }
+    #out-c1 { left: 76px; top: 600px; }
+    #out-c2 { left: 560px; top: 600px; }
+    #out-c3 { left: 76px; top: 960px; }
+    #out-c4 { left: 560px; top: 960px; }
+  </style>
+  <div id="root" data-composition-id="outils" data-width="1080" data-height="1920">
+    <div id="out-scene" class="clip" data-start="0" data-duration="4.2" data-layout-allow-overlap data-layout-allow-occlusion>
+      <div id="out-titre">
+        <div id="out-t1"><b>4</b> OUTILS</div>
+        <div id="out-t2">prêts à l'emploi.</div>
+      </div>
+      <div id="out-c1" class="out-carte"><img src="assets/img/outil-tl.png" alt="Idées de contenu" /></div>
+      <div id="out-c2" class="out-carte"><img src="assets/img/outil-tr.png" alt="Messages" /></div>
+      <div id="out-c3" class="out-carte"><img src="assets/img/outil-bl.png" alt="Tarif juste" /></div>
+      <div id="out-c4" class="out-carte"><img src="assets/img/outil-br.png" alt="Plan 30 jours" /></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#out-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
+    tl.fromTo("#out-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.45);
+    tl.fromTo(".out-carte", { opacity: 0, y: 50, scale: 0.9, filter: "blur(8px)" },
+      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out", stagger: 0.17 }, 0.7);
+    // la carte « Messages » devient le monde suivant
+    tl.to(["#out-c1", "#out-c3", "#out-c4", "#out-titre"], { opacity: 0, filter: "blur(15px)", duration: 0.3, ease: "power2.in" }, 3.35);
+    tl.to("#out-c2", { x: -258, y: 140, scale: 2.4, duration: 0.65, ease: "power2.inOut" }, 3.4);
+    tl.to("#out-c2", { opacity: 0, duration: 0.2, ease: "power2.in" }, 3.85);
+    window.__timelines["outils"] = tl;
+  </script>
+</template>
