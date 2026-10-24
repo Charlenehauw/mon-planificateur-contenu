@@ -11,20 +11,22 @@
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     #fin-trait { width: 380px; height: 6px; margin: 24px auto 0; background: #e8bd3c; border-radius: 3px; }
-    #fin-cta { margin-top: 40px; font-family: "Lato"; font-weight: 900; font-size: 46px; letter-spacing: 0.3em; color: #4a433c; padding-left: 0.3em; }
+    #fin-by { margin-top: 22px; font-family: "Lato"; font-style: italic; font-size: 56px; color: #4a433c; }
+    #fin-cta { margin-top: 34px; font-family: "Lato"; font-weight: 900; font-size: 46px; letter-spacing: 0.3em; color: #4a433c; padding-left: 0.3em; }
     .fin-etoile { position: absolute; width: 70px; height: 70px; }
     .fin-etoile path { fill: #e8bd3c; }
     #fin-e1 { left: 120px; top: 640px; }
     #fin-e2 { left: 900px; top: 560px; width: 52px; height: 52px; }
-    #fin-e3 { left: 880px; top: 1010px; width: 44px; height: 44px; }
+    #fin-e3 { left: 880px; top: 1090px; width: 44px; height: 44px; }
   </style>
   <div id="root" data-composition-id="fin" data-width="1080" data-height="1920">
     <div id="fin-scene" class="clip" data-start="0" data-duration="4" data-layout-allow-overlap>
       <div id="fin-bloc">
         <div id="fin-rejoins">TON COACH DANS LA POCHE</div>
-        <div id="fin-l1">COACH</div>
-        <div id="fin-l2">CHACHOU</div>
+        <div id="fin-l1">BIZ’ EN</div>
+        <div id="fin-l2">POCHE</div>
         <div id="fin-trait"></div>
+        <div id="fin-by">by Charlène</div>
         <div id="fin-cta">LIEN EN BIO ♥</div>
       </div>
       <svg id="fin-e1" class="fin-etoile" viewBox="-50 -50 100 100"><path d="M0 -50 L9 -9 L50 0 L9 9 L0 50 L-9 9 L-50 0 L-9 -9 Z" /></svg>
@@ -38,6 +40,7 @@
     tl.fromTo("#fin-l2", { scale: 1.25, opacity: 0, filter: "blur(14px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.4);
     tl.fromTo("#fin-trait", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.75);
     tl.fromTo("#fin-rejoins", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power2.out" }, 1.0);
+    tl.fromTo("#fin-by", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" }, 1.15);
     tl.fromTo("#fin-cta", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" }, 1.35);
     // étoiles de son identité (en or, le crème disparaîtrait sur ce fond clair) : apparition puis scintillement unique
     ["#fin-e1", "#fin-e2", "#fin-e3"].forEach((s, i) => {

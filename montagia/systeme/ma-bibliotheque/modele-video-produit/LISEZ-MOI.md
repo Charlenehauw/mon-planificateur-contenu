@@ -13,3 +13,5 @@ Version du 23/10/2026 (« espace complet ») : 12 scènes, 48,6 s. Après messag
 (exemple « Léa », 384 x 848) est découpé en séquences : prospects (« TON BUSINESS STRUCTURÉ. »), clientes & ventes, réseaux,
 motivation, victoires. Découpe : crop=384:724:0:124 (sans la barre du haut), agrandi en 720 de large (lanczos + netteté légère),
 vitesse ajustée pour remplir chaque scène. La scène « semaine » a été retirée (le mini plan apparaît dans « une vision claire »).
+
+Version du 24/10/2026 : produit renommé « Biz’ en poche by Charlène » (intro et écran final). Fichier : produit-biz-en-poche.mp4.
