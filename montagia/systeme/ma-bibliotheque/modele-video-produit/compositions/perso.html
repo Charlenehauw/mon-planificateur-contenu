@@ -1,0 +1,43 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #per-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #per-t1 { font-family: "Anton"; font-size: 96px; line-height: 1; color: #141210; }
+    #per-t1 b { font-weight: 400; color: #e8bd3c; }
+    #per-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+    .tel { position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .emo { position: absolute; width: 130px; }
+  </style>
+  <div id="root" data-composition-id="perso" data-width="1080" data-height="1920">
+    <div id="per-scene" class="clip" data-start="0" data-duration="4.8" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
+      <div id="per-titre">
+        <div id="per-t1">TON APP, <b>TES COULEURS</b></div>
+        <div id="per-t2">change d'ambiance en un clic.</div>
+      </div>
+      <div id="per-tel" class="tel"><div class="tel-ecran">
+        <video id="per-video" class="clip" src="assets/video/app-perso.mp4" data-start="0" data-duration="4.8" muted playsinline></video>
+        <div class="tel-ilot"></div>
+      </div></div>
+      <img id="per-emo1" class="emo" src="assets/img/emoji-palette.png" alt="" style="left: 50px; top: 655px;" />
+      <img id="per-emo2" class="emo" src="assets/img/emoji-fleur.png" alt="" style="left: 900px; top: 835px;" />
+      <img id="per-emo3" class="emo" src="assets/img/emoji-coeurviolet.png" alt="" style="left: 50px; top: 1095px;" />
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // arrivée en balayage depuis la droite
+    tl.fromTo("#per-scene", { x: 1150, filter: "blur(14px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0.0);
+    tl.fromTo("#per-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.5);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#per-emo1", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.8);
+    tl.fromTo("#per-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.9);
+    tl.fromTo("#per-emo3", { scale: 0, rotation: 18, opacity: 0 }, { scale: 1, rotation: -6, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 3.4);
+    tl.to("#per-scene", { scale: 0.85, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power3.in" }, 4.45);
+    window.__timelines["perso"] = tl;
+  </script>
+</template>

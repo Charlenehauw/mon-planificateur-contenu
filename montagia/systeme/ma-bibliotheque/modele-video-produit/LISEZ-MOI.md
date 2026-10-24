@@ -15,3 +15,7 @@ motivation, victoires. Découpe : crop=384:724:0:124 (sans la barre du haut), ag
 vitesse ajustée pour remplir chaque scène. La scène « semaine » a été retirée (le mini plan apparaît dans « une vision claire »).
 
 Version du 24/10/2026 : produit renommé « Biz’ en poche by Charlène » (intro et écran final). Fichier : produit-biz-en-poche.mp4.
+
+Version du 24/10/2026 (mise à jour appli) : 15 scènes, 60,4 s. Nouvelles scènes : guide (visite au démarrage, entrée par la plongée),
+commissions (affiliation), perso (« TON APP, TES COULEURS », changement d'ambiance accéléré x2,6, dernière scène avant la fin).
+Source : enregistrement 384 x 848 de 42 s, même découpe crop=384:724:0:124.

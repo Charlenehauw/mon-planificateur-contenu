@@ -1,0 +1,42 @@
+<template>
+  <style>
+    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+    #root { position: absolute; inset: 0; }
+    #gui-titre { position: absolute; left: 0; right: 0; top: 185px; text-align: center; }
+    #gui-t1 { font-family: "Anton"; font-size: 92px; line-height: 1; color: #141210; }
+    #gui-t1 b { font-weight: 400; color: #e8bd3c; }
+    #gui-t2 { margin-top: 10px; font-family: "Lato"; font-style: italic; font-size: 46px; color: #4a433c; }
+    .tel { position: absolute; left: 230px; top: 400px; width: 620px; height: 952px; border-radius: 74px;
+      background: #141210; padding: 20px; box-shadow: 0 50px 90px rgba(40, 28, 12, 0.32); }
+    .tel-ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #ede8e3; padding-top: 56px; }
+    .tel-ecran > img, .tel-ecran > video { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
+    .tel-ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; }
+    .emo { position: absolute; width: 130px; }
+  </style>
+  <div id="root" data-composition-id="guide" data-width="1080" data-height="1920">
+    <div id="gui-scene" class="clip" data-start="0" data-duration="3.6" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-caption-zone>
+      <div id="gui-titre">
+        <div id="gui-t1">GUIDÉE <b>DÈS LE DÉBUT</b></div>
+        <div id="gui-t2">une visite pas à pas, puis un exemple à explorer.</div>
+      </div>
+      <div id="gui-tel" class="tel"><div class="tel-ecran">
+        <video id="gui-video" class="clip" src="assets/video/app-guide.mp4" data-start="0" data-duration="3.6" muted playsinline></video>
+        <div class="tel-ilot"></div>
+      </div></div>
+      <img id="gui-emo1" class="emo" src="assets/img/emoji-coucou.png" alt="" style="left: 50px; top: 655px;" />
+      <img id="gui-emo2" class="emo" src="assets/img/emoji-idee.png" alt="" style="left: 900px; top: 915px;" />
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // le téléphone arrive un peu grand et se pose (raccord avec la plongée)
+    tl.fromTo("#gui-tel", { scale: 1.3, opacity: 0.4, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 0.0);
+    tl.fromTo("#gui-t1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.35);
+    tl.fromTo("#gui-t2", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.6);
+    // émojis qui surgissent dans les espaces vides autour du téléphone
+    tl.fromTo("#gui-emo1", { scale: 0, rotation: 24, opacity: 0 }, { scale: 1, rotation: -8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.8);
+    tl.fromTo("#gui-emo2", { scale: 0, rotation: -24, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 1.6);
+    tl.to("#gui-scene", { x: -1150, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 3.22);
+    window.__timelines["guide"] = tl;
+  </script>
+</template>
