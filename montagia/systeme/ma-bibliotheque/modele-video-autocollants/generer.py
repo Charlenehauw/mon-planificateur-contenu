@@ -103,11 +103,22 @@ def scene(cid, p, tag, groupes, visuels, extra_js="", fin_tenue=0.3):
 </template>
 """
     (OUT / "compositions" / f"{cid}.html").write_text(doc, encoding="utf-8")
-    return dur, debuts, visuels
+    ev = [("choc", 0.12, 0.22)]                                   # le ruban se colle
+    for gi, g in enumerate(groupes):
+        for wi, w in enumerate(g):
+            t = debuts[gi] + wi * MOT + 0.02
+            ev.append(("pop", t, 0.32) if w.startswith("*") else ("clic", t, 0.35))   # chaque étiquette qui tombe
+    for v in visuels:
+        if v.get("vol"):
+            ev.append(("whoosh", debuts[v.get("g", 0)] + v.get("dt", 0.0) - 0.05, 0.28))
+    return dur, debuts, visuels, ev
 
 SCENES = []
+EVENEMENTS = {}
 def ajoute(*a, **k):
-    SCENES.append((a[0],) + scene(*a, **k))
+    dur, debuts, vis, ev = scene(*a, **k)
+    SCENES.append((a[0], dur, debuts, vis))
+    EVENEMENTS[a[0]] = ev
 
 L, R = 190, 890
 ajoute("accroche", "acc", "BIZ’ EN POCHE",
@@ -175,6 +186,14 @@ cta.write_text(cta.read_text(encoding="utf-8").replace("CLIC", str(clic)), encod
 # ---------- index : fond papier, scènes, feuilles de papier aux transitions, bruitages
 debut, hosts, feuilles, sons = 0.0, "", "", []
 for k, (cid, dur, debs, vis) in enumerate(SCENES):
+    sons += [(f, debut + t, v) for f, t, v in EVENEMENTS[cid]]
+    if cid == "accroche":
+        sons.append(("impact", debut + debs[0] + MOT + 0.02, 0.35))          # « business »
+    if cid == "fou":
+        sons += [("montee", debut - 0.9, 0.3), ("impact", debut + 0.15, 0.35)]
+        sons += [("whoosh", debut + t - 0.05, 0.25) for t in (1.95, 2.65, 3.35)]   # changements de couleur
+    if cid == "quoi":
+        sons += [("pop", debut + debs[i] + d + 0.05, 0.35) for i, d in ((0, 0.6), (1, 0.3), (2, 0.6))]
     hosts += f'''
       <div id="{cid}" class="scene" data-composition-id="{cid}" data-composition-src="compositions/{cid}.html"
         data-start="{debut:g}" data-duration="{dur:g}" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>'''
@@ -182,7 +201,7 @@ for k, (cid, dur, debs, vis) in enumerate(SCENES):
         if v["kind"] in ("st", "carte", "html"):
             sons.append(("pop", debut + debs[v.get("g", 0)] + v.get("dt", 0) + 0.05, 0.3))
     if cid == "cta":
-        sons.append(("clic", debut + clic, 0.7)); sons.append(("impact", debut + debs[0] + 0.05, 0.4))
+        sons += [("clic", debut + clic, 0.7), ("ding", debut + clic + 0.05, 0.35), ("impact", debut + debs[0] + 0.05, 0.4)]
     if k > 0:
         feuilles += f'''
       <div id="feuille-{k}" class="clip" data-start="{debut - 0.3:.2f}" data-duration="0.6" data-track-index="2" style="position: absolute; inset: 0; z-index: 5;" data-layout-allow-overlap data-layout-allow-occlusion><div id="feuille-{k}-papier" class="feuille"></div></div>'''
