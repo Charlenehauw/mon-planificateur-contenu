@@ -40,7 +40,9 @@ css = """    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Reg
     .ecran { position: relative; width: 580px; height: 912px; border-radius: 56px; overflow: hidden; background: #EDE8E3; }
     .vue { position: absolute; left: 0; top: 0; width: 580px; height: 912px; padding-top: 56px; background: #EDE8E3; }
     .vue video, .vue img.plein { width: 580px; height: 856px; object-fit: cover; object-position: top; display: block; }
-    .vue img.carte { width: 540px; margin: 40px 20px 0; display: block; border-radius: 22px; }
+    .vue.photo { display: flex; align-items: center; justify-content: center; overflow: hidden; background: #ECE7E1; }
+    .vue.photo img { width: 580px; flex: none; display: block; }
+    .vue.photo img.rogne { width: 604px; }
     .ilot { position: absolute; left: 215px; top: 16px; width: 150px; height: 40px; border-radius: 20px; background: #141210; z-index: 5; }
     .mini { position: absolute; width: 120px; height: 120px; border-radius: 30px; background: #FFFFFF; box-shadow: 0 8px 20px rgba(60, 40, 20, 0.15); display: flex; align-items: center; justify-content: center; }
     .mini img { width: 70px; }
@@ -54,7 +56,6 @@ css = """    @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Reg
     #splash .l1 { font-family: "Anton"; font-size: 150px; line-height: 1; color: #141210; }
     #splash .l2 { font-family: "Anton"; font-size: 150px; line-height: 1; color: #FFFFFF; }
     #splash .by { margin-top: 18px; font-family: "Lato"; font-style: italic; font-size: 48px; color: #141210; }
-    #pied { position: absolute; left: 0; right: 0; top: 1395px; text-align: center; font-family: "Lato"; font-weight: 900; font-size: 38px; color: #141210; letter-spacing: 0.04em; }
 """
 h, js = [], []
 h.append('<div id="h1" class="haut">6 APPLIS…</div><div id="h2" class="haut">…DANS <b>UNE SEULE.</b></div><div id="h3" class="haut" style="top: 200px; font-size: 96px;">TOUT TON BUSINESS,<br /><b>DANS TA POCHE.</b></div>')
@@ -70,8 +71,10 @@ for f, (titre, neuf, kind, src) in enumerate(FEATS):
         inner = f'<video id="v{f}-media" class="clip" src="assets/video/{src}" data-start="{t0}" data-duration="{D_F}" muted playsinline></video>'
         vues.append(f'<div id="v{f}" class="vue">{inner}</div>')
     else:
-        cls = "carte" if src == "image-3.jpg" else "plein"
-        vues.append(f'<div id="v{f}" class="vue"><img class="{cls}" src="assets/img/{src}" alt="" /></div>')
+        # capture photo : largeur entière de l'écran, centrée en hauteur (barres de défilement rognées)
+        cls = ' class="rogne"' if src in ("image-5.jpg", "image-6.jpg") else ""
+        fond = ' style="background: #EFE7E4;"' if src == "image-5.jpg" else ""   # même beige que la capture
+        vues.append(f'<div id="v{f}" class="vue photo"{fond}><img{cls} src="assets/img/{src}" alt="" /></div>')
     js.append(f'    tl.fromTo("#v{f}", {{ y: 912, opacity: 1 }}, {{ y: 0, duration: 0.32, ease: "power3.out" }}, {t0 - 0.05:.2f});')
     if f + 1 < len(FEATS):
         js.append(f'    tl.to("#v{f}", {{ y: -200, opacity: 0, duration: 0.3, ease: "power2.in" }}, {t0 + D_F - 0.08:.2f});')
@@ -88,7 +91,6 @@ FLECHES = [(150, 380, "M20 100 Q60 20 110 40 M92 26 L110 40 L94 56", 1), (850, 4
            (150, 1020, "M20 20 Q60 100 110 80 M92 64 L110 80 L94 96", 1), (850, 1080, "M100 20 Q60 100 10 80 M28 64 L10 80 L26 96", 1)]
 for i, (x, y, d, _) in enumerate(FLECHES):
     h.append(f'<svg id="f{i}" class="fleche" viewBox="0 0 120 120" style="left: {x - 60}px; top: {y - 60}px;"><path d="{d}" /></svg>')
-h.append('<div id="pied">@hwl.assistantevirtuelle · LIEN EN BIO ♥</div>')
 
 # --- intro : les applis sont aspirées dans l'icône Biz' en poche
 js0 = []
@@ -117,7 +119,6 @@ js.append(f'    tl.fromTo("#splash", {{ clipPath: "inset(100% 0% 0% 0%)" }}, {{ 
 js.append(f'    tl.fromTo("#splash .l1, #splash .l2", {{ scale: 1.3, opacity: 0, filter: "blur(10px)" }}, {{ scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "expo.out", stagger: 0.1 }}, {T_FIN + 0.35:.2f});')
 js.append(f'    tl.fromTo("#splash .by", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, {T_FIN + 0.75:.2f});')
 js.append(f'    tl.fromTo("#h3", {{ opacity: 0, filter: "blur(8px)" }}, {{ opacity: 1, filter: "blur(0px)", duration: 0.3 }}, {T_FIN + 0.2:.2f});')
-js.append(f'    tl.fromTo("#pied", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }}, {T_FIN + 0.9:.2f});')
 js.append(f'    tl.fromTo(".mini", {{ y: 0 }}, {{ y: -16, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1, stagger: 0.05 }}, {T_FIN + 0.4:.2f});')
 
 scene_html = f"""<template>
@@ -177,3 +178,4 @@ index = f"""<!doctype html>
 """
 (OUT / "index.html").write_text(index, encoding="utf-8")
 print("durée", DUREE)
+
