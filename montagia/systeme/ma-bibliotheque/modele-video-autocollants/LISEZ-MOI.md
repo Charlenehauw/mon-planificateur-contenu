@@ -11,3 +11,10 @@ Tout le texte, l'ordre des chapitres et les visuels sont dans la liste SCENES en
 Bruitages (26/10) : « clic » sur chaque étiquette de mot, « pop » sur les mots forts et les autocollants, « choc » quand le ruban se colle, « whoosh » sur les envols, les feuilles et les changements de couleur, montée + impact sur l'accroche et « le plus fou », clic + ding sur « Abonnée ».
 Version courte (< 20 s) : generer_court.py (5 chapitres, un mot toutes les 0,22 s), fichier biz-en-poche-autocollants-20s.mp4.
 Rythme : un mot toutes les 0,30 s, un groupe reste 0,75 s après son dernier mot ; une feuille de papier balaie l'écran entre deux chapitres.
+
+Version voix off IA (26/10/2026) : generer_voix.py. Voix française locale et gratuite Kokoro « ff_siwis » (npx hyperframes tts, avec
+HYPERFRAMES_PYTHON pointant vers le Python de Montag'IA où kokoro-onnx et soundfile sont installés), vitesse 0.95.
+Écrire les mots anglais « à la française » pour la voix : « biznesse », « Bizz en poche, baille Charlène ».
+Les étiquettes tombent sur le début de chaque mot (relevé par faster-whisper -> voix-temps.json). Bruitages baissés à 70 % sous la voix,
+pas de clic par étiquette. Fichier : biz-en-poche-voix-ia.mp4 (18,8 s, -17 LUFS).
+Correction : ecran-c-jaune.png doit venir d'une image où l'appli est encore jaune (début de l'enregistrement, 3,85 s).
