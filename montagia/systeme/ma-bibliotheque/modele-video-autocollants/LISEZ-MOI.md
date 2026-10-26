@@ -9,4 +9,5 @@ img/ecran-*.png (morceaux d'écrans de l'appli recadrés et agrandis x2,5). Puis
   python3 generer.py <dossier du projet>   -> écrit compositions/*.html et index.html
 Tout le texte, l'ordre des chapitres et les visuels sont dans la liste SCENES en bas de generer.py.
 Bruitages (26/10) : « clic » sur chaque étiquette de mot, « pop » sur les mots forts et les autocollants, « choc » quand le ruban se colle, « whoosh » sur les envols, les feuilles et les changements de couleur, montée + impact sur l'accroche et « le plus fou », clic + ding sur « Abonnée ».
+Version courte (< 20 s) : generer_court.py (5 chapitres, un mot toutes les 0,22 s), fichier biz-en-poche-autocollants-20s.mp4.
 Rythme : un mot toutes les 0,30 s, un groupe reste 0,75 s après son dernier mot ; une feuille de papier balaie l'écran entre deux chapitres.
