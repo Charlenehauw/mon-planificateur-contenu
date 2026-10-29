@@ -88,3 +88,8 @@ Charlène travaille pour plusieurs comptes et clients : chacun a sa propre ident
 - Nouvelle identité : `identite.py creer <nom>` (part d'une copie de l'active), puis faire l'accueil de `montage-ia`
   (couleurs, police, ambiance, sous-titres, B-roll, pseudo, modèle éventuel) et réécrire le framework pour ce client, puis `identite.py sauver`.
 - Après tout changement de charte ou de style : `identite.py sauver`.
+
+## Notes de montage (reel-4, 29/10/2026)
+- Quand la tête est tout en haut du cadre (téléphone posé bas), les titres Anton passent sur la poitrine (`"blocs_y": 1180` dans replique.json) au lieu d'au-dessus de la tête.
+- Les « euh » sont mieux trouvés en retranscrivant la source avec faster-whisper et un `initial_prompt` plein de « euh » (ils apparaissent alors comme des mots). On coupe entre le mot d'avant et le mot d'après, puis on reconstruit `mots.json` à partir de cette transcription (en passant les temps à travers les plages de `coupes.json`).
+- B-roll de ses écrans et de ses avis : `ma-bibliotheque/modele-broll-telephone/` (HyperFrames, entre replique et finitions).
