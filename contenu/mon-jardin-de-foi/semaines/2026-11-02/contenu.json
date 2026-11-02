@@ -1,0 +1,126 @@
+{
+  "semaine": "2026-11-02",
+  "hashtags": "#monjardindefoi #muslimah #soeurmusulmane #rappelislam #mamanmusulmane #convertie #coran #islam #deen #routinespirituelle",
+  "carrousels": [
+    {
+      "id": "c1",
+      "date": "2026-11-02T13:30:00",
+      "pilier": "Rappel islamique",
+      "slides": [
+        {"type": "cover", "kicker": "Rappel du lundi", "title": "Allah ne te demande pas d'être parfaite", "text": "Pour les jours où tu te sens « pas assez » 🌷"},
+        {"type": "arabic", "ar": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا", "text": "« Allah n'impose à aucune âme une charge supérieure à sa capacité. »", "src": "Sourate Al-Baqara, 2:286"},
+        {"type": "text", "title": "Tu as raté ta lecture hier ?", "text": "Ton wird de ce matin est passé à la trappe ?<br><br>Ce n'est pas la fin de ton chemin.<br><b>C'est juste une journée.</b> 🤍"},
+        {"type": "arabic", "ar": "أَحَبُّ الأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ", "text": "« Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. »", "src": "Rapporté par Al-Bukhari (6464) et Muslim (783)"},
+        {"type": "list", "title": "Aujourd'hui, choisis UNE petite graine", "items": ["🌱 1 page de Coran", "🌱 1 invocation sincère", "🌱 1 dhikr après une prière"]},
+        {"type": "cta", "title": "La régularité plutôt que la perfection", "text": "C'est comme ça qu'un jardin pousse 🌸", "cta": "Enregistre ce post pour les jours difficiles 🤍"}
+      ],
+      "caption": "Allah ne te demande pas d'être parfaite, ma sœur 🌷\n\nTu as raté ta lecture hier ? Ton wird est passé à la trappe avec la fatigue, les enfants, les cours… Ce n'est pas la fin de ton chemin. C'est juste une journée 🤍\n\n« Allah n'impose à aucune âme une charge supérieure à sa capacité. » (2:286)\n\nEt le Prophète ﷺ nous a appris que les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont petites (Al-Bukhari & Muslim).\n\n🌱 Alors aujourd'hui, choisis juste UNE petite graine. Une page, une invocation, un dhikr.\n\nLaquelle tu choisis ? Dis-le moi en commentaire 🌸\n\n"
+    },
+    {
+      "id": "c2",
+      "date": "2026-11-03T10:00:00",
+      "pilier": "Bien-être de la femme",
+      "slides": [
+        {"type": "cover", "kicker": "Bien-être", "title": "5 gestes doux pour ta matinée", "text": "Même quand tu es fatiguée, maman ou étudiante 🌷"},
+        {"type": "step", "num": "1", "title": "Bismillah avant l'écran", "text": "Commence par les invocations du réveil, <b>avant</b> de prendre ton téléphone 📵"},
+        {"type": "step", "num": "2", "title": "Un grand verre d'eau", "text": "💧 « Ton corps a un droit sur toi. »<br><span class='src'>Rapporté par Al-Bukhari (1975)</span>"},
+        {"type": "step", "num": "3", "title": "Fajr + 2 minutes de dhikr", "text": "Même avec un enfant dans les bras, même à voix basse : <b>ça compte</b> 🤍"},
+        {"type": "step", "num": "4", "title": "Une seule intention", "text": "✍️ « Aujourd'hui, je veux… »<br>Une phrase suffit pour donner une direction à ta journée."},
+        {"type": "step", "num": "5", "title": "Un moment de lumière", "text": "☀️ Ouvre les volets, respire, souris.<br>« Ton sourire à ton frère est une aumône. »<br><span class='src'>Rapporté par At-Tirmidhi (1956)</span>"},
+        {"type": "cta", "title": "Lequel tu essaies demain ?", "text": "Pas les 5 d'un coup : un seul, en douceur 🌱", "cta": "Dis-le moi en commentaire 🌷"}
+      ],
+      "caption": "5 gestes doux pour ta matinée de sœur débordée 🌷\n\n1️⃣ Bismillah et les invocations du réveil avant l'écran 📵\n2️⃣ Un grand verre d'eau : ton corps a un droit sur toi 💧\n3️⃣ Fajr + 2 minutes de dhikr, même avec bébé dans les bras 🤍\n4️⃣ Une seule intention pour la journée ✍️\n5️⃣ Un moment de lumière et un sourire ☀️\n\nTu n'as pas besoin de tout faire. Choisis-en un seul et laisse-le pousser 🌱\n\nLequel tu testes demain matin ? 🌸\n\n"
+    },
+    {
+      "id": "c3",
+      "date": "2026-11-04T10:00:00",
+      "pilier": "Mon offre",
+      "slides": [
+        {"type": "cover", "kicker": "Mon Jardin de Foi", "title": "Et si ta foi avait enfin un endroit à elle ?", "text": "Un seul endroit, doux et organisé 🌷"},
+        {"type": "text", "title": "Tu te reconnais ?", "text": "Une appli pour le Coran, des notes pour les hadiths, un carnet pour tes objectifs…<br><br><b>Et au final, tu te disperses.</b> 😮‍💨"},
+        {"type": "text", "title": "Mon Jardin de Foi", "text": "rassemble toute ta routine spirituelle dans une seule appli, pensée <b>par une sœur, pour les sœurs</b> 🫶"},
+        {"type": "list", "kicker": "Version gratuite", "title": "Pour commencer en douceur", "items": ["📖 Coran : plan de lecture, sourates, mémorisation", "📚 Apprentissage : leçons, 99 Noms, hadiths, quiz"]},
+        {"type": "list", "kicker": "Version complète", "title": "Tout le jardin", "items": ["🕌 Ta journée par prière", "🌙 Jeûne & 📓 carnet du soir", "✨ Glow up & 🌱 habitudes", "🏆 Défis & 🤲 aumône", "🎨 Thèmes de couleur"]},
+        {"type": "text", "title": "Chaque journée complète fait pousser une fleur", "text": "<span class='big'>🌱 🌷 🌸 🌺 🌹</span><br>Tu vois ta foi grandir, jour après jour."},
+        {"type": "offer", "title": "Offre de lancement", "old": "7,90 €", "price": "2,99 €", "text": "Paiement unique · accès à vie<br>Jusqu'au 30 novembre", "cta": "Lien en bio 🌷"}
+      ],
+      "caption": "Et si ta foi avait enfin un endroit à elle ? 🌷\n\nLe Coran sur une appli, les hadiths dans tes notes, tes objectifs dans un carnet… et au final tu te disperses. Je connais 🫶\n\nMon Jardin de Foi rassemble tout au même endroit :\n📖 Coran & 📚 Apprentissage → gratuit\n🕌 Ta journée par prière, 🌙 jeûne, 📓 carnet du soir, ✨ glow up, 🌱 habitudes, défis, 🤲 aumône, 🎨 thèmes → version complète\n\nEt chaque journée complète fait pousser une fleur dans ton jardin 🌱🌷🌸🌺🌹\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre.\n\n👉 Lien en bio\n\n"
+    },
+    {
+      "id": "c4",
+      "date": "2026-11-05T10:00:00",
+      "pilier": "Motivation",
+      "slides": [
+        {"type": "cover", "kicker": "Motivation", "title": "Tu n'es pas en retard, ma sœur", "text": "Surtout si tu as l'impression de tout recommencer 🤍"},
+        {"type": "text", "title": "On se compare souvent…", "text": "Convertie, jeune maman, étudiante…<br>On regarde celles qui « savent déjà » et on se sent à la traîne."},
+        {"type": "text", "title": "Mais Allah regarde ton cœur", "text": "« Allah ne regarde ni vos corps ni vos apparences, mais Il regarde vos cœurs et vos actes. »<br><span class='src'>Rapporté par Muslim (2564)</span>"},
+        {"type": "text", "title": "Mon histoire", "text": "J'ai embrassé l'islam il y a environ 6 ans.<br>J'ai appris pas à pas, et <b>j'apprends encore</b> 🌱"},
+        {"type": "list", "title": "3 rappels pour avancer", "items": ["🌱 Commence petit", "🌱 Apprends une chose à la fois", "🌱 Entoure-toi de sœurs bienveillantes"]},
+        {"type": "arabic", "ar": "إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ", "text": "« Certes, Allah est avec les endurants. »", "src": "Sourate Al-Baqara, 2:153"},
+        {"type": "cta", "title": "Ton chemin est le tien", "text": "Et chaque pas compte 🌸", "cta": "Partage ce post à une sœur qui en a besoin 🤍"}
+      ],
+      "caption": "Tu n'es pas en retard, ma sœur 🤍\n\nConvertie, jeune maman, étudiante… on se compare à celles qui « savent déjà ». Mais Allah ne regarde pas ton point de départ : « Allah ne regarde ni vos corps ni vos apparences, mais Il regarde vos cœurs et vos actes. » (Muslim)\n\nMoi, j'ai embrassé l'islam il y a environ 6 ans. J'ai appris pas à pas, et j'apprends encore 🌱\n\n🌷 Commence petit\n🌷 Apprends une chose à la fois\n🌷 Entoure-toi de sœurs bienveillantes\n\nPartage ce post à une sœur qui a besoin de l'entendre aujourd'hui 🌸\n\n"
+    },
+    {
+      "id": "c5",
+      "date": "2026-11-06T10:00:00",
+      "pilier": "Rappel islamique",
+      "slides": [
+        {"type": "cover", "kicker": "Jumu'a Mubarak", "title": "4 sunnahs du vendredi", "text": "À cocher dans ton jardin aujourd'hui 🌷"},
+        {"type": "step", "num": "1", "title": "Le ghusl", "text": "La grande ablution du vendredi 💧<br><span class='src'>Rapporté par Al-Bukhari (877) et Muslim (844)</span>"},
+        {"type": "step", "num": "2", "title": "Lire sourate Al-Kahf", "text": "« Celui qui lit sourate Al-Kahf le vendredi, une lumière l'éclairera entre les deux vendredis. »<br><span class='src'>Rapporté par Al-Hakim, authentifié par Al-Albani</span>"},
+        {"type": "step", "num": "3", "title": "Prier sur le Prophète ﷺ", "text": "Multiplie les salawat en ce jour béni 🤍<br><span class='src'>Rapporté par Abu Dawud (1047)</span>"},
+        {"type": "step", "num": "4", "title": "Chercher l'heure exaucée", "text": "Il y a le vendredi une heure où Allah exauce les invocations 🤲<br><span class='src'>Rapporté par Al-Bukhari (935) et Muslim (852)</span>"},
+        {"type": "check", "title": "Ma checklist du vendredi", "items": ["Ghusl", "Sourate Al-Kahf", "Salawat sur le Prophète ﷺ", "Invocations de l'après-midi"]},
+        {"type": "cta", "title": "Jumu'a Mubarak 🌷", "text": "Qu'Allah accepte tes invocations", "cta": "Enregistre pour vendredi prochain 🤍"}
+      ],
+      "caption": "Jumu'a Mubarak ma sœur 🌷\n\n4 sunnahs du vendredi à cocher aujourd'hui :\n💧 Le ghusl\n📖 La lecture de sourate Al-Kahf : une lumière entre les deux vendredis\n🤍 Multiplier les salawat sur le Prophète ﷺ\n🤲 Chercher l'heure où les invocations sont exaucées\n\nTu en as déjà fait combien aujourd'hui ? 🌸\n\nEnregistre ce post pour vendredi prochain 🤍\n\n"
+    },
+    {
+      "id": "c6",
+      "date": "2026-11-07T10:00:00",
+      "pilier": "Bien-être de la femme",
+      "slides": [
+        {"type": "cover", "kicker": "Carnet du soir", "title": "3 questions pour finir ta journée en douceur", "text": "3 minutes, rien que pour toi 🌙"},
+        {"type": "text", "title": "Avant de dormir…", "text": "Pose le téléphone, prends un carnet (ou ton jardin 🌷) et respire.<br><br><b>Tu as le droit de souffler.</b>"},
+        {"type": "step", "num": "1", "title": "Pour quoi je dis Alhamdulillah ?", "text": "Une chose, même toute petite 🤍"},
+        {"type": "step", "num": "2", "title": "Quelle victoire je célèbre ?", "text": "🌸 Même « j'ai prié à l'heure malgré la fatigue »."},
+        {"type": "step", "num": "3", "title": "Qu'est-ce que je confie à Allah ?", "text": "🤲 Ce qui te pèse, tu peux le déposer ce soir."},
+        {"type": "arabic", "ar": "أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ", "text": "« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ? »", "src": "Sourate Ar-Ra'd, 13:28"},
+        {"type": "cta", "title": "Ton carnet du soir t'attend", "text": "Dans la version complète de Mon Jardin de Foi 📓", "cta": "Lien en bio 🌷"}
+      ],
+      "caption": "Ton carnet du soir en 3 questions 🌙\n\n🤍 Pour quoi je dis Alhamdulillah aujourd'hui ?\n🌸 Quelle petite victoire je célèbre ?\n🤲 Qu'est-ce que je confie à Allah ce soir ?\n\n« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ? » (13:28)\n\n3 minutes avant de dormir, et tu fermes la journée en douceur, sans culpabilité.\n\n📓 Le carnet du soir est inclus dans la version complète de Mon Jardin de Foi (2,99 € jusqu'au 30/11). Lien en bio 🌷\n\n"
+    },
+    {
+      "id": "c7",
+      "date": "2026-11-08T11:00:00",
+      "pilier": "Mon offre",
+      "slides": [
+        {"type": "cover", "kicker": "Mon histoire", "title": "Cette appli est née en plein post-partum", "text": "Pourquoi j'ai créé Mon Jardin de Foi 🤍"},
+        {"type": "text", "title": "Tout s'éparpillait", "text": "Mon cerveau avait du mal à suivre.<br>Le Coran sur une appli, mes objectifs dans un carnet, mes notes partout…"},
+        {"type": "text", "title": "Alors j'ai créé un outil pour moi", "text": "Un seul endroit, doux et organisé, pour faire grandir ma foi <b>chaque jour</b> 🌱"},
+        {"type": "text", "title": "Puis je l'ai ouvert à vous", "text": "D'autres sœurs vivent sûrement la même chose.<br>Alors je vous l'offre 🫶"},
+        {"type": "text", "title": "Un projet bénéfique", "text": "Qui participe aussi à notre projet de hijra, in shaa Allah 🌍🤍"},
+        {"type": "list", "title": "Commence comme tu veux", "items": ["🌷 Gratuit : 📖 Coran + 📚 Apprentissage", "🌹 Complète : tout le jardin, accès à vie"]},
+        {"type": "offer", "title": "Jusqu'au 30 novembre", "old": "7,90 €", "price": "2,99 €", "text": "Paiement unique · accès à vie", "cta": "Lien en bio 🌷"}
+      ],
+      "caption": "Cette appli est née en plein post-partum 🤍\n\nMon cerveau avait du mal à suivre. Le Coran sur une appli, mes objectifs dans un carnet, mes notes partout… tout s'éparpillait.\n\nAlors j'ai créé un outil pour moi : un seul endroit, doux et organisé, pour faire grandir ma foi chaque jour 🌱\n\nPuis je me suis dit que d'autres sœurs vivaient sûrement la même chose. Alors je vous l'ai ouvert 🫶 Et c'est aussi un projet bénéfique qui participe à notre projet de hijra, in shaa Allah 🌍\n\n🌷 Version gratuite : Coran + Apprentissage\n🌹 Version complète : 2,99 € au lieu de 7,90 €, paiement unique, jusqu'au 30 novembre\n\nTu en es où dans ta routine en ce moment ? Raconte-moi 🌸\n\n👉 Lien en bio\n\n"
+    }
+  ],
+  "reels": [
+    {"id": "r1", "date": "2026-11-02T18:00:00", "type": "motion", "scene": "jardin", "pilier": "Mon offre (douce)", "sons": "vent léger, oiseaux, carillon à chaque fleur",
+     "caption": "Et si chaque prière faisait pousser une fleur ? 🌱🌷🌸🌺🌹\n\nC'est l'idée de Mon Jardin de Foi : tu coches ta journée, prière après prière, et ton jardin grandit avec toi. Pas de pression, pas de culpabilité. Juste de la régularité, en douceur 🤍\n\nTon jardin t'attend : lien en bio 🌷\n\n"},
+    {"id": "r2", "date": "2026-11-03T18:00:00", "type": "ambiance", "scene": "pluie", "pilier": "Rappel islamique", "sons": "pluie douce",
+     "caption": "Un peu, mais régulièrement 🌧️🌱\n\n« Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. » (Al-Bukhari & Muslim)\n\nComme la pluie qui tombe goutte après goutte et finit par faire pousser tout un jardin 🤍\n\nQuelle petite œuvre tu veux rendre régulière cette semaine ? 🌸\n\n"},
+    {"id": "r3", "date": "2026-11-04T18:00:00", "type": "motion", "scene": "graines", "pilier": "Bien-être / motivation", "sons": "oiseaux, vent, petits « pop » de germination",
+     "caption": "Débordée ? Commence par 3 petites graines 🌱\n\n🌱 1 verset par jour\n🌱 1 invocation après chaque prière\n🌱 1 bonne action discrète\n\nPas besoin de tout changer d'un coup. Plante, arrose, et laisse Allah faire pousser 🤍\n\nEnregistre cette vidéo pour t'en souvenir 🌷\n\n"},
+    {"id": "r4", "date": "2026-11-05T18:00:00", "type": "ambiance", "scene": "aube", "pilier": "Motivation", "sons": "oiseaux du matin, brise",
+     "caption": "Ce que tu traverses n'est pas la fin de ton histoire 🌅\n\n« À côté de la difficulté est, certes, une facilité. À côté de la difficulté, certes, une facilité. » (94:5-6)\n\nAllah l'a dit deux fois. Pour que ton cœur l'entende bien 🤍\n\nEnvoie cette vidéo à une sœur qui traverse un moment difficile 🌸\n\n"},
+    {"id": "r5", "date": "2026-11-06T12:00:00", "type": "motion", "scene": "jumua", "pilier": "Rappel islamique", "sons": "brise, petits « tick » de checklist, carillon",
+     "caption": "Ta checklist du vendredi 🕌🌷\n\n✔️ Ghusl\n✔️ Sourate Al-Kahf\n✔️ Salawat sur le Prophète ﷺ\n✔️ Invocations, en cherchant l'heure exaucée\n\nJumu'a Mubarak ma sœur, qu'Allah accepte tes invocations 🤍\n\n"},
+    {"id": "r6", "date": "2026-11-07T19:00:00", "type": "ambiance", "scene": "nuit", "pilier": "Bien-être de la femme", "sons": "grillons, brise du soir",
+     "caption": "Avant de dormir, pose ton cœur 🌙\n\n« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ? » (13:28)\n\nCe soir, dis Alhamdulillah pour une chose. Une seule. Et confie le reste à Allah 🤍\n\nBonne nuit ma sœur 🌸\n\n"},
+    {"id": "r7", "date": "2026-11-08T18:00:00", "type": "motion", "scene": "offre", "pilier": "Mon offre", "sons": "oiseaux, carillons",
+     "caption": "Tout ton jardin de foi, dans ta poche 🌷\n\n🕌 Ta journée par prière\n🌙 Jeûne\n📓 Carnet du soir\n✨ Glow up & 🌱 habitudes\n🤲 Défis & aumône\n🎨 Thèmes de couleur\n\n💝 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre seulement.\n\nEt la partie Coran + Apprentissage reste gratuite 🤍\n\n👉 Lien en bio\n\n"}
+  ]
+}

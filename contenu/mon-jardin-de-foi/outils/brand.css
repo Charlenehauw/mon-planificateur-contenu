@@ -1,0 +1,21 @@
+/* Mon Jardin de Foi — identité visuelle */
+:root {
+  --poudre: #fdf1f4;
+  --rose: #e8a3b9;
+  --framboise: #a34d6b;
+  --mauve: #86385a;
+  --encre: #5c2740;
+  --blanc: #ffffff;
+  --titre: 'Dancing Script', cursive;
+  --texte: 'Quicksand', sans-serif;
+  --arabe: 'Amiri', serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--poudre); }
+body {
+  font-family: var(--texte), 'Noto Color Emoji';
+  color: var(--encre);
+  -webkit-font-smoothing: antialiased;
+}
+.ar { font-family: var(--arabe); direction: rtl; }
+.src { font-size: .78em; color: var(--framboise); font-weight: 600; opacity: .9; }
