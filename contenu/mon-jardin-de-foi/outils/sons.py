@@ -37,10 +37,11 @@ def norm(x):
 
 def vent(n, force=1.0):
     w = rng.standard_normal(n)
-    b = norm(lp(w, 380, 2))
+    # vent audible sur un téléphone : bande 250-1600 Hz (le grave pur ne passe pas sur les petits haut-parleurs)
+    b = norm(lp(hp(w, 250), 1600, 2))
     t = np.arange(n) / SR
     lfo = 0.55 + 0.45 * np.sin(2 * np.pi * 0.09 * t + 1.3) * np.sin(2 * np.pi * 0.033 * t + 0.4)
-    return b * lfo * 0.22 * force
+    return b * lfo * 0.16 * force
 
 
 def pluie(n):
@@ -71,7 +72,7 @@ def oiseau(dur_tot, densite=1.0):
             f = base + sens * rng.uniform(400, 1400) * (tt / tt[-1]) + 120 * np.sin(2 * np.pi * 38 * tt)
             ph = 2 * np.pi * np.cumsum(f) / SR
             env = np.sin(np.pi * tt / tt[-1]) ** 2
-            s = np.sin(ph) * env * rng.uniform(0.04, 0.09)
+            s = np.sin(ph) * env * rng.uniform(0.07, 0.14)
             p = int((t + k * rng.uniform(0.12, 0.2)) * SR)
             if p + L < n:
                 out[p:p + L] += s
@@ -136,9 +137,9 @@ def main():
     elif amb == 'aube':
         x = vent(n, 0.7) + oiseau(duree, 1.6)
     elif amb == 'brise':
-        x = vent(n, 1.0) + oiseau(duree, 0.5) * 0.6
+        x = vent(n, 1.0) + oiseau(duree, 0.9)
     elif amb == 'nuit':
-        x = grillons(n) + vent(n, 0.55)
+        x = grillons(n) * 1.8 + vent(n, 0.55)
     else:
         raise ValueError(amb)
     for e in json.load(open(evts)):

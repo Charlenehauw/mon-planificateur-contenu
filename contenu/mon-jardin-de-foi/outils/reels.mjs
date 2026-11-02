@@ -161,7 +161,7 @@ for (const r of data.reels) {
   const out = path.join(sortie, `${r.id}.mp4`);
   const ff = spawn('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-i', '-', '-i', wav,
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-r', String(FPS),
-    '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+    '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
   const fini = new Promise((ok, ko) => ff.on('close', (c) => (c ? ko(new Error('ffmpeg ' + c)) : ok())));
   const N = Math.round(sc.duree * FPS);
   for (let f = 0; f < N; f++) {
