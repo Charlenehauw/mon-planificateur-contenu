@@ -1,13 +1,15 @@
 # 🌷 Mon Jardin de Foi — production de contenu hebdomadaire
 
-Chaque lundi : **7 carrousels + 7 reels** (1 de chaque par jour), programmés dans Metricool
-(marque « Mon jardin », Instagram @mon.jardin.de.foi).
+Chaque lundi, avant 8h : **7 carrousels + 7 reels** (1 de chaque par jour), programmés directement dans Metricool
+(marque « Mon jardin », Instagram @mon.jardin.de.foi), et **3 séquences de stories** (rappel, créer du lien, offre ; 5 à 8 slides)
+déposées dans le Drive « Mon jardin de foi » > « Story semaine N ».
 
 ## Identité de marque
 - **Fondatrice** : Oum Imran (Cha'), maman de deux garçons, convertie depuis ~6 ans.
 - **Mission** : aider chaque sœur à faire grandir sa foi au quotidien, avec douceur et organisation.
 - **Valeurs** : douceur 🤍 · régularité plutôt que perfection 🌱 · accessibilité 🫶 · sincérité · bienveillance entre sœurs.
 - **Métaphore** : le jardin. Chaque journée complète fait pousser une fleur 🌱🌷🌸🌺🌹.
+- **Vocabulaire** : jamais « wird » (connotation soufie) → « adhkar », « lecture du Coran », « invocations ».
 - **Ton** : tutoiement, chaleureux, simple, encourageant, jamais culpabilisant, emojis floraux (dans les légendes).
 - **Couleurs** : rose poudré `#fdf1f4` · rose `#e8a3b9` · framboise `#a34d6b` · mauve `#86385a`.
 - **Polices** : Dancing Script (titres) · Quicksand (texte) · Amiri (arabe).
@@ -36,6 +38,8 @@ cd contenu/mon-jardin-de-foi
 mkdir -p node_modules && ln -sfn "$(npm root -g)/playwright" node_modules/playwright
 node outils/carrousels.mjs semaines/AAAA-MM-JJ
 node outils/reels.mjs semaines/AAAA-MM-JJ
+FORMAT=story node outils/carrousels.mjs semaines/AAAA-MM-JJ   # stories 1080x1920
 ```
+- Son des reels : normalisé à -16 LUFS (loudnorm), ambiances dans les médiums pour rester audibles sur téléphone.
 - `semaines/<date>/contenu.json` : textes des slides, légendes, dates de publication, scènes des reels.
 - `outils/scenes.mjs` : scènes animées des reels · `outils/sons.py` : ambiances et bruitages synthétisés.
