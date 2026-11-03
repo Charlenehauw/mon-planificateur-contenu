@@ -1,0 +1,203 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c"></canvas>
+<script>
+// Scène forêt cosy animée — toutes les animations sont périodiques (P secondes) => boucle parfaite
+const P = 20;
+let W, H, S, ctx, layers = {};
+function rng(seed){ return function(){ seed = (seed*1664525 + 1013904223) % 4294967296; return seed/4294967296; }; }
+const TAU = Math.PI*2;
+
+function mk(w,h){ const c=document.createElement('canvas'); c.width=w; c.height=h; return c; }
+
+function pine(g, x, base, h, w, col, r){
+  g.fillStyle = col; g.beginPath();
+  const tiers = 6 + Math.floor(r()*3);
+  g.moveTo(x, base - h);
+  for(let i=1;i<=tiers;i++){
+    const y = base - h + h*(i/tiers)*1.0;
+    const ww = w*(0.25 + 0.75*i/tiers)*(0.85+r()*0.3);
+    g.lineTo(x + ww/2, y);
+    if(i<tiers) g.lineTo(x + ww*0.18, y - h*0.02);
+  }
+  for(let i=tiers;i>=1;i--){
+    const y = base - h + h*(i/tiers)*1.0;
+    const ww = w*(0.25 + 0.75*i/tiers)*(0.85+r()*0.3);
+    if(i<tiers) g.lineTo(x - ww*0.18, y - h*0.02);
+    g.lineTo(x - ww/2, y);
+  }
+  g.closePath(); g.fill();
+  g.fillRect(x - w*0.04, base - h*0.1, w*0.08, h*0.12);
+}
+function leafy(g, x, base, h, w, col, r){
+  g.fillStyle = col;
+  g.fillRect(x - w*0.05, base - h*0.55, w*0.1, h*0.56);
+  for(let i=0;i<14;i++){
+    const a = r()*TAU, d = r();
+    const cx = x + Math.cos(a)*w*0.38*d, cy = base - h*0.68 + Math.sin(a)*h*0.26*d;
+    g.beginPath(); g.arc(cx, cy, w*(0.18+r()*0.14), 0, TAU); g.fill();
+  }
+}
+
+function build(){
+  const r = rng(42);
+  // Ciel
+  const sky = mk(W,H), g = sky.getContext('2d');
+  let gr = g.createLinearGradient(0,0,0,H);
+  gr.addColorStop(0,'#f6c98f'); gr.addColorStop(0.35,'#f3b27a'); gr.addColorStop(0.62,'#e8a070'); gr.addColorStop(1,'#c9875e');
+  g.fillStyle=gr; g.fillRect(0,0,W,H);
+  const sx = W*0.62, sy = H*0.42;
+  gr = g.createRadialGradient(sx,sy,0,sx,sy,S*0.55);
+  gr.addColorStop(0,'rgba(255,246,214,1)'); gr.addColorStop(0.08,'rgba(255,236,190,0.95)');
+  gr.addColorStop(0.3,'rgba(255,210,150,0.45)'); gr.addColorStop(1,'rgba(255,200,140,0)');
+  g.fillStyle=gr; g.fillRect(0,0,W,H);
+  layers.sky = sky;
+
+  // Couches d'arbres (lointain -> proche) avec perspective atmosphérique
+  const defs = [
+    {base:0.70, hmin:0.18, hmax:0.28, n:46, col:'#cfa283', pine:0.8},
+    {base:0.74, hmin:0.24, hmax:0.36, n:34, col:'#a48a6c', pine:0.75},
+    {base:0.79, hmin:0.32, hmax:0.48, n:24, col:'#68674f', pine:0.7},
+    {base:0.86, hmin:0.45, hmax:0.62, n:16, col:'#2f372b', pine:0.65},
+  ];
+  layers.trees = defs.map((d,li)=>{
+    const c = mk(W,H), t = c.getContext('2d');
+    const by = H*d.base;
+    for(let i=0;i<d.n;i++){
+      let x = (i + r()*0.8)/d.n * W*1.08 - W*0.04;
+      if (li>=2 && Math.abs(x - sx) < S*0.12*(li-1)) x += (x<sx?-1:1)*S*0.14; // clairière vers le soleil
+      const h = H*(d.hmin + r()*(d.hmax-d.hmin)) * (W<H?0.75:1);
+      const w = h*(0.32 + r()*0.12);
+      (r()<d.pine ? pine : leafy)(t, x, by + r()*H*0.02, h, w, d.col, r);
+    }
+    t.fillStyle = d.col; t.fillRect(0, by, W, H-by);
+    return c;
+  });
+
+  // Sol + chemin + cabane
+  const gd = mk(W,H), q = gd.getContext('2d');
+  const gy = H*0.86;
+  gr = q.createLinearGradient(0,gy,0,H); gr.addColorStop(0,'#4a4434'); gr.addColorStop(1,'#26231c');
+  q.fillStyle = gr; q.fillRect(0,gy,W,H-gy);
+  // chemin lumineux vers le soleil
+  q.fillStyle='rgba(240,190,130,0.35)'; q.beginPath();
+  q.moveTo(sx - S*0.02, gy); q.lineTo(sx + S*0.02, gy); q.lineTo(W*0.5 + S*0.22, H); q.lineTo(W*0.5 - S*0.10, H); q.closePath(); q.fill();
+  // cabane
+  const cx = W<H ? W*0.24 : W*0.2, cb = gy + H*0.015, cw = S*0.17, ch = S*0.11;
+  q.fillStyle='#2a221b'; q.fillRect(cx, cb-ch, cw, ch);
+  q.beginPath(); q.moveTo(cx - cw*0.1, cb-ch); q.lineTo(cx+cw/2, cb-ch-cw*0.42); q.lineTo(cx+cw*1.1, cb-ch); q.closePath(); q.fill();
+  q.fillRect(cx+cw*0.7, cb-ch-cw*0.42, cw*0.09, cw*0.3); // cheminée
+  layers.cabin = {x:cx, b:cb, w:cw, h:ch, chimX: cx+cw*0.745, chimY: cb-ch-cw*0.42};
+  // herbes
+  for(let i=0;i<900;i++){
+    const x = r()*W, y = gy + r()*(H-gy), hh = S*(0.01+r()*0.025)*(0.5+(y-gy)/(H-gy));
+    q.strokeStyle = `rgba(${30+r()*30},${36+r()*30},${22+r()*15},0.9)`; q.lineWidth = S*0.0018;
+    q.beginPath(); q.moveTo(x,y); q.quadraticCurveTo(x+hh*0.2, y-hh*0.6, x+hh*(r()-0.5)*0.6, y-hh); q.stroke();
+  }
+  layers.ground = gd;
+
+  // Premier plan : fougères/branches sombres sur les bords (oscillent)
+  layers.ferns = [];
+  for(let i=0;i<10;i++){
+    const left = i%2===0;
+    layers.ferns.push({x: left ? r()*W*0.12 : W - r()*W*0.12, y: H*(0.9+r()*0.12), len: S*(0.16+r()*0.12),
+      ang: left ? -Math.PI/2 + 0.3 + r()*0.5 : -Math.PI/2 - 0.3 - r()*0.5, ph: r()*TAU, k: 1+Math.floor(r()*2)});
+  }
+  // Particules
+  layers.flies = Array.from({length:70},()=>({x:r(),y:0.55+r()*0.4,ax:0.01+r()*0.03,ay:0.008+r()*0.02,k1:1+Math.floor(r()*3),k2:1+Math.floor(r()*3),ph:r()*TAU,s:0.6+r(),tw:1+Math.floor(r()*5)}));
+  layers.dust = Array.from({length:120},()=>({x:r(),y:r()*0.85,ph:r()*TAU,k:1+Math.floor(r()*2),s:0.4+r()*0.8}));
+  layers.leaves = Array.from({length:22},()=>({x:r(),off:r(),k:1+Math.floor(r()*2),sw:0.02+r()*0.04,ph:r()*TAU,s:0.7+r()*0.8,col:['#c8742f','#d9a441','#a8542a','#e0b45a'][Math.floor(r()*4)]}));
+}
+
+function fern(g, f, t){
+  const sway = Math.sin(TAU*f.k*t/P + f.ph)*0.06;
+  g.save(); g.translate(f.x, f.y); g.rotate(f.ang + Math.PI/2 + sway);
+  g.strokeStyle='#14130f'; g.fillStyle='#14130f'; g.lineWidth=S*0.004;
+  g.beginPath(); g.moveTo(0,0); g.quadraticCurveTo(f.len*0.1, -f.len*0.5, f.len*0.25, -f.len); g.stroke();
+  for(let i=1;i<14;i++){
+    const u=i/14, px=f.len*0.25*u*u, py=-f.len*u, l=f.len*0.22*(1-u*0.8);
+    for(const sgn of [-1,1]){ g.beginPath(); g.ellipse(px+sgn*l*0.5, py+l*0.15, l*0.5, l*0.12, sgn*0.5, 0, TAU); g.fill(); }
+  }
+  g.restore();
+}
+
+function draw(t){
+  const ph = TAU*t/P;
+  ctx.drawImage(layers.sky,0,0);
+  // rayons de lumière (pulsent doucement)
+  const sx=W*0.62, sy=H*0.42;
+  ctx.save(); ctx.globalCompositeOperation='lighter';
+  for(let i=0;i<9;i++){
+    const a = Math.PI*0.5 + (i-4)*0.13 + Math.sin(ph + i)*0.015;
+    const alpha = 0.035 + 0.025*Math.sin(ph*(1+(i%2)) + i*1.7);
+    const L = S*1.4, wd = 0.035 + (i%3)*0.012;
+    ctx.fillStyle = `rgba(255,225,170,${alpha})`;
+    ctx.beginPath(); ctx.moveTo(sx,sy);
+    ctx.lineTo(sx + Math.cos(a-wd)*L, sy + Math.sin(a-wd)*L);
+    ctx.lineTo(sx + Math.cos(a+wd)*L, sy + Math.sin(a+wd)*L); ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+  // arbres + brume entre couches
+  layers.trees.forEach((c,i)=>{
+    ctx.drawImage(c,0,0);
+    const my = H*(0.62 + i*0.05), drift = Math.sin(ph + i)*W*0.02;
+    const gr = ctx.createLinearGradient(0,my-H*0.06,0,my+H*0.08);
+    gr.addColorStop(0,'rgba(255,220,180,0)'); gr.addColorStop(0.5,`rgba(255,222,185,${0.16-i*0.025})`); gr.addColorStop(1,'rgba(255,220,180,0)');
+    ctx.save(); ctx.translate(drift,0); ctx.fillStyle=gr; ctx.fillRect(-W*0.05,my-H*0.06,W*1.1,H*0.14); ctx.restore();
+  });
+  ctx.drawImage(layers.ground,0,0);
+  // fenêtre de la cabane (lueur qui vacille)
+  const cb = layers.cabin, fl = 0.85 + 0.1*Math.sin(ph*7) + 0.05*Math.sin(ph*13+1);
+  const wx = cb.x+cb.w*0.22, wy = cb.b-cb.h*0.72, ww = cb.w*0.24, wh = cb.h*0.35;
+  let gr = ctx.createRadialGradient(wx+ww/2,wy+wh/2,0,wx+ww/2,wy+wh/2,cb.w*0.6);
+  gr.addColorStop(0,`rgba(255,190,90,${0.35*fl})`); gr.addColorStop(1,'rgba(255,190,90,0)');
+  ctx.fillStyle=gr; ctx.fillRect(wx-cb.w*0.6,wy-cb.w*0.6,cb.w*1.4,cb.w*1.4);
+  ctx.fillStyle=`rgba(255,${200+30*fl|0},120,${fl})`; ctx.fillRect(wx,wy,ww,wh);
+  ctx.fillStyle='#2a221b'; ctx.fillRect(wx+ww/2-ww*0.04,wy,ww*0.08,wh); ctx.fillRect(wx,wy+wh/2-wh*0.05,ww,wh*0.1);
+  // fumée de cheminée (boucle)
+  ctx.save(); ctx.filter='blur('+(S*0.008)+'px)';
+  for(let i=0;i<18;i++){
+    const u = ((t/P)*2 + i/18)%1;
+    const x = cb.chimX + Math.sin(u*6 + i)*S*0.01 + u*S*0.06, y = cb.chimY - u*S*0.22;
+    ctx.fillStyle = `rgba(235,215,195,${0.10*Math.sin(Math.PI*u)})`;
+    ctx.beginPath(); ctx.arc(x,y,S*(0.008+u*0.025),0,TAU); ctx.fill();
+  }
+  ctx.restore();
+  // poussières dorées dans la lumière
+  ctx.save(); ctx.globalCompositeOperation='lighter';
+  for(const d of layers.dust){
+    const x = (d.x + 0.02*Math.sin(ph*d.k + d.ph))*W, y = ((d.y - t/P*d.k*0.05 + 1)%1)*H*0.9;
+    const a = 0.25 + 0.25*Math.sin(ph*d.k*2 + d.ph);
+    ctx.fillStyle=`rgba(255,235,190,${a})`; ctx.beginPath(); ctx.arc(x,y,S*0.0018*d.s,0,TAU); ctx.fill();
+  }
+  // lucioles
+  for(const f of layers.flies){
+    const x = (f.x + f.ax*Math.sin(ph*f.k1 + f.ph))*W, y = (f.y + f.ay*Math.sin(ph*f.k2 + f.ph*1.3))*H;
+    const a = Math.max(0, Math.sin(ph*f.tw + f.ph));
+    const rr = S*0.012*f.s;
+    const g2 = ctx.createRadialGradient(x,y,0,x,y,rr);
+    g2.addColorStop(0,`rgba(255,240,160,${0.9*a})`); g2.addColorStop(0.25,`rgba(255,210,110,${0.35*a})`); g2.addColorStop(1,'rgba(255,200,100,0)');
+    ctx.fillStyle=g2; ctx.fillRect(x-rr,y-rr,rr*2,rr*2);
+  }
+  ctx.restore();
+  // feuilles qui tombent
+  for(const l of layers.leaves){
+    const u = ((t/P)*l.k + l.off)%1;
+    const x = (l.x + l.sw*Math.sin(u*TAU*2 + l.ph) + u*0.05)*W, y = (u*1.15 - 0.08)*H;
+    ctx.save(); ctx.translate(x,y); ctx.rotate(Math.sin(u*TAU*3 + l.ph)*1.2); ctx.scale(1, Math.abs(Math.cos(u*TAU*2+l.ph))*0.8+0.2);
+    ctx.fillStyle=l.col; ctx.beginPath(); ctx.ellipse(0,0,S*0.009*l.s,S*0.004*l.s,0,0,TAU); ctx.fill(); ctx.restore();
+  }
+  for(const f of layers.ferns) fern(ctx,f,t);
+  // vignette chaude
+  gr = ctx.createRadialGradient(W/2,H/2,S*0.3,W/2,H/2,Math.hypot(W,H)*0.6);
+  gr.addColorStop(0,'rgba(0,0,0,0)'); gr.addColorStop(1,'rgba(30,15,5,0.55)');
+  ctx.fillStyle=gr; ctx.fillRect(0,0,W,H);
+}
+
+function init(w,h){
+  W=w; H=h; S=Math.min(W,H)*1.0; if(W>H) S=H*1.0; else S=W*1.15;
+  const c=document.getElementById('c'); c.width=W; c.height=H; ctx=c.getContext('2d');
+  build();
+}
+window.init=init; window.draw=draw;
+</script></body></html>
