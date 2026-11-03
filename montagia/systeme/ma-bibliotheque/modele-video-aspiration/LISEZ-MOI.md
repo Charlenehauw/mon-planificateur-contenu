@@ -10,3 +10,7 @@ Pour s'en resservir : modifier les listes `APPS` et `FEATS` dans `generer.py`, m
 
 ## Version 30 s (toute l'appli)
 `generer_30s.py` présente 13 fonctions de 1,7 s chacune, avec les nouveautés en premier. Les écrans viennent des enregistrements de produit-1 : objectif, plan, prospects, clientes (démarrée à 1,1 s pour arriver tout de suite sur la bonne page), commissions, réseaux, messages, motivation et victoires. Le projet se trouve dans `projets/produit-3-long/video`.
+
+## Version noir & or (identité actuelle)
+`generer_noir.py <dossier video> <config.json>` : même animation, mais en noir et or, avec Montserrat et Playfair italique doré. Les configs `config-noir-20s.json` et `config-noir-30s.json` donnent la liste des écrans. Une ligne = [titre avec <i>mot doré</i>, pastille (false, true ou un texte), "video" ou "img", fichier, début dans la vidéo].
+Polices à mettre dans `assets/fonts` : Montserrat-Black, Montserrat-ExtraBold, PlayfairDisplay-BoldItalic.

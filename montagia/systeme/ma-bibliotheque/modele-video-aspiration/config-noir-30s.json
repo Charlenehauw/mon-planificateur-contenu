@@ -1,0 +1,14 @@
+{"d_f": 1.7, "feats": [
+ ["TA <i>journée</i>", "NOUVEAU LOOK ✨", "img", "accueil.jpg", 0],
+ ["TA <i>semaine</i>", false, "img", "mini-plan.jpg", 0],
+ ["TON <i>objectif</i>", false, "img", "objectif.jpg", 0],
+ ["TES <i>prospects</i>", false, "img", "prospects.jpg", 0],
+ ["TES <i>messages</i>", false, "video", "tour-noir.mp4", 9.6],
+ ["TES <i>clientes</i>", false, "video", "tour-noir.mp4", 15.8],
+ ["TES <i>ventes</i>", false, "video", "tour-noir.mp4", 18.7],
+ ["TES <i>abonnés</i>", false, "video", "tour-noir.mp4", 19.8],
+ ["TON <i>calendrier</i>", true, "video", "tour-noir.mp4", 21.3],
+ ["TES <i>idées</i>", false, "video", "tour-noir.mp4", 24.0],
+ ["TA <i>motivation</i>", false, "video", "tour-noir.mp4", 27.0],
+ ["TES <i>victoires</i>", false, "video", "tour-noir.mp4", 29.0],
+ ["7 <i>ambiances</i>", true, "video", "tour-noir.mp4", 33.0]]}

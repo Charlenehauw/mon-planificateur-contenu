@@ -13,6 +13,8 @@ finitions.json (positions dans le repère 1080 x 1920, temps en secondes ou « @
  "sons":    [{"t": "@go", "son": "whoosh", "volume": 0.5}],
  "sous_titres": {"mots_forts": ["tonnerre", "Claude"], "y": 1260, "taille": 68, "mots": 3}
 }
+Options des sous-titres : "police" (fichier de systeme/.outils/polices, Lato-Black.ttf par défaut)
+et "couleur_forte" (couleur des mots forts, #E8BD3C par défaut).
 « sous_titres » remplace les sous-titres du moteur (mettre "sous_titres": {"actif": false} dans replique.json) :
 2 à 3 mots en Lato blanc sur la poitrine, les mots forts en jaune doré, rien pendant les blocs de replique.json.
 Un émoji ou une étoile peut porter "son" (nom d'un fichier de systeme/assets/sons sans .wav, ou un chemin) et "volume" (0 à 1).
@@ -168,10 +170,13 @@ class Finitions:
     def preparer_sous_titres(self, S):
         if not S:
             return []
-        police = next((d / "Lato-Black.ttf" for d in (RACINE / ".outils" / "polices", Path.home() / "Library/Fonts")
-                       if (d / "Lato-Black.ttf").exists()), None)
+        nom = S.get("police", "Lato-Black.ttf")      # ex. « Montserrat-ExtraBold.ttf » pour l'identité noir & or
+        police = next((d / nom for d in (RACINE / ".outils" / "polices", Path.home() / "Library/Fonts")
+                       if (d / nom).exists()), None)
         if police is None:
-            sys.exit("Police Lato-Black.ttf introuvable (systeme/.outils/polices).")
+            sys.exit(f"Police {nom} introuvable (systeme/.outils/polices).")
+        c = S.get("couleur_forte", "#E8BD3C").lstrip("#")
+        self.couleur_forte = tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
         self.police_st = ImageFont.truetype(str(police), int(S.get("taille", 68) * self.K))
         self.y_st = S.get("y", 1260) * self.K
         forts = {norm(m) for m in S.get("mots_forts", [])}
@@ -207,7 +212,7 @@ class Finitions:
         x = fond.width / 2 - larg / 2
         for (w, fort), b in zip(c["mots"], tailles):
             y = self.y_st - (b[3] + b[1]) / 2
-            d.text((x - b[0], y), w, font=f, fill=(JAUNE if fort else (255, 255, 255)) + (255,))
+            d.text((x - b[0], y), w, font=f, fill=(self.couleur_forte if fort else (255, 255, 255)) + (255,))
             do.text((x - b[0], y + 3 * self.K), w, font=f, fill=OMBRE + (205,))
             x += b[2] - b[0] + esp
         ombre = ombre.filter(ImageFilter.GaussianBlur(10 * self.K))

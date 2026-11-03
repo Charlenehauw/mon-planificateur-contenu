@@ -93,3 +93,12 @@ Charlène travaille pour plusieurs comptes et clients : chacun a sa propre ident
 - Quand la tête est tout en haut du cadre (téléphone posé bas), les titres Anton passent sur la poitrine (`"blocs_y": 1180` dans replique.json) au lieu d'au-dessus de la tête.
 - Les « euh » sont mieux trouvés en retranscrivant la source avec faster-whisper et un `initial_prompt` plein de « euh » (ils apparaissent alors comme des mots). On coupe entre le mot d'avant et le mot d'après, puis on reconstruit `mots.json` à partir de cette transcription (en passant les temps à travers les plages de `coupes.json`).
 - B-roll de ses écrans et de ses avis : `ma-bibliotheque/modele-broll-telephone/` (HyperFrames, entre replique et finitions).
+
+## Identité actuelle : noir & or (depuis le 03/11/2026, nouvelle version de l'appli Biz' en poche)
+- Fond noir #070605 (cartes #141210, bordures #3A3128 / #5A4A36), texte crème #F3EDE4, or en dégradé
+  (#A9843F → #E9D396 → #F6E7B8 → #C9A45C → #9C773A), or uni #D9B866 / #E2C275 quand le dégradé n'est pas possible.
+- Polices : Montserrat Black / ExtraBold (titres en majuscules, textes) + Playfair Display Bold Italic doré pour LE mot fort
+  (ex. « MES *prospects* », « TA *journée* »). Fichiers dans systeme/.outils/polices.
+- Face caméra : titres replique = `ma-bibliotheque/modele-replique-noir-or.json` ; sous-titres finitions avec
+  `"police": "Montserrat-ExtraBold.ttf", "couleur_forte": "#D9B866"` ; B-roll = `modele-broll-telephone/generer_noir.py`.
+- Vidéos produit : `modele-video-aspiration/generer_noir.py <dossier video> <config.json>` (configs 20 s et 30 s fournies).

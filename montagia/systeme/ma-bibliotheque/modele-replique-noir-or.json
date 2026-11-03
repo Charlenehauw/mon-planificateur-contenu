@@ -1,0 +1,304 @@
+{
+ "_lisez-moi": "reel-4 en identité noir & or : Montserrat Black/ExtraBold + Playfair Display italique doré.",
+ "polices": {
+  "titre": {
+   "fichier": "Montserrat-Black.ttf"
+  },
+  "texte": {
+   "fichier": "Montserrat-ExtraBold.ttf"
+  },
+  "accent": {
+   "fichier": "PlayfairDisplay-BoldItalic.ttf"
+  }
+ },
+ "styles": {
+  "sous_titre": {
+   "police": "texte",
+   "taille": 60,
+   "couleur": "#FFFFFF",
+   "ombre": [
+    "#0A0908",
+    0.85,
+    12,
+    4
+   ]
+  },
+  "petit": {
+   "police": "texte",
+   "taille": 60,
+   "couleur": "#F3EDE4",
+   "ombre": [
+    "#000000",
+    0.9,
+    10,
+    3
+   ]
+  },
+  "creme": {
+   "police": "titre",
+   "taille": 112,
+   "couleur": "#F3EDE4",
+   "ombre": [
+    "#000000",
+    0.9,
+    12,
+    4
+   ]
+  },
+  "cle": {
+   "police": "accent",
+   "taille": 150,
+   "couleur": "#E2C275",
+   "ombre": [
+    "#000000",
+    0.9,
+    10,
+    4
+   ],
+   "halo": [
+    "#000000",
+    0.5,
+    24
+   ]
+  }
+ },
+ "sous_titres": {
+  "actif": false,
+  "style": "sous_titre",
+  "y": 1260
+ },
+ "blocs_y": 1180,
+ "largeur_max": 0.8,
+ "animation": {
+  "rebond": 0.06,
+  "avance": 0.03
+ },
+ "blocs": [
+  {
+   "type": "video",
+   "fin": "@parler>+0.2",
+   "lignes": [
+    {
+     "dx": -20,
+     "mots": [
+      [
+       "le prix de mon appli",
+       "petit",
+       "@Je"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "augmente",
+       "cle",
+       "@vidéo"
+      ]
+     ],
+     "chevauche": 0.0
+    },
+    {
+     "dx": 10,
+     "mots": [
+      [
+       "SAMEDI",
+       "creme",
+       "@maquillée"
+      ]
+     ],
+     "chevauche": 0.0
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@jours>+0.3",
+   "lignes": [
+    {
+     "dx": -20,
+     "mots": [
+      [
+       "au départ, un",
+       "petit",
+       "@l'idée"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "plan d'action",
+       "cle",
+       "@plan"
+      ]
+     ],
+     "chevauche": 0.0
+    },
+    {
+     "dx": 10,
+     "mots": [
+      [
+       "SUR 30 JOURS",
+       "creme",
+       "@30"
+      ]
+     ],
+     "chevauche": 0.0
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@place>+0.3",
+   "lignes": [
+    {
+     "dx": -30,
+     "mots": [
+      [
+       "mon",
+       "petit",
+       "@mon"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "cerveau",
+       "cle",
+       "@cerveau"
+      ]
+     ],
+     "chevauche": 0.0
+    },
+    {
+     "dx": 10,
+     "mots": [
+      [
+       "D'ASSISTANTE",
+       "creme",
+       "@d'assistante"
+      ]
+     ],
+     "chevauche": 0.0
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@incluses>+0.6",
+   "lignes": [
+    {
+     "dx": -20,
+     "mots": [
+      [
+       "toutes les",
+       "petit",
+       "@toutes"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "mises à jour",
+       "cle",
+       "@mises"
+      ]
+     ],
+     "chevauche": 0.0
+    },
+    {
+     "dx": 10,
+     "mots": [
+      [
+       "INCLUSES",
+       "creme",
+       "@incluses"
+      ]
+     ],
+     "chevauche": 0.0
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@plus#3>+0.2",
+   "lignes": [
+    {
+     "dx": -20,
+     "mots": [
+      [
+       "profite de l'offre",
+       "petit",
+       "@profite"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "avant samedi",
+       "cle",
+       "@l'offre#2"
+      ]
+     ],
+     "chevauche": 0.0
+    }
+   ]
+  },
+  {
+   "type": "video",
+   "fin": "@merci>+0.9",
+   "lignes": [
+    {
+     "dx": -20,
+     "mots": [
+      [
+       "BIZ’ EN POCHE",
+       "creme",
+       "@c'était#3"
+      ]
+     ]
+    },
+    {
+     "dx": 0,
+     "mots": [
+      [
+       "lien en bio",
+       "cle",
+       "@petit#4"
+      ]
+     ],
+     "chevauche": 0.0
+    }
+   ]
+  }
+ ],
+ "zooms": [
+  {
+   "debut": "@semaine",
+   "fin": "@parler",
+   "echelle": 1.05,
+   "y": 800
+  },
+  {
+   "debut": "@bref",
+   "fin": "@longue",
+   "echelle": 1.06,
+   "y": 800
+  },
+  {
+   "debut": "@vraiment#2",
+   "fin": "@plus#3",
+   "echelle": 1.06,
+   "y": 800
+  }
+ ]
+}
