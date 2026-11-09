@@ -50,4 +50,4 @@ Dossier Drive « MRR » (partagé par lien) : femmes voilées en images et vidé
 + textes + bruitages ; si un fichier `semaines/<date>/anasheed/<id>.mp3` existe, l'anasheed est mixé automatiquement.
 Rendu des reels motion : lancer `node outils/reels.mjs <semaine> <id>` reel par reel (plusieurs d'un coup donne des vidéos vides).
 Règle visuels MRR : sur 5 carrousels et 5 reels, **2 avec une femme** (uniquement yeux fermés ou de dos, tenue pudique)
-et **3 décors sans personne**.
+et **3 sans personne, uniquement sur fond aux couleurs de la marque (pas de décor)**.
