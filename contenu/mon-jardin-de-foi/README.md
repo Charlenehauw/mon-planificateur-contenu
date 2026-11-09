@@ -49,3 +49,5 @@ node outils/reels_mrr.mjs semaines/AAAA-MM-JJ <dossier des clips MRR>   # reels 
 Dossier Drive « MRR » (partagé par lien) : femmes voilées en images et vidéos. Les reels « femme voilée » enchaînent 2 clips
 + textes + bruitages ; si un fichier `semaines/<date>/anasheed/<id>.mp3` existe, l'anasheed est mixé automatiquement.
 Rendu des reels motion : lancer `node outils/reels.mjs <semaine> <id>` reel par reel (plusieurs d'un coup donne des vidéos vides).
+Règle visuels MRR : sur 5 carrousels et 5 reels, **2 avec une femme** (uniquement yeux fermés ou de dos, tenue pudique)
+et **3 décors sans personne**.
