@@ -1,0 +1,127 @@
+{
+  "semaine": "2026-11-09",
+  "hashtags": "#monjardindefoi #muslimah #soeurmusulmane #rappelislam #mamanmusulmane #convertie #coran #islam #deen #routinespirituelle",
+  "carrousels": [
+    {
+      "id": "c1", "date": "2026-11-10T10:00:00", "pilier": "Rappel islamique",
+      "slides": [
+        {"type": "cover", "photo": "medias/c1.jpg", "kicker": "Rappel", "title": "3 invocations quand ton cœur est lourd", "text": "À garder près de toi 🤍"},
+        {"type": "arabic", "ar": "ٱللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ ٱلْهَمِّ وَٱلْحَزَنِ", "text": "« Ô Allah, je cherche refuge auprès de Toi contre les soucis et la tristesse. »", "src": "Rapporté par Al-Bukhari (6369)"},
+        {"type": "arabic", "ar": "لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبْحَٰنَكَ إِنِّي كُنتُ مِنَ ٱلظَّٰلِمِينَ", "text": "« Pas de divinité à part Toi ! Gloire à Toi ! J'ai été vraiment du nombre des injustes. »", "src": "L'invocation de Yunus · Sourate Al-Anbiya, 21:87"},
+        {"type": "arabic", "ar": "حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ", "text": "« Allah nous suffit ; Il est notre meilleur garant. »", "src": "Sourate Al-Imran, 3:173"},
+        {"type": "text", "title": "Et si les mots ne viennent pas…", "text": "Parle-Lui simplement, dans ta langue.<br><b>Il entend ce que ton cœur n'arrive pas à dire.</b>"},
+        {"type": "cta", "photo": "medias/c1.jpg", "title": "Enregistre-les", "text": "Pour les jours où tu en auras besoin 🌷", "cta": "Partage à une sœur"}
+      ],
+      "caption": "3 invocations quand ton cœur est lourd 🤍\n\n🌸 « Ô Allah, je cherche refuge auprès de Toi contre les soucis et la tristesse. » (Al-Bukhari)\n🌸 L'invocation de Yunus : « Pas de divinité à part Toi ! Gloire à Toi ! J'ai été vraiment du nombre des injustes. » (21:87)\n🌸 « Allah nous suffit ; Il est notre meilleur garant. » (3:173)\n\nEt si les mots ne viennent pas, parle-Lui simplement, dans ta langue. Il entend ce que ton cœur n'arrive pas à dire 🌷\n\nEnregistre ce post et partage-le à une sœur qui en a besoin 🫶\n\n"
+    },
+    {
+      "id": "c2", "date": "2026-11-11T10:00:00", "pilier": "Motivation",
+      "slides": [
+        {"type": "cover", "photo": "medias/c2.jpg", "kicker": "Apprendre", "title": "Apprendre ta religion quand tu es débordée", "text": "C'est possible, pas à pas 🌱"},
+        {"type": "text", "title": "Le chemin de la science", "text": "« Celui qui emprunte un chemin à la recherche d'une science, Allah lui facilite par cela un chemin vers le Paradis. »<br><span class='src'>Rapporté par Muslim (2699)</span>"},
+        {"type": "step", "num": "1", "title": "10 minutes par jour", "text": "Pas besoin d'une heure. <b>10 minutes régulières</b> valent mieux qu'une grosse séance par mois."},
+        {"type": "step", "num": "2", "title": "Un thème à la fois", "text": "Les 99 Noms d'Allah, la prière, la vie du Prophète ﷺ… Choisis un thème et reste dessus."},
+        {"type": "step", "num": "3", "title": "Écoute pendant tes tâches", "text": "Un cours en pliant le linge ou en cuisinant, ça compte aussi 🤍"},
+        {"type": "step", "num": "4", "title": "Note une seule chose", "text": "À la fin, écris <b>une phrase</b> que tu retiens. C'est elle qui restera."},
+        {"type": "cta", "photo": "medias/c2.jpg", "title": "Commence gratuitement", "text": "Leçons, 99 Noms, hadiths et quiz dans Mon Jardin de Foi", "cta": "Lien en bio"}
+      ],
+      "caption": "Apprendre ta religion quand tu es débordée ? C'est possible, pas à pas 🌱\n\n« Celui qui emprunte un chemin à la recherche d'une science, Allah lui facilite par cela un chemin vers le Paradis. » (Muslim)\n\n1️⃣ 10 minutes par jour suffisent\n2️⃣ Un thème à la fois\n3️⃣ Écoute un cours pendant tes tâches\n4️⃣ Note une seule chose que tu retiens\n\n📚 La partie Apprentissage de Mon Jardin de Foi (leçons, 99 Noms, hadiths, quiz) est gratuite. Lien en bio 🌷\n\n"
+    },
+    {
+      "id": "c3", "date": "2026-11-12T10:00:00", "pilier": "Bien-être de la femme",
+      "slides": [
+        {"type": "cover", "photo": "medias/c3.jpg", "kicker": "Bien-être", "title": "Pour les jours de grande fatigue", "text": "Tu n'as pas à tout porter 🤍"},
+        {"type": "text", "title": "Ton repos peut devenir adoration", "text": "« Les actions ne valent que par les intentions. »<br><span class='src'>Rapporté par Al-Bukhari (1) et Muslim (1907)</span><br><br>Repose-toi avec l'intention de reprendre des forces pour Allah et pour les tiens."},
+        {"type": "step", "num": "1", "title": "Garde l'essentiel", "text": "Tes prières, à l'heure. Le reste peut attendre demain."},
+        {"type": "step", "num": "2", "title": "Un dhikr tout doux", "text": "SubhanAllah, Alhamdulillah, Allahu Akbar. Même allongée, même à voix basse."},
+        {"type": "step", "num": "3", "title": "Demande de l'aide", "text": "À ton mari, à une sœur, à ta famille. Ce n'est pas un échec 🫶"},
+        {"type": "step", "num": "4", "title": "Couche-toi tôt", "text": "Le Prophète ﷺ n'aimait pas dormir avant Isha ni discuter après.<br><span class='src'>Rapporté par Al-Bukhari (568)</span>"},
+        {"type": "arabic", "ar": "وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ", "text": "« Et quiconque place sa confiance en Allah, Il lui suffit. »", "src": "Sourate At-Talaq, 65:3"}
+      ],
+      "caption": "Pour les jours de grande fatigue 🤍\n\nTon repos peut devenir une adoration : « Les actions ne valent que par les intentions. » (Al-Bukhari & Muslim)\n\n🌷 Garde l'essentiel : tes prières\n🌷 Un dhikr tout doux, même allongée\n🌷 Demande de l'aide, ce n'est pas un échec\n🌷 Couche-toi tôt, comme le recommandait la sunnah\n\n« Et quiconque place sa confiance en Allah, Il lui suffit. » (65:3)\n\nPrends soin de toi ma sœur 🌸\n\n"
+    },
+    {
+      "id": "c4", "date": "2026-11-13T10:00:00", "pilier": "Mon offre",
+      "slides": [
+        {"type": "cover", "photo": "medias/c4.jpg", "kicker": "Mon Jardin de Foi", "title": "Fais fleurir ta foi, un jour à la fois", "text": "L'appli pensée pour les sœurs 🌷"},
+        {"type": "text", "title": "Un seul endroit", "text": "Ton Coran, tes leçons, tes prières, tes habitudes et ton carnet du soir.<br><b>Fini l'éparpillement.</b>"},
+        {"type": "list", "kicker": "Gratuit", "title": "Pour commencer", "items": ["Coran : plan de lecture, sourates, mémorisation", "Apprentissage : leçons, 99 Noms, hadiths, quiz"]},
+        {"type": "list", "kicker": "Version complète", "title": "Tout le jardin", "items": ["Ta journée par prière", "Jeûne & carnet du soir", "Glow up & habitudes", "Défis & aumône", "Thèmes de couleur"]},
+        {"type": "text", "title": "Chaque journée complète fait pousser une fleur", "text": "Et ton jardin grandit avec toi 🌸"},
+        {"type": "offer", "photo": "medias/c4.jpg", "title": "Jusqu'au 30 novembre", "old": "7,90 €", "price": "2,99 €", "text": "Paiement unique · accès à vie", "cta": "Lien en bio"}
+      ],
+      "caption": "Fais fleurir ta foi, un jour à la fois 🌷\n\nMon Jardin de Foi réunit tout au même endroit : ton Coran, tes leçons, tes prières, tes habitudes et ton carnet du soir. Fini l'éparpillement 🫶\n\n📖 Coran + 📚 Apprentissage : gratuits\n🕌 Ta journée par prière, 🌙 jeûne, 📓 carnet du soir, ✨ glow up, 🌱 habitudes, défis, 🤲 aumône, 🎨 thèmes : version complète\n\n💝 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre.\n\n👉 Lien en bio\n\n"
+    },
+    {
+      "id": "c5", "date": "2026-11-14T10:00:00", "pilier": "Rappel islamique",
+      "slides": [
+        {"type": "cover", "photo": "medias/c5.jpg", "kicker": "Rappel du soir", "title": "4 sunnahs avant de dormir", "text": "Pour t'endormir protégée 🌙"},
+        {"type": "step", "num": "1", "title": "Ayat al-Kursi", "text": "Celui qui la récite en se couchant a un gardien d'Allah jusqu'au matin.<br><span class='src'>Rapporté par Al-Bukhari (2311)</span>"},
+        {"type": "step", "num": "2", "title": "Les 2 derniers versets d'Al-Baqara", "text": "Ils suffisent à celui qui les récite la nuit.<br><span class='src'>Rapporté par Al-Bukhari (5009) et Muslim (808)</span>"},
+        {"type": "step", "num": "3", "title": "Les 3 Qul", "text": "Al-Ikhlas, Al-Falaq et An-Nas, en soufflant dans tes mains puis en les passant sur ton corps, 3 fois.<br><span class='src'>Rapporté par Al-Bukhari (5017)</span>"},
+        {"type": "arabic", "ar": "بِٱسْمِكَ ٱللَّهُمَّ أَمُوتُ وَأَحْيَا", "text": "4. « C'est en Ton nom, ô Allah, que je meurs et que je vis. »", "src": "Rapporté par Al-Bukhari (6324)"},
+        {"type": "cta", "photo": "medias/c5.jpg", "title": "Bonne nuit ma sœur", "text": "Qu'Allah te protège 🤍", "cta": "Enregistre pour ce soir"}
+      ],
+      "caption": "4 sunnahs avant de dormir 🌙\n\n1️⃣ Ayat al-Kursi : un gardien d'Allah jusqu'au matin (Al-Bukhari)\n2️⃣ Les 2 derniers versets d'Al-Baqara : ils suffisent à celui qui les récite la nuit (Al-Bukhari & Muslim)\n3️⃣ Les 3 Qul, en soufflant dans tes mains, 3 fois (Al-Bukhari)\n4️⃣ « C'est en Ton nom, ô Allah, que je meurs et que je vis. » (Al-Bukhari)\n\nEnregistre ce post pour ce soir 🤍 Bonne nuit ma sœur 🌸\n\n"
+    }
+  ],
+  "reels": [
+    {"id": "m1", "date": "2026-11-09T18:00:00", "type": "motion", "scene": "pluie", "variante": "istighfar",
+     "caption": "Et si tu disais Astaghfirullah aujourd'hui ? 🌧️🌱\n\n« Implorez le pardon de votre Seigneur, car Il est grand Pardonneur, pour qu'Il vous envoie du ciel des pluies abondantes. » (71:10-11)\n\nL'istighfar ouvre les portes, apaise le cœur et fait pousser ton jardin 🤍\n\nCombien de fois tu le dis aujourd'hui ? 🌸\n\n"},
+    {"id": "m2", "date": "2026-11-10T18:00:00", "type": "motion", "scene": "graines", "variante": "matin",
+     "caption": "3 petites graines pour bien commencer ta journée 🌅🌱\n\n🌱 Tes adhkar du matin\n🌱 2 rak'at de Duha : elles valent l'aumône de chaque articulation de ton corps (Muslim)\n🌱 Un sourire : c'est une aumône (At-Tirmidhi)\n\nEnregistre et essaie demain matin 🌷\n\n"},
+    {"id": "m3", "date": "2026-11-11T18:00:00", "type": "motion", "scene": "aube", "variante": "tawakkul",
+     "caption": "Tu n'as pas à tout porter seule 🤍\n\n« Et quiconque place sa confiance en Allah, Il lui suffit. » (65:3)\n\nFais ta part, puis confie le reste à Celui qui ne dort jamais 🌅\n\nEnvoie cette vidéo à une sœur qui en a besoin 🌸\n\n"},
+    {"id": "m4", "date": "2026-11-12T18:00:00", "type": "motion", "scene": "jardin", "variante": "semaine",
+     "caption": "Chaque jour où tu reviens à Allah fait pousser une fleur 🌱🌷🌸🌺🌹\n\nPas besoin d'une semaine parfaite. Juste de revenir, encore et encore 🤍\n\nC'est tout l'esprit de Mon Jardin de Foi. Ton jardin t'attend : lien en bio 🌷\n\n"},
+    {"id": "m5", "date": "2026-11-13T18:00:00", "type": "motion", "scene": "jumua", "variante": "invocations",
+     "caption": "Jumu'a Mubarak 🕌🌷\n\nAujourd'hui, garde un moment pour tes invocations 🤲\n✔️ Pour toi\n✔️ Pour ta famille\n✔️ Pour la oumma\n✔️ Et multiplie les salawat sur le Prophète ﷺ\n\nIl y a le vendredi une heure où Allah exauce les invocations (Al-Bukhari & Muslim) 🤍\n\n"},
+    {"id": "m6", "date": "2026-11-14T19:00:00", "type": "motion", "scene": "nuit", "variante": "kursi",
+     "caption": "Avant de dormir, récite Ayat al-Kursi 🌙\n\nCelui qui la récite en se couchant a un gardien d'Allah jusqu'au matin (Al-Bukhari) 🤍\n\nBonne nuit ma sœur 🌸\n\n"},
+    {"id": "m7", "date": "2026-11-15T18:00:00", "type": "motion", "scene": "offre", "variante": "offre2",
+     "caption": "Plus que quelques jours pour l'offre de lancement 🌷\n\n🕌 Ta journée par prière\n🌙 Jeûne\n📓 Carnet du soir\n✨ Glow up & 🌱 habitudes\n🤲 Défis & aumône\n🎨 Thèmes de couleur\n\n💝 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre.\n\nEt la partie Coran + Apprentissage reste gratuite 🤍\n\n👉 Lien en bio\n\n"}
+  ],
+  "reels_mrr": [
+    {"id": "v1", "date": "2026-11-10T12:30:00", "clips": ["v1a", "v1b"], "ambiance": "brise",
+     "textes": [["Quand ton cœur est fatigué…", 0.4, 5.6], ["« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ? »", 5.9, 10.8], ["Sourate Ar-Ra'd, 13:28", 6.4, 10.8, "ref"]],
+     "caption": "Quand ton cœur est fatigué, reviens à Lui 🤍\n\n« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs ? » (13:28)\n\nUn SubhanAllah, un Alhamdulillah, un Astaghfirullah… et ton cœur respire 🌸\n\n"},
+    {"id": "v2", "date": "2026-11-11T12:30:00", "clips": ["v2a", "v2b"], "ambiance": "pages",
+     "textes": [["Chaque jour, apprends une chose sur ta religion", 0.4, 5.6], ["« Celui qui emprunte un chemin à la recherche d'une science, Allah lui facilite un chemin vers le Paradis. »", 5.9, 10.8], ["Rapporté par Muslim", 6.4, 10.8, "ref"]],
+     "caption": "Chaque jour, apprends une chose sur ta religion 📚🌱\n\n« Celui qui emprunte un chemin à la recherche d'une science, Allah lui facilite par cela un chemin vers le Paradis. » (Muslim)\n\nMême 10 minutes. Même une seule phrase. Ça compte 🤍\n\n"},
+    {"id": "v3", "date": "2026-11-12T12:30:00", "clips": ["v3a", "v3b"], "ambiance": "mer",
+     "textes": [["Prendre soin de toi fait aussi partie de ta foi", 0.4, 5.6], ["« Ton corps a un droit sur toi. »", 5.9, 10.8], ["Rapporté par Al-Bukhari", 6.4, 10.8, "ref"]],
+     "caption": "Prendre soin de toi fait aussi partie de ta foi 🌊🤍\n\n« Ton corps a un droit sur toi. » (Al-Bukhari)\n\nUn thé chaud, une marche, une sieste avec l'intention de reprendre des forces… Tu as le droit de souffler ma sœur 🌸\n\n"},
+    {"id": "v4", "date": "2026-11-13T12:30:00", "clips": ["v4a", "v4b"], "ambiance": "jardin",
+     "textes": [["J'ai créé l'appli dont j'avais besoin", 0.4, 5.6], ["Mon Jardin de Foi · 2,99 € au lieu de 7,90 € jusqu'au 30 novembre", 5.9, 10.8], ["Lien en bio", 6.4, 10.8, "ref"]],
+     "caption": "J'ai créé l'appli dont j'avais besoin en plein post-partum 🌷\n\nUn seul endroit pour ton Coran, tes leçons, tes prières, tes habitudes et ton carnet du soir 🫶\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, jusqu'au 30 novembre. Coran + Apprentissage gratuits.\n\n👉 Lien en bio\n\n"},
+    {"id": "v5", "date": "2026-11-14T12:30:00", "clips": ["v5a", "v5b"], "ambiance": "aube",
+     "textes": [["Avance, même à petits pas", 0.4, 5.6], ["« Certes, Allah est avec les endurants. »", 5.9, 10.8], ["Sourate Al-Baqara, 2:153", 6.4, 10.8, "ref"]],
+     "caption": "Avance, même à petits pas 🌱\n\n« Certes, Allah est avec les endurants. » (2:153)\n\nTu n'as pas besoin de courir. Tu as juste besoin de ne pas t'arrêter 🤍\n\nEnregistre pour les jours où tu doutes 🌸\n\n"}
+  ],
+  "stories": [
+    {"id": "s1", "titre": "Rappel", "slides": [
+      {"type": "cover", "kicker": "Rappel du jour", "title": "L'istighfar, ta pluie intérieure", "text": "Un rappel tout doux 🌧️"},
+      {"type": "arabic", "ar": "فَقُلْتُ ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًا", "text": "« Implorez le pardon de votre Seigneur, car Il est grand Pardonneur. »", "src": "Sourate Nuh, 71:10"},
+      {"type": "text", "title": "Et la suite du verset…", "text": "« … pour qu'Il vous envoie du ciel des pluies abondantes, et qu'Il vous accorde beaucoup de biens et d'enfants. »<br><span class='src'>Sourate Nuh, 71:11-12</span>"},
+      {"type": "list", "title": "Quand le dire ?", "items": ["En te réveillant", "Après chaque prière", "Dans la voiture", "Avant de dormir"]},
+      {"type": "text", "title": "Défi du jour", "text": "Dis <b>Astaghfirullah 100 fois</b> aujourd'hui, à ton rythme.", "sticker": "Curseur emoji 🌧️ « Je relève le défi »"},
+      {"type": "cta", "title": "Partage à une sœur", "text": "Et faites le défi ensemble 🤍", "cta": "Envoie cette story"}
+    ]},
+    {"id": "s2", "titre": "Créer du lien", "slides": [
+      {"type": "cover", "photo": "medias/s2.jpg", "kicker": "Entre sœurs", "title": "On parle de ta routine&nbsp;?", "text": "J'ai envie de te lire 🌷"},
+      {"type": "text", "title": "Ta routine du matin, c'est plutôt…", "text": "", "sticker": "SONDAGE : « Adhkar & Coran 📖 » / « Café & course 😅 »"},
+      {"type": "text", "title": "Combien de pages de Coran par jour&nbsp;?", "text": "", "sticker": "QUIZ ou SONDAGE : « 1 page » / « 2 à 5 » / « Plus » / « J'y travaille 🌱 »"},
+      {"type": "text", "title": "Qu'est-ce qui t'aide à être régulière&nbsp;?", "text": "Ton astuce peut aider une autre sœur 🫶", "sticker": "QUESTIONS : « Ton astuce ici 🌸 »"},
+      {"type": "text", "title": "Je partage vos astuces", "text": "Dans une prochaine story, in shaa Allah 🤍"},
+      {"type": "cta", "title": "Merci d'être là", "text": "Ce jardin grandit grâce à vous 🌸", "cta": "Réponds en DM"}
+    ]},
+    {"id": "s3", "titre": "Mon offre", "slides": [
+      {"type": "cover", "photo": "medias/s3.jpg", "kicker": "Mon Jardin de Foi", "title": "Ta foi mérite un bel endroit", "text": "Doux, organisé, rien que pour toi 🌷"},
+      {"type": "list", "title": "Gratuit pour toujours", "items": ["Coran : plan de lecture et mémorisation", "Apprentissage : leçons, 99 Noms, quiz"]},
+      {"type": "list", "title": "La version complète", "items": ["Ta journée par prière", "Jeûne & carnet du soir", "Glow up & habitudes", "Défis & aumône"]},
+      {"type": "text", "title": "Pourquoi un jardin&nbsp;?", "text": "Parce que chaque journée complète fait pousser une fleur 🌸<br>Tu vois ta foi grandir, sans pression."},
+      {"type": "offer", "title": "Jusqu'au 30 novembre", "old": "7,90 €", "price": "2,99 €", "text": "Paiement unique · accès à vie", "cta": "Lien juste en dessous", "sticker": "COMPTE À REBOURS « Fin de l'offre » (30/11)"},
+      {"type": "cta", "title": "Plante ta première graine", "text": "Ton jardin t'attend 🌱", "cta": "Clique ici", "sticker": "LIEN vers ta page de vente"}
+    ]}
+  ]
+}

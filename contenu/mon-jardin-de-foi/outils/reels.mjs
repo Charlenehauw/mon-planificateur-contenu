@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { SCENES } from './scenes.mjs';
+import { SCENES, VARIANTES } from './scenes.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const dossier = path.resolve(process.argv[2]);
@@ -151,7 +151,7 @@ const seule = process.argv[3];
 const tmp = fs.mkdtempSync(path.join(process.env.TMPDIR || '/tmp', 'reels-'));
 for (const r of data.reels) {
   if (seule && r.id !== seule) continue;
-  const sc = SCENES[r.scene];
+  const sc = r.variante ? VARIANTES[r.variante] : SCENES[r.scene];
   await pg.setContent(page(sc), { waitUntil: 'load' });
   await pg.evaluate(() => document.fonts.ready);
   const evts = path.join(tmp, r.id + '.json'), wav = path.join(tmp, r.id + '.wav');

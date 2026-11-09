@@ -80,6 +80,14 @@ def oiseau(dur_tot, densite=1.0):
     return out
 
 
+def vagues(n):
+    w = rng.standard_normal(n)
+    b = norm(lp(hp(w, 150), 1400, 2))
+    t = np.arange(n) / SR
+    env = 0.25 + 0.75 * np.clip(np.sin(2 * np.pi * 0.11 * t), 0, 1) ** 1.5
+    return b * env * 0.3
+
+
 def grillons(n):
     out = np.zeros(n)
     for f0, decal, vol in [(4300, 0.0, 0.035), (4720, 0.31, 0.025)]:
@@ -138,6 +146,8 @@ def main():
         x = vent(n, 0.7) + oiseau(duree, 1.6)
     elif amb == 'brise':
         x = vent(n, 1.0) + oiseau(duree, 0.9)
+    elif amb == 'mer':
+        x = vagues(n) + oiseau(duree, 0.4) * 0.5
     elif amb == 'nuit':
         x = grillons(n) * 1.8 + vent(n, 0.55)
     else:

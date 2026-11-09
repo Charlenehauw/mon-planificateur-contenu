@@ -183,3 +183,58 @@ export const SCENES = {
       </div>`,
   },
 };
+
+// ——— Variantes : mêmes animations, nouveaux textes (semaines suivantes) ———
+const varier = (base, remplacements, extra = {}) => {
+  let html = SCENES[base].html;
+  for (const [a, b] of remplacements) {
+    if (!html.includes(a)) throw new Error(`Variante de ${base} : texte introuvable « ${a.slice(0, 40)} »`);
+    html = html.split(a).join(b);
+  }
+  return { ...SCENES[base], ...extra, html };
+};
+
+export const VARIANTES = {
+  istighfar: varier('pluie', [
+    ['Un peu,<br>mais régulièrement', 'Et si tu disais<br>Astaghfirullah&nbsp;?'],
+    ['أَحَبُّ الأَعْمَالِ إِلَى اللَّهِ<br>أَدْوَمُهَا وَإِنْ قَلَّ', 'ٱسْتَغْفِرُوا۟ رَبَّكُمْ<br>إِنَّهُۥ كَانَ غَفَّارًا'],
+    ["« Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. »", "« Implorez le pardon de votre Seigneur, car Il est grand Pardonneur, pour qu'Il vous envoie du ciel des pluies abondantes. »"],
+    ['Al-Bukhari &amp; Muslim', 'Sourate Nuh, 71:10-11'],
+    ['Comme la pluie, goutte après goutte,<br>qui fait pousser tout un jardin.', "L'istighfar, c'est la pluie<br>qui fait refleurir ton cœur."],
+  ]),
+  matin: varier('graines', [
+    ['Débordée&nbsp;?', 'Ton matin,<br>en douceur'],
+    ['3 petites graines', '3 sunnahs du matin'],
+    ['1 verset par jour', 'Tes adhkar du matin'],
+    ['1 invocation après chaque prière', '2 rak\'at de Duha'],
+    ['1 bonne action discrète', 'Un sourire, c\'est une aumône'],
+    ['Plante. Arrose.<br>Et laisse Allah faire pousser.', 'Une graine chaque matin,<br>un jardin chaque année.'],
+  ]),
+  tawakkul: varier('aube', [
+    ['Ce que tu traverses<br>n\'est pas la fin<br>de ton histoire', 'Tu n\'as pas<br>à tout porter<br>seule'],
+    ['فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا<br>إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا', 'وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ<br>فَهُوَ حَسْبُهُۥٓ'],
+    ['« À côté de la difficulté est, certes, une facilité. À côté de la difficulté, certes, une facilité. »', '« Et quiconque place sa confiance en Allah, Il lui suffit. »'],
+    ['Sourate Ash-Sharh, 94:5-6', 'Sourate At-Talaq, 65:3'],
+    ['Allah l\'a dit deux fois.<br>Pour que ton cœur l\'entende bien.', 'Fais ta part,<br>puis confie le reste à Allah.'],
+  ]),
+  semaine: varier('jardin', [
+    ['Et si chaque prière<br>faisait pousser<br>une fleur&nbsp;?', 'Chaque jour où tu<br>reviens à Allah<br>fait pousser une fleur'],
+    ...[['Fajr', 'Lun'], ['Dhuhr', 'Mar'], ['Asr', 'Mer'], ['Maghrib', 'Jeu'], ['Isha', 'Ven']].map(([a, b]) => [`<div class="lbl">${a}</div>`, `<div class="lbl">${b}</div>`]),
+    ['Ton jardin grandit avec toi, prière après prière.', 'Pas une semaine parfaite. Juste revenir, encore.'],
+  ]),
+  invocations: varier('jumua', [
+    ['Ta checklist<br>du vendredi', 'Tes invocations<br>du vendredi'],
+    ...[['Ghusl', 'Pour toi'], ['Sourate Al-Kahf', 'Pour ta famille'], ['Salawat sur le Prophète ﷺ', 'Pour la oumma'], ["Invocations, l'heure exaucée", 'Salawat sur le Prophète ﷺ']].map(([a, b]) => [`<span>${a}</span>`, `<span>${b}</span>`]),
+    ['Qu\'Allah accepte tes invocations.', 'Il y a une heure où Allah exauce.'],
+  ]),
+  kursi: varier('nuit', [
+    ['Avant de dormir,<br>pose ton cœur', 'Avant de dormir,<br>récite Ayat al-Kursi'],
+    ['أَلَا بِذِكْرِ ٱللَّهِ<br>تَطْمَئِنُّ ٱلْقُلُوبُ', 'ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ<br>ٱلْحَىُّ ٱلْقَيُّومُ'],
+    ["« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs&nbsp;? »", '« Allah ! Point de divinité à part Lui, le Vivant, Celui qui subsiste par Lui-même. »'],
+    ["Sourate Ar-Ra'd, 13:28", 'Sourate Al-Baqara, 2:255'],
+    ['Dis Alhamdulillah pour une chose.<br>Et confie le reste à Allah.', "Un gardien d'Allah veille sur toi<br>jusqu'au matin (Al-Bukhari)."],
+  ]),
+  offre2: varier('offre', [
+    ['Tout ton jardin de foi,<br>dans ta poche', 'Plus que quelques jours<br>pour l\'offre de lancement'],
+  ]),
+};

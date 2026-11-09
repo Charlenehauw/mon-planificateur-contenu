@@ -77,13 +77,18 @@ function contenu(s, sombre) {
 }
 
 function page(s, i, n, k) {
-  const sombre = SOMBRES.has(s.type);
+  const sombre = SOMBRES.has(s.type) || !!s.photo;
+  const photo = s.photo ? `<img class="photo" src="data:image/jpeg;base64,${fs.readFileSync(path.join(dossier, s.photo)).toString('base64')}"><div class="voile"></div><div class="cadre-ph"></div>` : '';
   return `<!doctype html><html><head><meta charset="utf-8"><style>${css}
   body { width:${W}px; height:${H}px; overflow:hidden; position:relative; }
   .decor { position:absolute; inset:0; }
   .theme { position:absolute; inset:0; --t:${sombre ? '#fdf1f4' : '#86385a'}; --x:${sombre ? '#fbe7ee' : '#5c2740'}; --a:${sombre ? '#e8a3b9' : '#a34d6b'}; }
   .entete { position:absolute; top:${STORY ? 230 : 100}px; left:0; right:0; text-align:center; font-weight:600; letter-spacing:.42em; text-transform:uppercase; font-size:19px; color:var(--a); }
-  .zone { position:absolute; top:${STORY ? 330 : 235}px; bottom:${STORY ? (s.sticker ? 860 : 420) : 275}px; left:130px; right:130px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:var(--x); }
+  .photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 25%; }
+  .cadre-ph { position:absolute; inset:44px; border:1.6px solid rgba(232,163,185,.7); border-radius:6px; }
+  .cadre-ph::after { content:''; position:absolute; inset:10px; border:.8px solid rgba(232,163,185,.5); border-radius:4px; }
+  .voile { position:absolute; inset:0; background:linear-gradient(180deg, rgba(63,26,44,.05) 0%, rgba(63,26,44,.15) 35%, rgba(63,26,44,.82) 62%, rgba(63,26,44,.94) 100%); }
+  .zone { position:absolute; top:${s.photo ? Math.round(H * 0.5) : (STORY ? 330 : 235)}px; bottom:${STORY ? (s.sticker ? 860 : 420) : 275}px; left:130px; right:130px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:var(--x); }
   .kicker { display:flex; align-items:center; gap:22px; font-weight:600; font-size:22px; letter-spacing:.34em; text-transform:uppercase; color:var(--a); margin-bottom:46px; }
   .kicker span { width:60px; height:1.5px; background:var(--a); opacity:.7; }
   h1 { font-family:var(--titre); font-weight:600; color:var(--t); font-size:124px; line-height:1.04; letter-spacing:-.005em; }
@@ -110,6 +115,7 @@ function page(s, i, n, k) {
   .pied .compte { font-family:var(--texte); letter-spacing:.2em; text-transform:none; }
   </style></head><body>
   ${decor(i, sombre, k)}
+  ${photo}
   <div class="theme">
     <div class="entete">Mon Jardin de Foi</div>
     <div class="zone">${contenu(s, sombre)}</div>
