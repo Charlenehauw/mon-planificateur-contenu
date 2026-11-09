@@ -51,3 +51,8 @@ Dossier Drive « MRR » (partagé par lien) : femmes voilées en images et vidé
 Rendu des reels motion : lancer `node outils/reels.mjs <semaine> <id>` reel par reel (plusieurs d'un coup donne des vidéos vides).
 Règle visuels MRR : sur 5 carrousels et 5 reels, **2 avec une femme** (uniquement yeux fermés ou de dos, tenue pudique)
 et **3 sans personne, uniquement sur fond aux couleurs de la marque (pas de décor)**.
+
+## Format hebdo validé (depuis le 9 novembre 2026)
+- 7 reels motion (identité) ~18h · 5 carrousels ~10h · 5 reels MRR ~12h30 · 3 séquences de stories (envoyées à Cha').
+- Vocabulaire : pluriel de sunnah = « sunan ».
+- Médias Metricool : URLs raw.githubusercontent.com figées sur le SHA du commit. Vérifier le planning pour éviter les heures déjà prises.
