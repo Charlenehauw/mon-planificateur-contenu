@@ -44,12 +44,12 @@ const png = async (html, f) => { await pg.setContent(html); await pg.evaluate(()
 for (const r of data.reels_mrr) {
   if (seule && r.id !== seule) continue;
   const [a, b] = r.clips.map((c) => path.join(clips, c + '.mp4'));
-  const da = duree(a), db = duree(b), X = 0.7, D = +(da + db - X).toFixed(2);
+  const da = Math.min(duree(a), 6), db = Math.min(duree(b), 6), X = 0.7, D = +(da + db - X).toFixed(2);
   // 1) fond vidéo : 2 clips recadrés 1080x1920, fondu enchaîné, léger zoom, ton chaud
   const fond = path.join(tmp, r.id + '-fond.mp4');
   const prep = 'scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1';
   run('ffmpeg', ['-nostdin', '-loglevel', 'error', '-y', '-i', a, '-i', b, '-filter_complex',
-    `[0:v]${prep}[x];[1:v]${prep}[y];[x][y]xfade=transition=fade:duration=${X}:offset=${(da - X).toFixed(2)},` +
+    `[0:v]trim=0:${da},setpts=PTS-STARTPTS,${prep}[x];[1:v]trim=0:${db},setpts=PTS-STARTPTS,${prep}[y];[x][y]xfade=transition=fade:duration=${X}:offset=${(da - X).toFixed(2)},` +
     `zoompan=z='min(1+0.0006*on,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30,eq=saturation=1.05,format=yuv420p[v]`,
     '-map', '[v]', '-an', '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', fond]);
   // 2) calques texte
