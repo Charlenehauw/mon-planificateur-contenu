@@ -204,7 +204,7 @@ export const VARIANTES = {
   ]),
   matin: varier('graines', [
     ['Débordée&nbsp;?', 'Ton matin,<br>en douceur'],
-    ['3 petites graines', '3 sunnahs du matin'],
+    ['3 petites graines', '3 sunan du matin'],
     ['1 verset par jour', 'Tes adhkar du matin'],
     ['1 invocation après chaque prière', '2 rak\'at de Duha'],
     ['1 bonne action discrète', 'Un sourire, c\'est une aumône'],
@@ -233,6 +233,13 @@ export const VARIANTES = {
     ["« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs&nbsp;? »", '« Allah ! Point de divinité à part Lui, le Vivant, Celui qui subsiste par Lui-même. »'],
     ["Sourate Ar-Ra'd, 13:28", 'Sourate Al-Baqara, 2:255'],
     ['Dis Alhamdulillah pour une chose.<br>Et confie le reste à Allah.', "Un gardien d'Allah veille sur toi<br>jusqu'au matin (Al-Bukhari)."],
+  ]),
+  vendredi: varier('aube', [
+    ['Ce que tu traverses<br>n\'est pas la fin<br>de ton histoire', 'Jumu\'a Mubarak<br>le meilleur<br>des jours'],
+    ['فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا<br>إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا', 'خير يوم طلعت عليه الشمس<br>يوم الجمعة'],
+    ['« À côté de la difficulté est, certes, une facilité. À côté de la difficulté, certes, une facilité. »', '« Le meilleur jour durant lequel le soleil se lève est le vendredi. C\'est en ce jour qu\'Âdam fut créé, qu\'il fut introduit au Paradis et qu\'il en fut exclu. »'],
+    ['Sourate Ash-Sharh, 94:5-6', 'Rapporté par Muslim (854)'],
+    ['Allah l\'a dit deux fois.<br>Pour que ton cœur l\'entende bien.', 'Multiplie les prières<br>sur le Prophète ﷺ aujourd\'hui.'],
   ]),
   offre2: varier('offre', [
     ['Tout ton jardin de foi,<br>dans ta poche', 'Plus que quelques jours<br>pour l\'offre de lancement'],
