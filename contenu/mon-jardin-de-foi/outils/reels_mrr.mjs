@@ -37,21 +37,44 @@ const signature = `<!doctype html><html><head><meta charset="utf-8"><style>${css
   .c{position:absolute;bottom:128px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.25em;color:#fbe7ee;font-weight:700;text-shadow:0 1px 6px rgba(0,0,0,.6)}</style></head>
   <body><div class="s">Mon Jardin de Foi</div><div class="c">@MON.JARDIN.DE.FOI</div></body></html>`;
 
+import { MOTIFS, fleurLigne } from './fleurs.mjs';
+const fondIdentite = (k) => `<!doctype html><html><head><style>html,body{margin:0;width:540px;height:960px;overflow:hidden}</style></head><body>
+<svg width="540" height="960" viewBox="0 0 1080 1920">
+ <defs><radialGradient id="l" cx="${k % 2 ? 75 : 25}%" cy="15%" r="85%"><stop offset="0" stop-color="#a34d6b"/><stop offset=".55" stop-color="#6e2b49"/><stop offset="1" stop-color="#3f1a2c"/></radialGradient>
+ <filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .35 0 0 0 0 .15 0 0 0 0 .25 0 0 0 .6 0"/></filter></defs>
+ <rect width="1080" height="1920" fill="url(#l)"/><rect width="1080" height="1920" filter="url(#g)" opacity=".2"/>
+ <rect x="44" y="44" width="992" height="1832" rx="6" fill="none" stroke="#e8a3b9" stroke-width="1.6" opacity=".6"/>
+ <rect x="56" y="56" width="968" height="1808" rx="4" fill="none" stroke="#e8a3b9" stroke-width=".8" opacity=".45"/>
+ <g transform="translate(540 330) scale(1.1)" opacity=".8">${MOTIFS[k % MOTIFS.length]('#e8a3b9')}</g>
+</svg></body></html>`;
 const browser = await chromium.launch();
 const pg = await browser.newPage({ viewport: { width: 540, height: 960 }, deviceScaleFactor: 2 });
 const png = async (html, f) => { await pg.setContent(html); await pg.evaluate(() => document.fonts.ready); await pg.screenshot({ path: f, omitBackground: true }); };
 
 for (const r of data.reels_mrr) {
   if (seule && r.id !== seule) continue;
-  const [a, b] = r.clips.map((c) => path.join(clips, c + '.mp4'));
-  const da = Math.min(duree(a), 6), db = Math.min(duree(b), 6), X = 0.7, D = +(da + db - X).toFixed(2);
-  // 1) fond vidéo : 2 clips recadrés 1080x1920, fondu enchaîné, léger zoom, ton chaud
   const fond = path.join(tmp, r.id + '-fond.mp4');
+  let D;
+  if (r.fond === 'identite') {
+    // Fond aux couleurs de la marque (sans décor) : dégradé mauve, grain, cadre fin, fleur au trait, léger zoom
+    D = 11;
+    const img = path.join(tmp, r.id + '-fond.png');
+    await pg.setContent(fondIdentite(data.reels_mrr.indexOf(r)));
+    await pg.screenshot({ path: img });
+    run('ffmpeg', ['-nostdin', '-loglevel', 'error', '-y', '-loop', '1', '-t', String(D), '-i', img, '-vf',
+      `zoompan=z='min(1+0.0004*on,1.05)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30,format=yuv420p`,
+      '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', fond]);
+  } else {
+  const [a, b] = r.clips.map((c) => path.join(clips, c + '.mp4'));
+  const da = Math.min(duree(a), 6), db = Math.min(duree(b), 6), X = 0.7;
+  D = +(da + db - X).toFixed(2);
+  // 1) fond vidéo : 2 clips recadrés 1080x1920, fondu enchaîné, léger zoom, ton chaud
   const prep = 'scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1';
   run('ffmpeg', ['-nostdin', '-loglevel', 'error', '-y', '-i', a, '-i', b, '-filter_complex',
     `[0:v]trim=0:${da},setpts=PTS-STARTPTS,${prep}[x];[1:v]trim=0:${db},setpts=PTS-STARTPTS,${prep}[y];[x][y]xfade=transition=fade:duration=${X}:offset=${(da - X).toFixed(2)},` +
     `zoompan=z='min(1+0.0006*on,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30,eq=saturation=1.05,format=yuv420p[v]`,
     '-map', '[v]', '-an', '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', fond]);
+  }
   // 2) calques texte
   const calques = [];
   for (const [k, t] of r.textes.entries()) { const f = path.join(tmp, `${r.id}-t${k}.png`); await png(calque(t), f); calques.push([f, t[1], Math.min(t[2], D - 0.3)]); }

@@ -105,7 +105,6 @@
       "slides": [
         {
           "type": "cover",
-          "photo": "medias/c3.jpg",
           "kicker": "Bien-être",
           "title": "Pour les jours de grande fatigue",
           "text": "Tu n'as pas à tout porter 🤍"
@@ -155,7 +154,6 @@
       "slides": [
         {
           "type": "cover",
-          "photo": "medias/c4.jpg",
           "kicker": "Mon Jardin de Foi",
           "title": "Fais fleurir ta foi, un jour à la fois",
           "text": "L'appli pensée pour les sœurs 🌷"
@@ -193,7 +191,6 @@
         },
         {
           "type": "offer",
-          "photo": "medias/c4.jpg",
           "title": "Jusqu'au 30 novembre",
           "old": "7,90 €",
           "price": "2,99 €",
@@ -210,7 +207,6 @@
       "slides": [
         {
           "type": "cover",
-          "photo": "medias/c5.jpg",
           "kicker": "Rappel du soir",
           "title": "4 sunnahs avant de dormir",
           "text": "Pour t'endormir protégée 🌙"
@@ -241,7 +237,6 @@
         },
         {
           "type": "cta",
-          "photo": "medias/c5.jpg",
           "title": "Bonne nuit ma sœur",
           "text": "Qu'Allah te protège 🤍",
           "cta": "Enregistre pour ce soir"
@@ -368,10 +363,6 @@
     {
       "id": "v3",
       "date": "2026-11-12T12:30:00",
-      "clips": [
-        "v3a",
-        "v3b"
-      ],
       "ambiance": "brise",
       "textes": [
         [
@@ -391,15 +382,12 @@
           "ref"
         ]
       ],
-      "caption": "Prendre soin de toi fait aussi partie de ta foi 🌊🤍\n\n« Ton corps a un droit sur toi. » (Al-Bukhari)\n\nUn thé chaud, une marche, une sieste avec l'intention de reprendre des forces… Tu as le droit de souffler ma sœur 🌸\n\n"
+      "caption": "Prendre soin de toi fait aussi partie de ta foi 🌊🤍\n\n« Ton corps a un droit sur toi. » (Al-Bukhari)\n\nUn thé chaud, une marche, une sieste avec l'intention de reprendre des forces… Tu as le droit de souffler ma sœur 🌸\n\n",
+      "fond": "identite"
     },
     {
       "id": "v4",
       "date": "2026-11-13T12:30:00",
-      "clips": [
-        "v4a",
-        "v4b"
-      ],
       "ambiance": "jardin",
       "textes": [
         [
@@ -419,15 +407,12 @@
           "ref"
         ]
       ],
-      "caption": "J'ai créé l'appli dont j'avais besoin en plein post-partum 🌷\n\nUn seul endroit pour ton Coran, tes leçons, tes prières, tes habitudes et ton carnet du soir 🫶\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, jusqu'au 30 novembre. Coran + Apprentissage gratuits.\n\n👉 Lien en bio\n\n"
+      "caption": "J'ai créé l'appli dont j'avais besoin en plein post-partum 🌷\n\nUn seul endroit pour ton Coran, tes leçons, tes prières, tes habitudes et ton carnet du soir 🫶\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, jusqu'au 30 novembre. Coran + Apprentissage gratuits.\n\n👉 Lien en bio\n\n",
+      "fond": "identite"
     },
     {
       "id": "v5",
       "date": "2026-11-14T12:30:00",
-      "clips": [
-        "v5a",
-        "v5b"
-      ],
       "ambiance": "jardin",
       "textes": [
         [
@@ -447,7 +432,8 @@
           "ref"
         ]
       ],
-      "caption": "Avance, même à petits pas 🌱\n\n« Certes, Allah est avec les endurants. » (2:153)\n\nTu n'as pas besoin de courir. Tu as juste besoin de ne pas t'arrêter 🤍\n\nEnregistre pour les jours où tu doutes 🌸\n\n"
+      "caption": "Avance, même à petits pas 🌱\n\n« Certes, Allah est avec les endurants. » (2:153)\n\nTu n'as pas besoin de courir. Tu as juste besoin de ne pas t'arrêter 🤍\n\nEnregistre pour les jours où tu doutes 🌸\n\n",
+      "fond": "identite"
     }
   ],
   "stories": [
