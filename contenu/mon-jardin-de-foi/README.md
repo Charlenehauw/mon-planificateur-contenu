@@ -5,7 +5,7 @@ Chaque lundi, avant 8h : **7 carrousels + 7 reels** (1 de chaque par jour), prog
 déposées dans le Drive « Mon jardin de foi » > « Story semaine N ».
 
 ## Identité de marque
-- **Fondatrice** : Oum Imran (Cha'), maman de deux garçons, convertie depuis ~6 ans.
+- **Fondatrice** : Oum Imran (Cha'), maman de deux garçons, convertie depuis environ 5 ans.
 - **Mission** : aider chaque sœur à faire grandir sa foi au quotidien, avec douceur et organisation.
 - **Valeurs** : douceur 🤍 · régularité plutôt que perfection 🌱 · accessibilité 🫶 · sincérité · bienveillance entre sœurs.
 - **Métaphore** : le jardin. Chaque journée complète fait pousser une fleur 🌱🌷🌸🌺🌹.
