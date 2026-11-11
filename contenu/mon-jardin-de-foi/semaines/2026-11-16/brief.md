@@ -17,6 +17,7 @@ Même type de contenu que la semaine du 9 (7 reels motion · 5 carrousels · 5 r
 **b. Le post-partum** : « Le post-partum a tué mon cerveau » : épuisement, agacement, fatigue. J'avais besoin d'un cocon dans
 lequel poser mon cerveau et mes émotions : **l'appli Mon Jardin de Foi, mon planner papier, mes Cosy Colors**,
 qu'elles peuvent retrouver **en bio**.
+  - **Cosy Colors** = des livres de coloriage créés par Cha', vendus sur **Amazon** (lien en bio).
 
 **c. Ma conversion** : j'ai rencontré mon homme il y a plusieurs années ; je n'étais pas encore musulmane, j'ai grandi dans une
 famille chrétienne. Il m'a parlé de l'islam sans entrer dans les détails (il était lui-même un peu perdu à ce moment-là).
@@ -30,3 +31,8 @@ devenir maman grandissait. Pendant le **Ramadan 2021**, chaque jour, dans chacun
 ## Rappels
 - Vocabulaire : jamais « wird » ; pluriel « sunan ». Références exactes et sourcées. Aucun témoignage inventé.
 - Visuels sans femme : uniquement fond aux couleurs de la marque.
+
+## Médias de Cha'
+- Cha' va envoyer ses propres contenus (photos/vidéos) pour les posts personnels : à utiliser en priorité pour ces posts
+  (fichiers déposés dans semaines/2026-11-16/medias-cha/ ou envoyés dans la conversation). Sans visage, sauf si elle le demande.
+  S'ils ne sont pas arrivés lundi, faire les posts personnels sur fond aux couleurs de la marque et le lui signaler.
