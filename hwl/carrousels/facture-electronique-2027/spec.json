@@ -1,0 +1,9 @@
+{"slides":[
+{"type":"cover","kicker":"Micro-entrepreneuse · TPE","title":"Facture électronique : <em>es-tu prête</em> pour 2027 ?","ill":"facture","spark":true},
+{"type":"text","kicker":"Déjà en vigueur","title":"<em>Recevoir</em> : c'est maintenant","body":"Depuis le <b>1er septembre 2026</b>, toutes les entreprises doivent pouvoir <b>recevoir</b> des factures électroniques. Micro-entreprises comprises, <span class=\"hl\">même en franchise de TVA</span>.","ill":"inbox"},
+{"type":"text","kicker":"La grosse échéance","title":"<em>Émettre</em> : le 1er septembre 2027","body":"Tu devras <b>émettre</b> tes factures au format électronique pour tes clients professionnels, via une <b>plateforme agréée</b>, et transmettre certaines données à l'administration (<b>e-reporting</b>).","ill":"calendrier"},
+{"type":"text","kicker":"Ce qui ne suffira plus","title":"Le <span class=\"strike\">PDF</span> envoyé par mail","body":"Pour une facture entre professionnels, un simple PDF envoyé par e-mail <b>ne sera plus conforme</b>.","ill":"pdf"},
+{"type":"text","kicker":"Ta checklist","title":"À faire <em>dès maintenant</em>","body":"Pour aborder 2027 sereinement :","cards":["Choisir ta plateforme agréée","Vérifier les infos de tes clients (SIREN…)","Mettre à jour tes modèles de factures","Tester avant l'échéance"]},
+{"type":"stat","kicker":"Le chiffre qui pique","big":"7 %","body":"C'est la part des entreprises françaises <b>prêtes pour la réforme</b> en mars 2026.","src":"étude OpinionWay-Quadient, mars 2026","star":true},
+{"type":"cta","title":"L'admin te pèse <em>déjà</em> ?","btn":"Commente BRAS DROIT","script":"factures, relances, mise en place : je m'en occupe","note":"Infos générales au 12/11/2026 · vérifie ta situation sur impots.gouv.fr"}
+]}

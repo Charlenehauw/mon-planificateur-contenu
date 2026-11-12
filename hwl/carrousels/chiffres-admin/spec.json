@@ -1,0 +1,9 @@
+{"slides":[
+{"type":"cover","kicker":"Chiffres clés · 2026","title":"L'admin te vole <em>plus de temps</em> que tu ne crois","ill":"horloge","spark":true},
+{"type":"stat","kicker":"Dirigeants de TPE-PME","big":"28 %","body":"consacrent <b>au moins 2 jours par semaine</b> aux tâches administratives.","src":"CPME, rapport d'activité 2025"},
+{"type":"stat","kicker":"Artisans du bâtiment","big":"13 h","body":"par semaine : le temps englouti par <b>la paperasse</b> chez les dirigeants de TPE du BTP.","src":"étude OpinionWay pour Qonto, avril 2026"},
+{"type":"stat","kicker":"Indépendants et TPE","big":"92 %","body":"estiment que le temps passé sur l'admin <b>a augmenté</b> ces 5 dernières années.","src":"enquête SDI auprès de 1 037 dirigeants de TPE"},
+{"type":"text","kicker":"Fais ton calcul","title":"Ce que l'admin <em>te coûte</em>","body":"Heures d'admin par semaine <b>× ton tarif horaire × 4</b>.<br>Exemple : 5 h × 60 € × 4 = <span class=\"hl\"><b>1 200 € par mois</b></span> de temps non facturé.","ill":"calcul"},
+{"type":"text","kicker":"Et si tu déléguais ?","title":"Imagine ton lundi <em>allégé</em>","body":"Pendant que tu travailles sur ton métier :","cards":["Tes mails sont triés","Tes factures et relances partent à l'heure","Ton agenda est calé","Tes posts sont programmés"]},
+{"type":"cta","title":"Tu veux récupérer <em>tes heures</em> ?","btn":"Commente BRAS DROIT","script":"on en parle lors d'un appel découverte gratuit"}
+]}
