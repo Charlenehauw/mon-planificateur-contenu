@@ -1,0 +1,8 @@
+{"slides":[
+{"type":"cover","kicker":"Bienvenue ✦","title":"Moi, c'est <em>Charlène</em>","body":"<span style=\"font-family:Playfair;font-style:italic;color:#4E6F94\">ton bras droit depuis 2019</span>","img":"img/photo.jpg","imgbox":{"w":560,"h":720,"right":80,"bottom":150,"pos":"center 20%","star":true}},
+{"type":"text","kicker":"Ce que je fais","title":"J'allège ta <em>charge mentale</em>","body":"Assistante virtuelle depuis 2019, je prends en main ce qui te pèse au quotidien pour que tu te concentres sur <b>ton métier</b> (et ta famille 💛).","cards":["Mails et agenda","Factures et relances","Réseaux sociaux","Outils IA et automatisations"]},
+{"type":"text","kicker":"Avec qui je travaille","title":"Des entrepreneuses <em>débordées</em>","body":"Indépendantes et dirigeantes de petites entreprises qui manquent de temps, pas d'idées. J'ai notamment accompagné des clientes dans :","cards":["La beauté et le bien-être","L'événementiel","Le juridique"]},
+{"type":"text","kicker":"Ma différence","title":"L'IA <em>+ l'humain</em>","body":"J'utilise l'IA pour aller plus vite, et je garde ce qu'aucun outil ne remplace :","cards":["Je connais ton activité","Je vérifie tout, rien ne part sans relecture","Je suis réactive et fiable","Maman de 2 garçons : je sais ce que jongler veut dire"]},
+{"type":"text","kicker":"En coulisses","title":"Un an en <em>camping-car</em>","body":"Mon bureau ? Là où on se garait 🚐 Aujourd'hui, je suis installée dans le Var avec mon homme et mes deux garçons. Ce métier m'a offert la liberté : <b>mon envie, c'est de t'en offrir un peu aussi.</b>","star":true},
+{"type":"cta","title":"On fait <em>connaissance</em> ?","btn":"Commente BRAS DROIT","script":"ou écris-moi en privé, je réponds à tout"}
+]}

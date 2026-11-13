@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz : quelle méthode d'organisation est faite pour toi ?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Playfair+Display:ital@1&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F0EFEE;--blue:#6F8FB3;--blue2:#4E6F94;--mus:#E6B93A;--mus2:#F3DC8E;--ink:#2F3437;--grey:#8A8F94;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 Inter,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+.halo{position:fixed;border-radius:50%;filter:blur(70px);opacity:.7;z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:28px 20px 60px}
+.brand{text-align:center;font:600 12px Inter;letter-spacing:4px;color:var(--blue2);text-transform:uppercase}
+.brand:before,.brand:after{content:"";display:inline-block;width:34px;height:1.5px;background:#C9B98A;vertical-align:middle;margin:0 12px}
+.kicker{font:600 13px Inter;letter-spacing:3px;color:var(--mus);text-transform:uppercase;margin:26px 0 10px}
+h1,h2{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;color:var(--blue);line-height:1.1}
+h1{font-size:42px}h2{font-size:30px}
+h1 em,h2 em{font-style:normal;color:var(--mus)}
+.script{font:italic 400 20px 'Playfair Display',serif;color:var(--blue2)}
+.hero{display:flex;gap:18px;align-items:flex-end;margin-top:8px}
+.hero img{width:150px;border-radius:22px;box-shadow:0 10px 28px rgba(78,111,148,.18);flex:none}
+p.lead{margin:16px 0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--mus);color:#fff;border:0;border-radius:16px;padding:16px 28px;font:600 20px Oswald,sans-serif;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;box-shadow:0 8px 20px rgba(230,185,58,.35);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--blue2);box-shadow:none;border:2px solid var(--blue);font-size:17px;padding:12px 22px}
+.bar{height:8px;background:#fff;border-radius:8px;overflow:hidden;margin:22px 0 6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--mus));transition:width .35s}
+.count{font:600 13px Inter;color:var(--grey);letter-spacing:1px}
+.q{font:600 26px/1.2 Oswald,sans-serif;color:var(--blue2);text-transform:uppercase;margin:14px 0 18px}
+.opt{display:flex;gap:14px;align-items:center;width:100%;text-align:left;background:var(--card);border:2px solid transparent;border-radius:18px;padding:15px 18px;margin-bottom:12px;font:600 16px Inter;color:var(--ink);cursor:pointer;box-shadow:0 4px 14px rgba(78,111,148,.08);transition:transform .12s,border-color .12s}
+.opt:hover{border-color:var(--mus2);transform:translateY(-1px)}
+.opt .l{flex:none;width:32px;height:32px;border-radius:50%;background:var(--bg);color:var(--blue2);display:flex;align-items:center;justify-content:center;font:600 16px Oswald}
+.back{background:none;border:0;color:var(--grey);font:600 14px Inter;cursor:pointer;margin-top:6px}
+.card{background:var(--card);border-radius:24px;padding:22px;box-shadow:0 6px 22px rgba(78,111,148,.10);margin-top:18px}
+.card h3{font:600 20px Oswald;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+.steps li{list-style:none;display:flex;gap:12px;margin:10px 0}
+.steps li b.n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font:600 15px Oswald}
+.prompt{background:var(--bg);border-radius:16px;padding:14px 16px;margin:12px 0}
+.prompt .t{font:600 13px Inter;color:var(--mus);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.prompt p{font-size:15px}
+.copy{margin-top:10px;background:#fff;border:1.5px solid var(--blue);color:var(--blue2);border-radius:10px;padding:7px 12px;font:600 13px Inter;cursor:pointer}
+.score{display:flex;align-items:center;gap:10px;margin:8px 0;font:600 14px Inter}
+.score span{width:120px;flex:none}.score .b{flex:1;height:8px;background:var(--bg);border-radius:6px;overflow:hidden}.score .b i{display:block;height:100%;background:var(--blue)}
+.score.top .b i{background:var(--mus)}
+.cta{background:var(--blue2);color:#fff;border-radius:24px;padding:24px;margin-top:22px;text-align:center}
+.cta h3{font:600 26px Oswald;text-transform:uppercase;line-height:1.15}
+.cta h3 em{font-style:normal;color:var(--mus2)}
+.cta p{margin:10px 0 18px;opacity:.95}
+.hl{background:linear-gradient(transparent 60%,var(--mus2) 60%)}
+.foot{text-align:center;color:var(--grey);font-size:13px;margin-top:28px}
+.star{display:block;margin:14px auto 0}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="halo" style="width:420px;height:420px;background:#DCE5EF;right:-160px;top:-120px"></div>
+<div class="halo" style="width:380px;height:380px;background:#F5E7C2;left:-170px;bottom:-120px"></div>
+<div class="wrap">
+  <div class="brand">HWL · Assistante virtuelle</div>
+
+  <section id="intro">
+    <div class="kicker">Quiz gratuit · 2 minutes</div>
+    <div class="hero">
+      <div>
+        <h1>Quelle méthode d'organisation est <em>faite pour toi</em>&nbsp;?</h1>
+      </div>
+    </div>
+    <div class="hero" style="margin-top:18px">
+      <img src="__ILLU__" alt="Illustration de Charlène">
+      <div>
+        <div class="script">Coucou, moi c'est Charlène&nbsp;!</div>
+        <p style="margin-top:8px;font-size:15px">Assistante virtuelle depuis 2019, j'aide les entrepreneuses à alléger leur charge mentale.</p>
+      </div>
+    </div>
+    <p class="lead">Réponds à <b>10 questions</b> et découvre la méthode qui colle vraiment à ta façon de travailler, avec <span class="hl"><b>5 prompts prêts à copier dans Claude</b></span> pour la mettre en place dès demain.</p>
+    <button class="btn" id="start">Je commence ✨</button>
+  </section>
+
+  <section id="quiz" class="hidden">
+    <div class="bar"><i id="prog" style="width:0"></i></div>
+    <div class="count" id="count"></div>
+    <div class="q" id="qtext"></div>
+    <div id="opts"></div>
+    <button class="back" id="back">← Question précédente</button>
+  </section>
+
+  <section id="result" class="hidden"></section>
+
+  <div class="foot">© HWL Assistante · @hwl.assistantevirtuelle</div>
+</div>
+
+<script>
+const M = {
+ P:{name:"Pomodoro",title:"Ta méthode : <em>le Pomodoro</em>",tag:"Pour celles qui ont plein d'idées… et du mal à rester concentrées.",
+  why:"Tu as de l'énergie et de l'envie, mais les distractions te font décrocher. Le Pomodoro découpe ton travail en sessions courtes et intenses : 25 minutes de concentration, puis 5 minutes de pause. Ton cerveau sait que la pause arrive, il tient plus facilement.",
+  steps:["Choisis UNE tâche et mets un minuteur sur 25 minutes.","Téléphone retourné, notifications coupées : tu ne fais que ça.","Pause de 5 minutes, puis une pause plus longue (15 à 20 min) toutes les 4 sessions."],
+  prompts:[
+   ["Planifier ta journée en sessions","Voici ma to-do de demain : [colle ta liste]. Découpe chaque tâche en sessions Pomodoro de 25 minutes, estime combien il en faut pour chacune et propose-moi un ordre de passage avec les pauses."],
+   ["Protéger ta concentration","Pendant mes sessions de travail, je décroche souvent à cause de [tes distractions]. Propose-moi 5 règles simples et réalistes pour protéger mes Pomodoros."],
+   ["Découper une tâche floue","Transforme cette tâche floue en mini-étapes faisables en 25 minutes chacune : [ta tâche]."],
+   ["Des pauses qui rechargent","Crée-moi une liste de 10 idées de pauses de 5 minutes qui rechargent vraiment, sans écran, faciles à faire à la maison."],
+   ["Faire le bilan du jour","Voici ce que j'ai fait aujourd'hui : [ton bilan]. Aide-moi à voir combien de sessions j'ai vraiment faites, ce qui m'a fait décrocher, et ce que je change demain."]]},
+ T:{name:"Time blocking",title:"Ta méthode : <em>le time blocking</em>",tag:"Pour celles qui n'ont « jamais le temps » et dont les journées débordent.",
+  why:"Ta to-do est pleine, mais rien n'est prévu dans ton agenda : alors tout déborde sur tes soirées. Le time blocking consiste à donner à chaque tâche un créneau précis dans ton agenda, comme un rendez-vous avec toi-même. Tu vois enfin si ta journée est réaliste.",
+  steps:["Bloque d'abord tes non-négociables : famille, pauses, temps pour toi.","Regroupe les tâches qui se ressemblent dans un même bloc (mails, admin, création).","Garde 20 % de marge pour les imprévus. Un bloc raté se déplace, il ne s'empile pas."],
+  prompts:[
+   ["Construire ta semaine","Voici mes tâches de la semaine avec leur durée estimée : [liste]. Je travaille [jours et horaires] et j'ai ces rendez-vous fixes : [rendez-vous]. Construis mon planning en blocs, en regroupant les tâches similaires et en gardant 20 % de marge."],
+   ["Utiliser tes meilleures heures","Mes heures les plus productives sont [créneau]. Aide-moi à placer mes tâches importantes dans ce créneau et les tâches légères ailleurs."],
+   ["Une semaine type","Propose-moi une semaine type en blocs pour mon activité de [ton métier], avec des blocs fixes pour l'admin, la création, mes clientes et moi."],
+   ["Protéger ta vie perso","Voici mes non-négociables perso : [sortie d'école, sport, repas en famille…]. Bloque-les en premier, puis organise mon travail autour."],
+   ["Rattraper un imprévu","Mon planning a explosé aujourd'hui à cause de [imprévu]. Réorganise la fin de ma semaine sans que je travaille le soir, et dis-moi ce que je peux reporter."]]},
+ E:{name:"Matrice d'Eisenhower",title:"Ta méthode : <em>la matrice d'Eisenhower</em>",tag:"Pour celles qui ont l'impression que tout est urgent.",
+  why:"Tu passes tes journées à éteindre des incendies, souvent ceux des autres. La matrice d'Eisenhower trie tes tâches en 4 cases : urgent et important (tu fais), important mais pas urgent (tu planifies), urgent mais pas important (tu délègues), ni l'un ni l'autre (tu supprimes).",
+  steps:["Vide ta tête : écris toutes tes tâches en vrac.","Place chacune dans une des 4 cases, sans tricher.","Commence par « important mais pas urgent » : c'est là que ton activité avance vraiment."],
+  prompts:[
+   ["Trier tes tâches","Voici toutes mes tâches en vrac : [liste]. Classe-les dans la matrice d'Eisenhower (urgent / important) sous forme de tableau, avec une phrase qui justifie chaque choix."],
+   ["Déléguer ou automatiser","Pour les tâches « urgentes mais pas importantes » de ma liste, propose-moi à qui ou à quoi les déléguer, ou comment les automatiser simplement."],
+   ["Savoir dire non","Aide-moi à rédiger un message chaleureux mais clair pour refuser ou reporter cette demande : [la demande]."],
+   ["Tester l'importance","Pose-moi 5 questions pour savoir si cette tâche est vraiment importante pour mon activité : [ta tâche]."],
+   ["Ton rituel du lundi","Chaque lundi, je veux remplir ma matrice en 10 minutes. Crée-moi un modèle simple à copier, avec des questions pour m'aider à trier."]]},
+ F:{name:"Eat the frog",title:"Ta méthode : <em>« eat the frog »</em>",tag:"Pour celles qui repoussent toujours LA tâche qui pèse.",
+  why:"Il y a toujours une tâche qui traîne en haut de ta liste et qui te pèse toute la journée. « Eat the frog » (manger la grenouille) consiste à t'en débarrasser en premier, dès le début de ta journée. Une fois la grenouille avalée, tout le reste paraît léger.",
+  steps:["La veille au soir, choisis ta grenouille : la tâche importante que tu repousses.","Le matin, attaque-la avant les mails et les réseaux.","Si elle est trop grosse, avale juste la première bouchée : 10 minutes suffisent pour démarrer."],
+  prompts:[
+   ["Trouver ta grenouille","Voici ma to-do de demain : [liste]. Aide-moi à identifier ma « grenouille » : la tâche la plus importante que j'ai le plus tendance à repousser. Explique ton choix."],
+   ["La découper","Ma grenouille du jour est [ta tâche]. Découpe-la en 5 étapes. La première doit prendre moins de 10 minutes."],
+   ["Comprendre le blocage","Je repousse [ta tâche] depuis [durée]. Pose-moi des questions, une par une, pour comprendre ce qui me bloque, puis propose-moi une solution concrète."],
+   ["Une routine du matin","Écris-moi une routine du matin de 15 minutes pour attaquer ma grenouille dès le début de ma journée de travail, à [heure]."],
+   ["Les grenouilles de la semaine","À partir de ces projets : [tes projets], fais-moi la liste des grenouilles de ma semaine, une par jour, de la plus lourde à la plus légère."]]},
+ K:{name:"Kanban",title:"Ta méthode : <em>le Kanban</em>",tag:"Pour celles qui jonglent avec plein de projets et perdent le fil.",
+  why:"Tes tâches sont éparpillées entre ton cahier, ton téléphone et tes mails, et tu ne sais plus où en est chaque dossier. Le Kanban est un tableau visuel en colonnes (À faire, En cours, Terminé) : tu vois d'un coup d'œil où tu en es, et tu limites ce qui est en cours.",
+  steps:["Crée un seul tableau (papier, Notion ou Trello) avec 3 ou 4 colonnes.","Une tâche = une carte. Rassemble-y TOUTES tes notes éparpillées.","Maximum 3 cartes « En cours » : tu en termines une avant d'en commencer une autre."],
+  prompts:[
+   ["Construire ton tableau","Voici tous mes projets et tâches en cours : [liste]. Organise-les en tableau Kanban avec 4 colonnes : À faire, En cours, En attente, Terminé."],
+   ["Ton tableau dans Notion","Crée-moi la structure d'un tableau Kanban dans Notion pour gérer mes clientes et mes projets : colonnes, étiquettes et propriétés utiles, expliquées simplement."],
+   ["Alléger le « en cours »","J'ai trop de tâches « en cours » : [liste]. Aide-moi à choisir les 3 que je garde et à mettre les autres en pause sans culpabiliser."],
+   ["Rassembler tes notes","Voici mes notes éparpillées (cahier, téléphone, mails) : [colle-les]. Regroupe-les en une seule liste, triée par projet, sans doublons."],
+   ["Ton point du vendredi","Chaque vendredi, aide-moi à faire le point sur mon tableau : ce qui avance, ce qui bloque, ce qui sort. Voici l'état actuel : [ton tableau]."]]}
+};
+const ORDER=["E","T","F","P","K"];
+const Q=[
+ ["Quand tu commences ta journée de travail…",{P:"Je me lance, mais au bout de 20 minutes je suis déjà ailleurs",T:"J'ai besoin de savoir à quelle heure je fais quoi",E:"Tout me paraît urgent, je ne sais pas par où commencer",F:"Je repousse LA tâche que je redoute",K:"J'ai plein de projets ouverts et je perds le fil"}],
+ ["Ta plus grande source de stress au travail ?",{P:"Les interruptions et les distractions",T:"Les journées qui débordent sur mes soirées",E:"Les urgences qui tombent sans arrêt",F:"La tâche importante qui traîne depuis des jours",K:"Ne plus savoir où en est chaque dossier"}],
+ ["Ton téléphone pendant que tu travailles…",{P:"Je le consulte toutes les 5 minutes",T:"Je le regarde quand j'ai un trou… mais je n'en ai jamais",E:"Je réponds tout de suite à tout le monde",F:"Il me sert (un peu) à procrastiner",K:"Je note des tâches dedans… un peu partout"}],
+ ["Ton agenda ressemble à…",{P:"Pas grand-chose, je travaille au feeling",T:"Des rendez-vous, mais aucune place pour mes tâches",E:"Une liste de choses « urgentes » à rendre hier",F:"Une to-do qui se reporte de jour en jour",K:"Des post-it, un cahier, des notes dans mes mails"}],
+ ["Et ta to-do list ?",{P:"Elle est courte, mais je n'arrive pas à m'y tenir",T:"Elle est longue et je ne sais pas quand caser tout ça",E:"Tout y est au même niveau, impossible de prioriser",F:"La même tâche y reste en haut toute la semaine",K:"J'en ai plusieurs… et aucune n'est à jour"}],
+ ["Ton énergie dans la journée…",{P:"Elle chute vite, j'ai besoin de pauses régulières",T:"Je suis bien plus efficace à certaines heures",E:"Elle part dans les demandes des autres",F:"Au top le matin, puis plus grand-chose",K:"Elle varie selon le projet sur lequel je suis"}],
+ ["Ton activité, c'est plutôt…",{P:"Beaucoup de petites tâches variées",T:"Un rythme de rendez-vous et de livrables",E:"Des demandes imprévues tous les jours",F:"Quelques gros projets qui demandent du courage",K:"Plusieurs projets en parallèle, avec des étapes"}],
+ ["Ce qui te ferait le plus de bien…",{P:"Tenir 25 minutes sans décrocher",T:"Une journée planifiée, avec du temps pour moi",E:"Savoir trier et dire non",F:"Me débarrasser de ce qui me pèse",K:"Voir d'un coup d'œil où j'en suis"}],
+ ["Ton outil idéal ?",{P:"Un minuteur",T:"Un bel agenda bien rempli",E:"Un tableau en 4 cases pour trier",F:"Un post-it avec UNE seule tâche",K:"Un tableau en colonnes, façon Trello ou Notion"}],
+ ["La phrase qui te ressemble le plus ?",{P:"« Je commence 10 choses et je n'en finis aucune »",T:"« Je n'ai jamais le temps »",E:"« Tout est urgent »",F:"« Je le ferai demain »",K:"« Je ne sais plus où j'en suis »"}]
+];
+const L="ABCDE";
+let i=0, ans=[];
+const $=s=>document.querySelector(s);
+function shuffleKeys(n){const k=["P","T","E","F","K"];let s=n*7+3;return k.map((x,j)=>[x,(j*31+s*17)%11]).sort((a,b)=>a[1]-b[1]).map(a=>a[0]);}
+function show(){
+  const [q,o]=Q[i];
+  $("#prog").style.width=(i/Q.length*100)+"%";
+  $("#count").textContent=`Question ${i+1} sur ${Q.length}`;
+  $("#qtext").textContent=q;
+  $("#opts").innerHTML=shuffleKeys(i).map((k,j)=>`<button class="opt" data-k="${k}"><span class="l">${L[j]}</span>${o[k]}</button>`).join("");
+  $("#back").style.visibility=i?"visible":"hidden";
+  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ans[i]=b.dataset.k;i++;i<Q.length?show():result();window.scrollTo({top:0,behavior:"smooth"});});
+}
+function result(){
+  const sc={P:0,T:0,E:0,F:0,K:0}; ans.forEach(k=>sc[k]++);
+  const best=ORDER.reduce((a,b)=>sc[b]>sc[a]?b:a, ORDER[0]);
+  const m=M[best];
+  const bars=ORDER.slice().sort((a,b)=>sc[b]-sc[a]).map(k=>`<div class="score${k===best?" top":""}"><span>${M[k].name}</span><div class="b"><i style="width:${sc[k]*10}%"></i></div><b>${sc[k]}/10</b></div>`).join("");
+  $("#quiz").classList.add("hidden");
+  const r=$("#result"); r.classList.remove("hidden");
+  r.innerHTML=`
+   <div class="kicker">Ton résultat</div>
+   <h2>${m.title}</h2>
+   <p class="script" style="margin-top:10px">${m.tag}</p>
+   <div class="card"><h3>Pourquoi elle est faite pour toi</h3><p>${m.why}</p></div>
+   <div class="card"><h3>Comment démarrer dès demain</h3><ul class="steps">${m.steps.map((s,j)=>`<li><b class="n">${j+1}</b><span>${s}</span></li>`).join("")}</ul></div>
+   <div class="card"><h3>Tes 5 prompts pour t'organiser avec Claude</h3>
+     <p style="font-size:14px;color:var(--grey)">Copie un prompt, colle-le dans Claude et remplace ce qui est entre [crochets] par tes infos.</p>
+     ${m.prompts.map((p,j)=>`<div class="prompt"><div class="t">Prompt ${j+1} · ${p[0]}</div><p id="p${j}">${p[1]}</p><button class="copy" data-j="${j}">Copier le prompt</button></div>`).join("")}
+   </div>
+   <div class="card"><h3>Ton profil complet</h3>${bars}</div>
+   <div class="cta">
+     <h3>Et si quelqu'un mettait tout ça <em>en place pour toi</em>&nbsp;?</h3>
+     <p>Organisation, outils, IA, admin : c'est mon métier depuis 2019. Je peux t'installer ta méthode et tes outils, ou prendre en main tout ce qui te pèse au quotidien avec mon accompagnement <b>Bras Droit</b>.</p>
+     <a class="btn" href="https://www.instagram.com/hwl.assistantevirtuelle/" target="_blank" rel="noopener">Écris-moi « BRAS DROIT » sur Instagram</a>
+     <p style="font-size:13px;margin:12px 0 0;opacity:.85">Appel découverte gratuit · @hwl.assistantevirtuelle</p>
+   </div>
+   <p style="text-align:center;margin-top:22px"><button class="btn ghost" id="again">Refaire le quiz</button></p>`;
+  r.querySelectorAll(".copy").forEach(b=>b.onclick=async()=>{const t=m.prompts[b.dataset.j][1];try{await navigator.clipboard.writeText(t);b.textContent="Copié ✓";}catch(e){const rg=document.createRange();rg.selectNodeContents(document.getElementById("p"+b.dataset.j));const s=getSelection();s.removeAllRanges();s.addRange(rg);b.textContent="Texte sélectionné : copie-le";}setTimeout(()=>b.textContent="Copier le prompt",2500);});
+  $("#again").onclick=()=>{i=0;ans=[];r.classList.add("hidden");$("#intro").classList.remove("hidden");window.scrollTo({top:0});};
+}
+$("#start").onclick=()=>{$("#intro").classList.add("hidden");$("#quiz").classList.remove("hidden");show();};
+$("#back").onclick=()=>{if(i>0){i--;show();}};
+</script>
+</body>
+</html>

@@ -94,6 +94,18 @@ def page(slide, i, n):
         deco = f'<div style="position:absolute;right:110px;bottom:520px">{SPARK.format(s=70)}</div>'
     if slide.get("star"):
         deco += f'<div style="position:absolute;right:120px;bottom:210px">{STAR.format(s=150)}</div>'
+    if slide.get("img"):
+        g = slide.get("imgbox", {})
+        w, h = g.get("w", 560), g.get("h", 700)
+        pos = g.get("pos", "center top")
+        r = g.get("right"); b = g.get("bottom", 150)
+        place = f"right:{r}px" if r is not None else f"left:{(1080-w)//2}px"
+        ill += (f'<div style="position:absolute;{place};bottom:{b}px;width:{w}px;height:{h}px;border-radius:44px;overflow:hidden;'
+                f'box-shadow:0 18px 40px rgba(78,111,148,.22);border:10px solid #fff">'
+                f'<img src="file://{(ROOT / slide["img"]).resolve()}" style="width:100%;height:100%;object-fit:cover;object-position:{pos}"></div>')
+        if g.get("star"):
+            sx = (1080 - (r if r is not None else (1080-w)//2)) - 95
+            ill += f'<div style="position:absolute;left:{sx}px;bottom:{b+h-70}px">{STAR.format(s=140)}</div>'
     glisse = '<div class="glisse">Glisse <span>→</span></div>' if i < n else '<div></div>'
     bottom = f'<div class="bottom">{glisse}<div class="pg">{i:02d}/{n:02d}</div></div>'
     return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>{halos}<div class="top">HWL · ASSISTANTE VIRTUELLE</div>{inner}{ill}{deco}{bottom}</body></html>'
