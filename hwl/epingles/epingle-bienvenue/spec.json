@@ -6,13 +6,13 @@
 "title": "Moi, c'est <em>Charlène</em>",
 "body": "<span style=\"font-family:Playfair;font-style:italic;color:#4E6F94\">ton bras droit depuis 2019</span>",
 "cutout": {
-"src": "img/photo-cut2.png",
-"w": 650,
-"right": -100,
-"bottom": 20,
+"src": "img/photo2-cut.png",
+"w": 620,
+"right": -20,
+"bottom": 0,
 "star": [
-150,
-640
+140,
+620
 ]
 }
 },
