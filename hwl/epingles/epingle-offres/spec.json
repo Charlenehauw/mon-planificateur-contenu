@@ -1,8 +1,73 @@
-{"slides":[
-{"type":"cover","kicker":"Mes accompagnements","title":"Je t'aide à <em>souffler</em>","body":"Choisis la formule qui te ressemble 👉","img":"img/illu.jpg","imgbox":{"w":520,"h":760,"right":80,"bottom":150,"pos":"center 8%","star":true}},
-{"type":"text","kicker":"La plus complète","title":"<em>Bras droit</em>","body":"Chaque mois, sur-mesure : je prends en main tout ce qui te pèse. <b>Une seule personne, qui connaît ton activité.</b>","cards":["Mails, agenda et rendez-vous","Factures, devis et relances","Réseaux sociaux et visuels","Outils IA et automatisations"]},
-{"type":"text","kicker":"Pour bien démarrer","title":"Setup <em>IA &amp; organisation</em>","body":"Un accompagnement unique pour t'installer des outils qui travaillent pour toi :","cards":["Un audit de 45 minutes","1 outil créé sur mesure","10 prompts adaptés à ton activité","1 h de prise en main en visio"]},
-{"type":"text","kicker":"Pour ton Instagram","title":"Contenu <em>signature</em>","body":"Ton Instagram tourne tout seul, avec un contenu qui te ressemble :","cards":["8 posts et 5 reels par mois","Visuels et légendes","Calendrier et programmation"]},
-{"type":"text","kicker":"Comment ça se passe","title":"Comment on <em>travaille ensemble</em>","body":"De ton premier message à ton premier jour plus léger :","steps":["On fait un appel découverte gratuit","Je t'envoie un devis sur mesure","On démarre ensemble","Tu respires 💛"]},
-{"type":"cta","title":"Une place <em>Bras droit</em> est ouverte","btn":"Commente BRAS DROIT","script":"je t'envoie les détails en privé"}
-]}
+{
+"slides": [
+{
+"type": "cover",
+"kicker": "Mes accompagnements",
+"title": "Je t'aide à <em>souffler</em>",
+"body": "Choisis la formule qui te ressemble 👉",
+"cutout": {
+"src": "img/illu-cut.png",
+"w": 450,
+"right": 110,
+"bottom": 100,
+"star": [
+150,
+700
+]
+}
+},
+{
+"type": "text",
+"kicker": "La plus complète",
+"title": "<em>Bras droit</em>",
+"body": "Chaque mois, sur-mesure : je prends en main tout ce qui te pèse. <b>Une seule personne, qui connaît ton activité.</b>",
+"cards": [
+"Mails, agenda et rendez-vous",
+"Factures, devis et relances",
+"Réseaux sociaux et visuels",
+"Outils IA et automatisations"
+]
+},
+{
+"type": "text",
+"kicker": "Pour bien démarrer",
+"title": "Setup <em>IA &amp; organisation</em>",
+"body": "Un accompagnement unique pour t'installer des outils qui travaillent pour toi :",
+"cards": [
+"Un audit de 45 minutes",
+"1 outil créé sur mesure",
+"10 prompts adaptés à ton activité",
+"1 h de prise en main en visio"
+]
+},
+{
+"type": "text",
+"kicker": "Pour ton Instagram",
+"title": "Contenu <em>signature</em>",
+"body": "Ton Instagram tourne tout seul, avec un contenu qui te ressemble :",
+"cards": [
+"8 posts et 5 reels par mois",
+"Visuels et légendes",
+"Calendrier et programmation"
+]
+},
+{
+"type": "text",
+"kicker": "Comment ça se passe",
+"title": "Comment on <em>travaille ensemble</em>",
+"body": "De ton premier message à ton premier jour plus léger :",
+"steps": [
+"On fait un appel découverte gratuit",
+"Je t'envoie un devis sur mesure",
+"On démarre ensemble",
+"Tu respires 💛"
+]
+},
+{
+"type": "cta",
+"title": "Une place <em>Bras droit</em> est ouverte",
+"btn": "Commente BRAS DROIT",
+"script": "je t'envoie les détails en privé"
+}
+]
+}

@@ -1,6 +1,37 @@
-{"slides":[
-{"type":"cover","kicker":"Cadeau ✦ Quiz gratuit","title":"Quelle méthode d'orga est <em>faite pour toi</em> ?","img":"img/illu.jpg","imgbox":{"w":440,"h":540,"right":80,"bottom":150,"pos":"center 8%","star":true}},
-{"type":"text","kicker":"10 questions · 2 minutes","title":"Découvre <em>ton profil</em>","body":"Le quiz te dit laquelle de ces 5 méthodes colle vraiment à ta façon de travailler :","cards":["Pomodoro","Time blocking","Matrice d'Eisenhower","Eat the frog","Kanban"]},
-{"type":"text","kicker":"Et en bonus","title":"5 prompts <em>prêts à copier</em>","body":"Pour chaque méthode, je t'offre <b>5 prompts à coller dans Claude</b> pour la mettre en place dès demain, sans y passer tes soirées.","ill":"robot"},
-{"type":"cta","title":"Tu veux <em>le quiz</em> ?","btn":"Commente QUIZ","script":"je t'envoie le lien en privé"}
-]}
+{
+"slides": [
+{
+"type": "cover",
+"kicker": "Cadeau ✦ Quiz gratuit",
+"title": "Quelle méthode d'orga est <em>faite pour toi</em> ?",
+"ill": "agenda",
+"spark": true
+},
+{
+"type": "text",
+"kicker": "10 questions · 2 minutes",
+"title": "Découvre <em>ton profil</em>",
+"body": "Le quiz te dit laquelle de ces 5 méthodes colle vraiment à ta façon de travailler :",
+"cards": [
+"Pomodoro",
+"Time blocking",
+"Matrice d'Eisenhower",
+"Eat the frog",
+"Kanban"
+]
+},
+{
+"type": "text",
+"kicker": "Et en bonus",
+"title": "5 prompts <em>prêts à copier</em>",
+"body": "Pour chaque méthode, je t'offre <b>5 prompts à coller dans Claude</b> pour la mettre en place dès demain, sans y passer tes soirées.",
+"ill": "robot"
+},
+{
+"type": "cta",
+"title": "Tu veux <em>le quiz</em> ?",
+"btn": "Commente QUIZ",
+"script": "je t'envoie le lien en privé"
+}
+]
+}
