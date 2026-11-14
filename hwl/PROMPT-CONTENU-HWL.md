@@ -27,7 +27,7 @@ Une entrepreneuse **déjà installée**, qui vend bien son temps et qui manque d
 |---|---|
 | **Bras Droit**, 950 €/mois (mails, agenda, factures et relances, projets, réseaux, outils IA) | **L'offre à vendre.** CTA : « Commente BRAS DROIT » |
 | Setup IA & Organisation, 190 € | Porte d'entrée pour celles qui hésitent. À citer en second, jamais en premier |
-| Contenu Signature, 400 €/mois | À citer seulement si une prospecte parle de ses réseaux |
+| Contenu Signature, 400 €/mois (16 publications par mois, reels ou carrousels au choix) | À citer seulement si une prospecte parle de ses réseaux |
 
 Ne pas afficher le prix du Bras Droit dans les posts : le prix se donne en appel découverte.
 
