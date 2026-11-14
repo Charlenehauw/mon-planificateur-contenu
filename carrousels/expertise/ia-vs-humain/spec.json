@@ -1,0 +1,9 @@
+{"slides":[
+{"type":"cover","kicker":"IA & délégation","title":"Ce que l'IA fait très bien… et <em>ce qu'elle ne fera jamais</em> à ta place","ill":"robot"},
+{"type":"text","kicker":"L'IA excelle pour","title":"Aller <em>plus vite</em>","body":"Bien utilisée, elle te fait gagner un temps fou :","cards":["Résumer tes mails et tes réunions","Rédiger un premier jet","Trier et organiser tes idées","Proposer un planning"]},
+{"type":"text","kicker":"Mais elle ne peut pas","title":"Remplacer <em>l'humain</em>","body":"Il y a des choses qu'aucun outil ne fera pour toi :","x":true,"cards":["Connaître tes clientes et ton histoire","Relancer un client en retard avec tact","Vérifier qu'une info est juste","Décider à ta place"]},
+{"type":"text","kicker":"Le piège","title":"3 soirées pour <em>gagner 30 min</em>","body":"Tester des dizaines d'outils, regarder des tutos, tout paramétrer seule… <b>Le temps que tu voulais gagner, tu le perds à apprendre.</b>","star":true},
+{"type":"text","kicker":"Ma méthode","title":"L'IA <em>+ moi</em>","body":"Le meilleur des deux, sans que tu aies à t'en occuper :","steps":["J'analyse tes tâches","J'automatise ce qui peut l'être","Je gère le reste, avec soin","Tu valides, c'est tout"]},
+{"type":"text","kicker":"Le résultat","title":"Plus de temps, <em>zéro outil</em> à apprendre","body":"Ton admin avance, tes outils travaillent pour toi, et tu gardes ton énergie pour <b>ton métier et ta famille</b>.","ill":"coeur"},
+{"type":"cta","title":"On s'y met <em>ensemble</em> ?","btn":"Commente BRAS DROIT","script":"je t'envoie les détails en privé"}
+]}
