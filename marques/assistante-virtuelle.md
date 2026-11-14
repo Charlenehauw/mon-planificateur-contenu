@@ -29,7 +29,7 @@
 - Pour HWL, c'est **le bleu** qui domine. Le jaune ne sert que d'accent : un univers à dominante jaune, c'est La Digitale Nomade.
 
 **Typographies :**
-- Titres : **Oswald 600**, majuscules condensées
+- Titres : **Anton**, en majuscules (remplace Oswald depuis nov. 2026 : ne plus utiliser Oswald)
 - Touches élégantes : **Playfair Display italique**
 - Texte courant : **Inter**
 
