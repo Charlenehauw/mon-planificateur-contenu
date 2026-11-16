@@ -244,4 +244,48 @@ export const VARIANTES = {
   offre2: varier('offre', [
     ['Tout ton jardin de foi,<br>dans ta poche', 'Plus que quelques jours<br>pour l\'offre de lancement'],
   ]),
+
+  // ——— Semaine du 16 novembre ———
+  charge: varier('aube', [
+    ['Ce que tu traverses<br>n\'est pas la fin<br>de ton histoire', 'Allah ne te demande<br>pas plus que ce que<br>tu peux porter'],
+    ['فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا<br>إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا', 'لَا يُكَلِّفُ ٱللَّهُ نَفْسًا<br>إِلَّا وُسْعَهَا'],
+    ['« À côté de la difficulté est, certes, une facilité. À côté de la difficulté, certes, une facilité. »', '« Allah n\'impose à aucune âme une charge supérieure à sa capacité. »'],
+    ['Sourate Ash-Sharh, 94:5-6', 'Sourate Al-Baqara, 2:286'],
+    ['Allah l\'a dit deux fois.<br>Pour que ton cœur l\'entende bien.', 'Ton épreuve a été pesée<br>à la mesure de ta force.'],
+  ]),
+  offre3: varier('offre', [
+    ['Tout ton jardin de foi,<br>dans ta poche', 'Plus que 2 semaines<br>pour l\'offre de lancement'],
+  ]),
+  exaucee: varier('nuit', [
+    ['Avant de dormir,<br>pose ton cœur', 'Ramadan 2021.<br>J\'ai demandé un enfant<br>à Allah'],
+    ['أَلَا بِذِكْرِ ٱللَّهِ<br>تَطْمَئِنُّ ٱلْقُلُوبُ', 'ٱدْعُونِىٓ<br>أَسْتَجِبْ لَكُمْ'],
+    ["« N'est-ce point par l'évocation d'Allah que se tranquillisent les cœurs&nbsp;? »", '« Invoquez-Moi, Je vous répondrai. »'],
+    ["Sourate Ar-Ra'd, 13:28", 'Sourate Ghafir, 40:60'],
+    ['Dis Alhamdulillah pour une chose.<br>Et confie le reste à Allah.', 'Un mois plus tard,<br>j\'étais enceinte. Alhamdulillah.'],
+  ]),
+  maman: varier('graines', [
+    ['Débordée&nbsp;?', 'Maman épuisée&nbsp;?'],
+    ['3 petites graines', '3 rappels pour toi'],
+    ['1 verset par jour', 'Ta fatigue n\'est pas perdue'],
+    ['1 invocation après chaque prière', 'L\'intention change tout'],
+    ['1 bonne action discrète', 'Demander de l\'aide n\'est pas une faiblesse'],
+    ['Plante. Arrose.<br>Et laisse Allah faire pousser.', 'Chaque geste fait pour Allah<br>devient une adoration.'],
+  ]),
+  kahf: varier('pluie', [
+    ['Un peu,<br>mais régulièrement', 'Jumu\'a Mubarak&nbsp;:<br>n\'oublie pas Al-Kahf'],
+    ['أَحَبُّ الأَعْمَالِ إِلَى اللَّهِ<br>أَدْوَمُهَا وَإِنْ قَلَّ', 'مَنْ قَرَأَ سُورَةَ الْكَهْفِ يَوْمَ الْجُمُعَةِ<br>أَضَاءَ لَهُ مِنَ النُّورِ مَا بَيْنَ الْجُمُعَتَيْنِ'],
+    ["« Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. »", "« Celui qui lit sourate Al-Kahf le jour du vendredi, une lumière l'éclairera entre les deux vendredis. »"],
+    ['Al-Bukhari &amp; Muslim', "Al-Hakim · authentifié par Al-Albani (Sahih al-Jami' 6470)"],
+    ['Comme la pluie, goutte après goutte,<br>qui fait pousser tout un jardin.', 'Une lumière pour ta semaine,<br>page après page.'],
+  ]),
+  conversion: varier('aube', [
+    ['Ce que tu traverses<br>n\'est pas la fin<br>de ton histoire', 'J\'ai grandi dans<br>une famille<br>chrétienne'],
+    ['فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا<br>إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا', 'فَمَن يُرِدِ ٱللَّهُ أَن يَهْدِيَهُۥ<br>يَشْرَحْ صَدْرَهُۥ لِلْإِسْلَٰمِ'],
+    ['« À côté de la difficulté est, certes, une facilité. À côté de la difficulté, certes, une facilité. »', '« Et quiconque Allah veut guider, Il lui ouvre la poitrine à l\'Islam. »'],
+    ['Sourate Ash-Sharh, 94:5-6', "Sourate Al-An'am, 6:125"],
+    ['Allah l\'a dit deux fois.<br>Pour que ton cœur l\'entende bien.', 'J\'ai lu le Coran.<br>Il y a 5 ans, je me suis convertie.'],
+  ]),
+  offre4: varier('offre', [
+    ['Tout ton jardin de foi,<br>dans ta poche', 'Plus que 8 jours<br>pour l\'offre de lancement'],
+  ]),
 };
