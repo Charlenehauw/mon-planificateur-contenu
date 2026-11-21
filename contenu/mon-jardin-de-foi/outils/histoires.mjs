@@ -88,7 +88,7 @@ function compiler(h) {
         coran.push({ t: t(x), f });
         const fin = k < p.ayat.length - 1 ? t(x + dd + 0.15) : null;
         const mots = a.ar.split(' ');
-        blocs += `<div class="aya" ${A(t(x), 'fade', 0.4, fin)}><div class="ar">${mots.map((m, j) => `<span ${A(t(x + (dd * 0.8) * j / mots.length), 'mot', 0.45)}>${m}</span>`).join(' ')}</div>
+        blocs += `<div class="aya" ${A(t(x), 'fade', 0.4, fin)}><div class="ar${a.ar.length > 70 ? ' long' : ''}">${mots.map((m, j) => `<span ${A(t(x + (dd * 0.8) * j / mots.length), 'mot', 0.45)}>${m}</span>`).join(' ')}</div>
           <div class="fr" ${A(t(x + 0.6), 'rise')}>${esc(a.fr)}</div></div>`;
         x += dd + 0.25;
       });
@@ -137,11 +137,13 @@ function compiler(h) {
       const pas = p.pas || 2.2, N = p.items.length; let cartes = '', kara = '', ts = [];
       p.items.forEach((it, k) => {
         const x = 0.8 + k * pas; ts.push(t(x).toFixed(2));
-        cartes += `<div class="ck-c" ${A(t(x), 'rise', 0.45)}><div class="box"><svg viewBox="-24 -24 48 48"><rect x="-18" y="-18" width="36" height="36" rx="9" class="bx" ${A(t(x + 0.6), 'rempli', 0.25)}/><path class="ck2" pathLength="1" d="M-9 1 L-2 8 L11 -8" ${A(t(x + 0.6), 'trait', 0.3)}/></svg></div>
+        const apercu = p.apercu ? ` data-apercu="1"` : '';
+        const gauche = it.an ? `<div class="an">${esc(it.an)}</div>` : null;
+        cartes += `<div class="ck-c${it.an ? ' frise' : ''}"${apercu} ${A(t(x), 'rise', 0.45)}>${gauche || `<div class="box"><svg viewBox="-24 -24 48 48"><rect x="-18" y="-18" width="36" height="36" rx="9" class="bx" ${A(t(x + 0.6), 'rempli', 0.25)}/><path class="ck2" pathLength="1" d="M-9 1 L-2 8 L11 -8" ${A(t(x + 0.6), 'trait', 0.3)}/></svg></div>`}
           <div class="ck-t"><b>${esc(it.t)}</b><span>${esc(it.s || '')}</span></div><div class="ck-i">${icone(it.ic)}</div></div>`;
-        sons.push({ t: t(x), type: 'envoi' }, { t: t(x + 0.62), type: 'tick' });
+        sons.push({ t: t(x), type: 'envoi' }, { t: t(x + 0.62), type: it.an ? 'pop' : 'tick' });
         const mots = (it.dit || it.t).split(' '), fin = k < N - 1 ? t(x + pas - 0.35) : null;
-        kara += `<div class="kara" ${A(t(x), 'fade', 0.2, fin)}>${mots.map((m, j) => `<span ${A(t(x + 0.1 + (pas - 0.5) * j / mots.length), 'kara', (pas - 0.5) / mots.length)}>${esc(m)}</span>`).join(' ')}</div>`;
+        if (p.karaoke) kara += `<div class="kara" ${A(t(x), 'fade', 0.2, fin)}>${mots.map((m, j) => `<span ${A(t(x + 0.1 + (pas - 0.5) * j / mots.length), 'kara', (pas - 0.5) / mots.length)}>${esc(m)}</span>`).join(' ')}</div>`;
       });
       d = p.d || 0.8 + N * pas + 1.0;
       html = `<div class="ckl"><div class="ck-h"><div class="kk">${esc(p.titre)}</div><div class="barre"><i data-prog="${ts.join(',')}" data-n="${N}"></i></div><div class="cpt" data-prog="${ts.join(',')}" data-n="${N}"></div></div>
@@ -252,6 +254,7 @@ function page(h, c) {
   .aya{position:absolute;left:36px;right:36px;top:250px;display:flex;flex-direction:column;align-items:center}
   .aya .ar{font-family:var(--arabe);font-size:50px;line-height:1.9;color:var(--t);direction:rtl}
   .aya .ar span{display:inline-block}
+  .aya .ar.long{font-size:38px;line-height:1.85}
   .aya .fr{margin-top:26px;font-size:22px;line-height:1.5;font-style:italic;font-weight:500;max-width:440px}
   .verset .ref{position:absolute;bottom:118px;left:0;right:0;font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--a)}
   .verset .note{position:absolute;bottom:150px;left:50px;right:50px;font-size:17px;line-height:1.5;font-weight:500}
@@ -293,6 +296,7 @@ function page(h, c) {
   .bx{fill:#fff;stroke:#a34d6b;stroke-width:2.5px;vector-effect:non-scaling-stroke}.ck2{fill:none;stroke:#fff;stroke-width:3.4px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
   .ck-t{flex:1;display:flex;flex-direction:column}.ck-t b{font-size:20px;color:#5c2740}.ck-t span{font-size:13px;color:#a34d6b;font-weight:600;margin-top:2px}
   .ck-i{width:58px;height:58px;flex:none}
+  .an{flex:none;min-width:86px;padding:8px 10px;border-radius:12px;background:#86385a;color:#fdf1f4;font-weight:700;font-size:13px;text-align:center;line-height:1.2}
   .kara{position:absolute;left:40px;right:40px;bottom:110px;font-size:27px;font-weight:700;line-height:1.35;color:var(--t)}
   .kara span{opacity:.35;padding:0 3px;border-radius:6px}
   .cpt-w{display:flex;flex-direction:column;align-items:center;padding:0 40px}
@@ -333,7 +337,8 @@ function page(h, c) {
       p.style.opacity=Math.min(e,1-x); p.style.filter='blur('+((1-e)*8+x*6)+'px)';}
     for(const el of E){const t0=+el.dataset.t0,d=+(el.dataset.d||.6),t1=el.dataset.t1?+el.dataset.t1:1e9,a=el.dataset.a;
       const q=cl((t-t0)/d),p=ease(q),o=ease(cl((t-t1)/.3)),vis=p*(1-o);
-      if(a==='rise'){el.style.opacity=vis;el.style.transform='translateY('+((1-p)*24)+'px)'}
+      if(a==='rise'&&el.dataset.apercu){el.style.opacity=t<t0?.32:.32+.68*p;el.style.transform='translateY('+((1-p)*10)+'px) scale('+(t<t0?.96:.96+.04*p)+')';el.style.filter=t<t0?'grayscale(.6)':'none'}
+      else if(a==='rise'){el.style.opacity=vis;el.style.transform='translateY('+((1-p)*24)+'px)'}
       else if(a==='fade'){el.style.opacity=vis}
       else if(a==='pop'){el.style.opacity=vis;el.style.transform='scale('+(q<=0?.5:.5+.5*back(q))+')'}
       else if(a==='drop'){el.style.opacity=vis;el.style.transform='translateY('+((1-p)*-140)+'px) scale('+(.9+.1*p)+')'}

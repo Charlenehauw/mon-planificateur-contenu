@@ -74,11 +74,12 @@
      "cta": "Enregistre pour les nuits difficiles"
     }
    ],
-   "caption": "POV : 3h du matin, tu n'arrives pas à dormir 🌙\n\nCes versets ont été révélés pour réconforter le Prophète ﷺ, à un moment où il s'inquiétait de ne plus recevoir de révélation (Al-Bukhari 4950) :\n\n« Ton Seigneur ne t'a ni abandonné, ni détesté. La vie dernière t'est, certes, meilleure que la vie présente. Ton Seigneur t'accordera certes [Ses faveurs], et alors tu seras satisfait. » (Ad-Duha, 93:3-5)\n\nÉcoute-les les yeux fermés 🤍\nEt envoie cette vidéo à une sœur qui ne dort pas ce soir.\n\n🎧 Récitation : Mishary Alafasy\n\n"
+   "caption": "POV : 3h du matin, tu n'arrives pas à dormir 🌙\n\nCes versets ont été révélés pour réconforter le Prophète ﷺ, à un moment où il s'inquiétait de ne plus recevoir de révélation (Al-Bukhari 4950) :\n\n« Ton Seigneur ne t'a ni abandonné, ni détesté. La vie dernière t'est, certes, meilleure que la vie présente. Ton Seigneur t'accordera certes [Ses faveurs], et alors tu seras satisfait. » (Ad-Duha, 93:3-5)\n\nÉcoute-les les yeux fermés 🤍\nEt envoie cette vidéo à une sœur qui ne dort pas ce soir.\n\n🎧 Récitation : Mishary Alafasy\n\n",
+   "date": "2026-11-23T18:00:00"
   },
   {
    "id": "h2",
-   "fond": "sombre",
+   "fond": "mauve",
    "ambiance": "chambre",
    "couverture": 1.6,
    "plans": [
@@ -128,7 +129,168 @@
      "cta": "Enregistre ce rappel"
     }
    ],
-   "caption": "Ton glow up, selon la sunnah ✨\n\n01 · Le siwak : « Il purifie la bouche et satisfait le Seigneur. » (An-Nasa'i)\n02 · Tes cheveux : « Que celui qui a des cheveux les honore. » (Abu Dawud)\n03 · Le khôl ithmid : « Il éclaircit la vue et fait pousser les cils. » (Abu Dawud)\n04 · Dormir tôt : le Prophète ﷺ n'aimait pas veiller après Isha (Al-Bukhari)\n05 · Manger avec mesure : un tiers pour la nourriture, un tiers pour la boisson, un tiers pour respirer (At-Tirmidhi)\n\nLaquelle tu commences demain ? 🤍\n\n"
+   "caption": "Ton glow up, selon la sunnah ✨\n\n01 · Le siwak : « Il purifie la bouche et satisfait le Seigneur. » (An-Nasa'i)\n02 · Tes cheveux : « Que celui qui a des cheveux les honore. » (Abu Dawud)\n03 · Le khôl ithmid : « Il éclaircit la vue et fait pousser les cils. » (Abu Dawud)\n04 · Dormir tôt : le Prophète ﷺ n'aimait pas veiller après Isha (Al-Bukhari)\n05 · Manger avec mesure : un tiers pour la nourriture, un tiers pour la boisson, un tiers pour respirer (At-Tirmidhi)\n\nLaquelle tu commences demain ? 🤍\n\n",
+   "date": "2026-11-24T18:00:00"
+  },
+  {
+   "id": "h5",
+   "fond": "rose",
+   "ambiance": "chambre",
+   "couverture": 9,
+   "plans": [
+    {
+     "type": "checklist",
+     "titre": "Ma checklist du quotidien",
+     "pas": 1.55,
+     "apercu": true,
+     "items": [
+      {
+       "t": "Prier à l'heure",
+       "s": "les 5 prières, à leur moment",
+       "ic": "soleil"
+      },
+      {
+       "t": "Ayat al-Kursi",
+       "s": "après chaque prière",
+       "ic": "livre"
+      },
+      {
+       "t": "Lire le Coran",
+       "s": "chaque jour, même une page",
+       "ic": "livre"
+      },
+      {
+       "t": "Faire de Fajr une priorité",
+       "s": "commencer la journée avec Allah",
+       "ic": "lune"
+      },
+      {
+       "t": "Bouger mon corps",
+       "s": "« le croyant fort est meilleur » · Muslim",
+       "ic": "marche"
+      },
+      {
+       "t": "Manger sainement",
+       "s": "la plupart du temps",
+       "ic": "assiette"
+      },
+      {
+       "t": "Honorer mes parents",
+       "s": "toujours avec douceur",
+       "ic": "coeur"
+      },
+      {
+       "t": "Pardonner facilement",
+       "s": "pour l'amour d'Allah",
+       "ic": "mains"
+      },
+      {
+       "t": "Adhkar matin et soir",
+       "s": "ma protection, chaque jour",
+       "ic": "tasbih"
+      },
+      {
+       "t": "Prier sur le Prophète ﷺ",
+       "s": "des salawat, souvent",
+       "ic": "coeur"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.6,
+     "titre": "Laquelle tu coches déjà ? 🤍",
+     "cta": "Enregistre ta checklist"
+    }
+   ],
+   "caption": "Ma checklist du quotidien 🤍\n\n☑️ Prier à l'heure\n☑️ Ayat al-Kursi après chaque prière : rien n'empêche celui qui la récite d'entrer au Paradis, si ce n'est la mort (An-Nasa'i, Sunan al-Kubra 9848)\n☑️ Lire le Coran chaque jour, même une page\n☑️ Faire de Fajr une priorité\n☑️ Bouger mon corps : « Le croyant fort est meilleur et plus aimé d'Allah que le croyant faible, et en chacun il y a du bien » (Muslim 2664)\n☑️ Manger sainement\n☑️ Honorer mes parents\n☑️ Pardonner facilement\n☑️ Adhkar du matin et du soir\n☑️ Prier sur le Prophète ﷺ : « Celui qui prie sur moi une fois, Allah prie sur lui dix fois » (Muslim 408)\n\nLaquelle tu coches déjà ? Dis-moi en commentaire 🌸\n\n",
+   "date": "2026-11-25T18:00:00"
+  },
+  {
+   "id": "h4",
+   "fond": "grille",
+   "ambiance": "chambre",
+   "couverture": 3.2,
+   "plans": [
+    {
+     "type": "compte",
+     "etiquette": "Patience",
+     "avant": "ça fait",
+     "de": 1,
+     "a": 47,
+     "dDefil": 2.4,
+     "unite": "jours que tu patientes",
+     "lignes": [
+      "Tu as l'impression qu'Allah *ne voit pas* ?",
+      "Il voit *chaque jour*. Écoute :"
+     ]
+    },
+    {
+     "type": "verset",
+     "sourate": 2,
+     "kicker": "Écoute",
+     "ref": "Sourate Al-Baqara, 2:153",
+     "fin": 0.7,
+     "ayat": [
+      {
+       "n": 153,
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ",
+       "fr": "« Ô les croyants ! Cherchez secours dans l'endurance et la prière. Car Allah est avec ceux qui sont endurants. »"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.6,
+     "titre": "Envoie-la à une sœur qui patiente 🤍",
+     "cta": "Enregistre pour les jours lourds"
+    }
+   ],
+   "caption": "Ça fait combien de jours que tu patientes ? 🤍\n\n« Ô les croyants ! Cherchez secours dans l'endurance et la prière. Car Allah est avec ceux qui sont endurants. » (Al-Baqara, 2:153)\n\nIl voit chaque jour. Chaque larme. Chaque « Alhamdulillah » dit le cœur serré.\n\n🎧 Récitation : Mishary Alafasy\n\n",
+   "date": "2026-11-26T18:00:00"
+  },
+  {
+   "id": "h6",
+   "fond": "grille",
+   "ambiance": "chambre",
+   "couverture": 3.4,
+   "plans": [
+    {
+     "type": "compte",
+     "etiquette": "Ramadan",
+     "avant": "dans environ",
+     "de": 90,
+     "a": 73,
+     "dDefil": 1.8,
+     "unite": "jours",
+     "lignes": [
+      "*N'attends pas* le dernier moment",
+      "Prépare ton cœur *dès maintenant* 🌙"
+     ]
+    },
+    {
+     "type": "verset",
+     "sourate": 2,
+     "kicker": "Écoute",
+     "ref": "Sourate Al-Baqara, 2:183",
+     "fin": 0.6,
+     "ayat": [
+      {
+       "n": 183,
+       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
+       "fr": "« Ô les croyants ! On vous a prescrit le jeûne comme on l'a prescrit à ceux d'avant vous, ainsi atteindrez-vous la piété. »"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.6,
+     "titre": "Qu'Allah nous permette d'atteindre Ramadan 🤲",
+     "cta": "Amine"
+    }
+   ],
+   "caption": "Ramadan dans environ 73 jours 🌙 (date à confirmer selon l'observation du croissant)\n\nN'attends pas le dernier moment : prépare ton cœur dès maintenant.\n\n« Ô les croyants ! On vous a prescrit le jeûne comme on l'a prescrit à ceux d'avant vous, ainsi atteindrez-vous la piété. » (Al-Baqara, 2:183)\n\nQu'Allah nous permette d'atteindre Ramadan 🤲 Écris « Amine » 🤍\n\n🎧 Récitation : Mishary Alafasy\n\n",
+   "date": "2026-11-27T18:00:00"
   },
   {
    "id": "h3",
@@ -186,49 +348,629 @@
      "cta": "Partage à une future maman"
     }
    ],
-   "caption": "Ma checklist douce post-partum 🤍\n\n☑️ Me reposer sans culpabiliser : « Ton corps a un droit sur toi » (Al-Bukhari)\n☑️ Manger des dattes, comme Maryam : « Secoue vers toi le tronc du palmier : il fera tomber sur toi des dattes fraîches et mûres. Mange donc et bois, et que ton œil se réjouisse ! » (19:25-26)\n☑️ Boire de l'eau\n☑️ Mes adhkar, même allongée : « ceux qui invoquent Allah debout, assis, couchés sur leurs côtés » (3:191)\n☑️ Demander de l'aide\n☑️ Invoquer pour mon bébé : « Seigneur, donne-nous, en nos épouses et nos descendants, la joie de nos yeux » (25:74)\n\nEnregistre-la et partage-la à une future maman 🌷\n\n"
+   "caption": "Ma checklist douce post-partum 🤍\n\n☑️ Me reposer sans culpabiliser : « Ton corps a un droit sur toi » (Al-Bukhari)\n☑️ Manger des dattes, comme Maryam : « Secoue vers toi le tronc du palmier : il fera tomber sur toi des dattes fraîches et mûres. Mange donc et bois, et que ton œil se réjouisse ! » (19:25-26)\n☑️ Boire de l'eau\n☑️ Mes adhkar, même allongée : « ceux qui invoquent Allah debout, assis, couchés sur leurs côtés » (3:191)\n☑️ Demander de l'aide\n☑️ Invoquer pour mon bébé : « Seigneur, donne-nous, en nos épouses et nos descendants, la joie de nos yeux » (25:74)\n\nEnregistre-la et partage-la à une future maman 🌷\n\n",
+   "date": "2026-11-28T18:00:00"
   },
   {
-   "id": "h4",
-   "fond": "grille",
+   "id": "h7",
+   "fond": "rose",
    "ambiance": "chambre",
-   "couverture": 3.2,
+   "couverture": 7,
    "plans": [
     {
-     "type": "compte",
-     "etiquette": "Patience",
-     "avant": "ça fait",
-     "de": 1,
-     "a": 47,
-     "dDefil": 2.4,
-     "unite": "jours que tu patientes",
+     "type": "texte",
+     "d": 2.4,
      "lignes": [
-      "Tu as l'impression qu'Allah *ne voit pas* ?",
-      "Il voit *chaque jour*. Écoute :"
-     ]
+      "Mon histoire,",
+      "en *30 secondes* 🤍"
+     ],
+     "pas": 0.7
     },
     {
-     "type": "verset",
-     "sourate": 2,
-     "kicker": "Écoute",
-     "ref": "Sourate Al-Baqara, 2:153",
-     "fin": 0.7,
-     "ayat": [
+     "type": "checklist",
+     "titre": "Mon chemin",
+     "pas": 2.3,
+     "items": [
       {
-       "n": 153,
-       "ar": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ",
-       "fr": "« Ô les croyants ! Cherchez secours dans l'endurance et la prière. Car Allah est avec ceux qui sont endurants. »"
+       "an": "Avant",
+       "t": "Une famille chrétienne",
+       "s": "c'est là que j'ai grandi",
+       "ic": "coeur"
+      },
+      {
+       "an": "Puis",
+       "t": "Je rencontre mon homme",
+       "s": "il me parle de l'islam",
+       "ic": "mains"
+      },
+      {
+       "an": "Il y a ~5 ans",
+       "t": "Je lis le Coran",
+       "s": "et je me convertis",
+       "ic": "livre"
+      },
+      {
+       "an": "Ramadan 2021",
+       "t": "J'invoque Allah",
+       "s": "pour avoir un enfant",
+       "ic": "lune"
+      },
+      {
+       "an": "1 mois après",
+       "t": "Je suis enceinte",
+       "s": "Alhamdulillah",
+       "ic": "bebe"
+      },
+      {
+       "an": "Aujourd'hui",
+       "t": "Maman de deux garçons",
+       "s": "et j'ai créé Mon Jardin de Foi",
+       "ic": "dattes"
       }
      ]
     },
     {
      "type": "fin",
      "d": 2.6,
-     "titre": "Envoie-la à une sœur qui patiente 🤍",
-     "cta": "Enregistre pour les jours lourds"
+     "titre": "Et toi, c'est quoi ton histoire ? 🌷",
+     "cta": "Raconte-moi en commentaire"
     }
    ],
-   "caption": "Ça fait combien de jours que tu patientes ? 🤍\n\n« Ô les croyants ! Cherchez secours dans l'endurance et la prière. Car Allah est avec ceux qui sont endurants. » (Al-Baqara, 2:153)\n\nIl voit chaque jour. Chaque larme. Chaque « Alhamdulillah » dit le cœur serré.\n\n🎧 Récitation : Mishary Alafasy\n\n"
+   "caption": "Mon histoire, en 30 secondes 🤍\n\nJ'ai grandi dans une famille chrétienne. J'ai rencontré mon homme, il m'a parlé de l'islam. J'ai lu le Coran, et je me suis convertie, il y a environ 5 ans.\n\nPendant le Ramadan 2021, j'ai demandé à Allah de m'accorder un enfant. Un mois plus tard, j'étais enceinte.\n\nAujourd'hui, je suis maman de deux garçons. Et en plein post-partum, j'ai créé Mon Jardin de Foi : le cocon dont j'avais besoin pour ma foi 🌷\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre. Coran + Apprentissage restent gratuits.\n\nLien en bio 🌸\n\nEt toi, c'est quoi ton histoire ? 🌸\n\n",
+   "date": "2026-11-29T18:00:00"
+  },
+  {
+   "id": "v2",
+   "fond": "mauve",
+   "ambiance": "chambre",
+   "couverture": 1.5,
+   "plans": [
+    {
+     "type": "texte",
+     "d": 2.9,
+     "lignes": [
+      "Tu as l'impression",
+      "qu'Allah *ne t'entend pas* ?"
+     ],
+     "pas": 0.8
+    },
+    {
+     "type": "verset",
+     "sourate": 2,
+     "kicker": "Écoute",
+     "ref": "Sourate Al-Baqara, 2:186",
+     "fin": 0.5,
+     "ayat": [
+      {
+       "n": 186,
+       "ar": "وَإِذَا سَأَلَكَ عِبَادِى عَنِّى فَإِنِّى قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ ٱلدَّاعِ إِذَا دَعَانِ ۖ فَلْيَسْتَجِيبُوا۟ لِى وَلْيُؤْمِنُوا۟ بِى لَعَلَّهُمْ يَرْشُدُونَ",
+       "fr": "« Et quand Mes serviteurs t'interrogent sur Moi, alors Je suis tout proche : Je réponds à l'appel de celui qui Me prie quand il Me prie. »"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.4,
+     "titre": "Il est tout proche 🤍",
+     "cta": "Envoie à une sœur"
+    }
+   ],
+   "caption": "Tu as l'impression qu'Allah ne t'entend pas ? 🤍\n\n« Et quand Mes serviteurs t'interrogent sur Moi, alors Je suis tout proche : Je réponds à l'appel de celui qui Me prie quand il Me prie. Qu'ils répondent à Mon appel, et qu'ils croient en Moi, afin qu'ils soient bien guidés. » (Al-Baqara, 2:186)\n\nContinue d'invoquer. Il est tout proche.\n\n🎧 Récitation : Mishary Alafasy\n\n",
+   "date": "2026-11-25T12:30:00"
+  },
+  {
+   "id": "v4",
+   "fond": "rose",
+   "ambiance": "chambre",
+   "couverture": 1.5,
+   "plans": [
+    {
+     "type": "texte",
+     "d": 3.2,
+     "lignes": [
+      "Tu as *1 minute* ?",
+      "Récite Al-Ikhlas : elle équivaut au *tiers du Coran*"
+     ],
+     "pas": 0.9
+    },
+    {
+     "type": "verset",
+     "sourate": 112,
+     "kicker": "Sourate Al-Ikhlas",
+     "ref": "Sourate Al-Ikhlas, 112:1-4",
+     "fin": 0.6,
+     "ayat": [
+      {
+       "n": 1,
+       "ar": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+       "fr": "« Dis : Il est Allah, Unique. »"
+      },
+      {
+       "n": 2,
+       "ar": "ٱللَّهُ ٱلصَّمَدُ",
+       "fr": "« Allah, Le Seul à être imploré pour ce que nous désirons. »"
+      },
+      {
+       "n": 3,
+       "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+       "fr": "« Il n'a jamais engendré, n'a pas été engendré non plus. »"
+      },
+      {
+       "n": 4,
+       "ar": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+       "fr": "« Et nul n'est égal à Lui. »"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.4,
+     "titre": "Récite-la 3 fois aujourd'hui 🤍",
+     "cta": "Enregistre ce rappel"
+    }
+   ],
+   "caption": "Tu as 1 minute ? 🤍\n\nLe Prophète ﷺ a dit à propos de sourate Al-Ikhlas : « Par Celui qui détient mon âme dans Sa main, elle équivaut au tiers du Coran. » (Al-Bukhari 5013)\n\nRécite-la 3 fois aujourd'hui, en cuisinant, en berçant bébé, en marchant 🌸\n\n🎧 Récitation : Mishary Alafasy\n\n",
+   "date": "2026-11-27T12:30:00"
+  },
+  {
+   "id": "v5",
+   "fond": "grille",
+   "ambiance": "chambre",
+   "couverture": 1.4,
+   "plans": [
+    {
+     "type": "points",
+     "kicker": "Rester régulière",
+     "titre": "choses qui m'aident chaque jour",
+     "sous": "même débordée 🤍",
+     "dPoint": 2.8,
+     "items": [
+      {
+       "titre": "Une petite habitude à la fois",
+       "src": "Al-Bukhari (6464)",
+       "texte": "« Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. »",
+       "ic": "sablier"
+      },
+      {
+       "titre": "Ma journée par prière",
+       "src": "Mon Jardin de Foi",
+       "texte": "Je m'organise autour des 5 prières, pas l'inverse.",
+       "ic": "soleil"
+      },
+      {
+       "titre": "Mon carnet du soir",
+       "src": "Mon Jardin de Foi",
+       "texte": "Une gratitude, une invocation, et je dors le cœur léger.",
+       "ic": "livre"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.6,
+     "titre": "Tout est réuni dans Mon Jardin de Foi 🌷",
+     "cta": "2,99 € jusqu'au 30/11 · lien en bio"
+    }
+   ],
+   "caption": "3 choses qui m'aident à rester régulière, même débordée 🤍\n\n1️⃣ Une petite habitude à la fois : « Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. » (Al-Bukhari)\n2️⃣ Organiser ma journée autour des 5 prières\n3️⃣ Mon carnet du soir : une gratitude, une invocation\n\nJ'ai tout réuni dans Mon Jardin de Foi 🌷\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre. Coran + Apprentissage restent gratuits.\n\nLien en bio 🌸\n\n",
+   "date": "2026-11-28T12:30:00"
+  }
+ ],
+ "reels_mrr": [
+  {
+   "id": "v1",
+   "date": "2026-11-24T12:30:00",
+   "clips": [
+    "v1a",
+    "v1b"
+   ],
+   "ambiance": "mer",
+   "textes": [
+    [
+     "Tu n'as pas à être parfaite",
+     0.4,
+     5.6
+    ],
+    [
+     "« Allah est Doux et Il aime la douceur en toute chose. »",
+     5.9,
+     10.8
+    ],
+    [
+     "Al-Bukhari & Muslim",
+     6.4,
+     10.8,
+     "ref"
+    ]
+   ],
+   "caption": "Tu n'as pas à être parfaite 🤍\n\n« Allah est Doux et Il aime la douceur en toute chose. » (Al-Bukhari 6927, Muslim 2593)\n\nSois douce avec les autres… et avec toi-même. Ta fatigue, tes jours sans, tes efforts invisibles : Allah voit tout 🌸\n\n"
+  },
+  {
+   "id": "v3",
+   "date": "2026-11-26T12:30:00",
+   "clips": [
+    "v3a",
+    "v3b"
+   ],
+   "ambiance": "brise",
+   "textes": [
+    [
+     "Arrête de te comparer",
+     0.4,
+     5.6
+    ],
+    [
+     "« Regardez ceux qui sont en dessous de vous, et non ceux qui sont au-dessus. »",
+     5.9,
+     10.8
+    ],
+    [
+     "Rapporté par Muslim",
+     6.4,
+     10.8,
+     "ref"
+    ]
+   ],
+   "caption": "Arrête de te comparer 🤍\n\nLe Prophète ﷺ a dit : « Regardez ceux qui sont en dessous de vous et ne regardez pas ceux qui sont au-dessus de vous : c'est plus digne pour ne pas mépriser les bienfaits d'Allah sur vous. » (Muslim 2963)\n\nTon chemin est le tien. Dis Alhamdulillah pour ce que tu as déjà 🌸\n\n"
+  }
+ ],
+ "carrousels": [
+  {
+   "id": "c1",
+   "date": "2026-11-24T10:00:00",
+   "pilier": "Ramadan",
+   "slides": [
+    {
+     "type": "cover",
+     "photo": "medias/c1.jpg",
+     "kicker": "Ramadan",
+     "title": "Prépare ton cœur dès maintenant",
+     "text": "5 gestes simples 🌙"
+    },
+    {
+     "type": "step",
+     "num": "1",
+     "title": "Rattrape tes jours",
+     "text": "Aïcha rattrapait ses jours manqués en <b>Sha'ban</b>, juste avant Ramadan.<br><span class='src'>Al-Bukhari (1950)</span>"
+    },
+    {
+     "type": "step",
+     "num": "2",
+     "title": "Jeûne un peu en Sha'ban",
+     "text": "Le Prophète ﷺ jeûnait <b>beaucoup en Sha'ban</b>.<br><span class='src'>Al-Bukhari (1969)</span>"
+    },
+    {
+     "type": "step",
+     "num": "3",
+     "title": "Augmente ta lecture",
+     "text": "Quelques pages de plus chaque semaine, pour arriver à Ramadan déjà habituée."
+    },
+    {
+     "type": "step",
+     "num": "4",
+     "title": "Fais le ménage dans ton cœur",
+     "text": "Repentir, pardon, liens à renouer. <b>Arrive léger.</b>"
+    },
+    {
+     "type": "step",
+     "num": "5",
+     "title": "Écris tes invocations",
+     "text": "Une liste de ce que tu veux demander à Allah, pour ne rien oublier."
+    },
+    {
+     "type": "cta",
+     "photo": "medias/c1.jpg",
+     "title": "Enregistre ce post",
+     "text": "Et commence par un seul geste cette semaine 🤍",
+     "cta": "Partage à une sœur"
+    }
+   ],
+   "caption": "Ramadan approche 🌙 Prépare ton cœur dès maintenant :\n\n1️⃣ Rattrape tes jours manqués : Aïcha les rattrapait en Sha'ban (Al-Bukhari 1950)\n2️⃣ Jeûne un peu en Sha'ban : le Prophète ﷺ y jeûnait beaucoup (Al-Bukhari 1969)\n3️⃣ Augmente doucement ta lecture du Coran\n4️⃣ Fais le ménage dans ton cœur : repentir, pardon, liens à renouer\n5️⃣ Écris ta liste d'invocations\n\nCommence par un seul geste cette semaine 🤍\n\n"
+  },
+  {
+   "id": "c2",
+   "date": "2026-11-25T10:00:00",
+   "pilier": "Offre",
+   "slides": [
+    {
+     "type": "cover",
+     "kicker": "Et toi ?",
+     "title": "Planner papier ou digital ?",
+     "text": "Je te dis tout 🌷"
+    },
+    {
+     "type": "list",
+     "kicker": "Team papier",
+     "title": "Ce que j'aime",
+     "items": [
+      "Écrire à la main, ça pose mon cerveau",
+      "Aucune notification",
+      "Un joli objet que j'ouvre avec plaisir"
+     ]
+    },
+    {
+     "type": "list",
+     "kicker": "Team digital",
+     "title": "Ce que j'aime",
+     "items": [
+      "Toujours dans ma poche",
+      "Mes prières et habitudes suivies",
+      "Je vois mon jardin grandir"
+     ]
+    },
+    {
+     "type": "text",
+     "title": "Ma réponse ?",
+     "text": "<b>Les deux</b> 🤍<br>Mon planner papier pour poser mes idées, et Mon Jardin de Foi pour ma foi au quotidien."
+    },
+    {
+     "type": "offer",
+     "title": "Jusqu'au 30 novembre",
+     "old": "7,90 €",
+     "price": "2,99 €",
+     "text": "Version complète · paiement unique · accès à vie",
+     "cta": "Lien en bio"
+    }
+   ],
+   "caption": "Planner papier ou digital ? 🌷\n\n📓 Team papier : écrire à la main pose mon cerveau, aucune notification, un joli objet\n📱 Team digital : toujours dans ma poche, mes prières et habitudes suivies, je vois mon jardin grandir\n\nMa réponse : les deux 🤍 Mon planner papier pour poser mes idées, et Mon Jardin de Foi pour ma foi au quotidien.\n\nEt toi, team papier ou team digital ? Dis-le en commentaire 👇\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre. Coran + Apprentissage restent gratuits.\n\nLien en bio 🌸\n\n"
+  },
+  {
+   "id": "c3",
+   "date": "2026-11-26T10:00:00",
+   "pilier": "Ramadan",
+   "slides": [
+    {
+     "type": "cover",
+     "kicker": "Organisation",
+     "title": "Organise ton Ramadan avant qu'il commence",
+     "text": "Tips de maman 🌙"
+    },
+    {
+     "type": "step",
+     "num": "1",
+     "title": "Le plan Coran",
+     "text": "Pour finir le Coran en 30 jours : <b>1 juz par jour</b>, soit environ 20 pages. Découpe-le en 4 moments."
+    },
+    {
+     "type": "step",
+     "num": "2",
+     "title": "La cuisine en avance",
+     "text": "Soupes, bricks, pâtes à pizza : prépare et congèle en janvier pour libérer tes soirées."
+    },
+    {
+     "type": "step",
+     "num": "3",
+     "title": "Le rythme de sommeil",
+     "text": "Décale doucement ton coucher dès maintenant pour le suhur."
+    },
+    {
+     "type": "step",
+     "num": "4",
+     "title": "La sadaqa",
+     "text": "Fixe un petit montant par jour : <b>la régularité</b> compte plus que la somme."
+    },
+    {
+     "type": "step",
+     "num": "5",
+     "title": "Les 10 dernières nuits",
+     "text": "Note déjà ce que tu veux faire de ces nuits : prière, invocations, lecture."
+    },
+    {
+     "type": "cta",
+     "title": "Enregistre",
+     "text": "Pour le ressortir en février 🌙",
+     "cta": "Partage à une sœur"
+    }
+   ],
+   "caption": "Organise ton Ramadan avant qu'il commence 🌙\n\n1️⃣ Le plan Coran : 1 juz par jour pour finir en 30 jours\n2️⃣ La cuisine en avance : prépare et congèle\n3️⃣ Le rythme de sommeil : décale doucement ton coucher\n4️⃣ La sadaqa : un petit montant chaque jour\n5️⃣ Les 10 dernières nuits : note déjà ton programme\n\nEnregistre pour le ressortir en février 🤍\n\n"
+  },
+  {
+   "id": "c4",
+   "date": "2026-11-27T10:00:00",
+   "pilier": "Rappel",
+   "slides": [
+    {
+     "type": "cover",
+     "photo": "medias/c4.jpg",
+     "kicker": "Rappel doux",
+     "title": "Pour les jours où tu doutes de toi",
+     "text": "Lis jusqu'au bout 🤍"
+    },
+    {
+     "type": "arabic",
+     "ar": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+     "text": "« Allah n'impose à aucune âme une charge supérieure à sa capacité. »",
+     "src": "Sourate Al-Baqara, 2:286"
+    },
+    {
+     "type": "text",
+     "title": "Il connaît ton cœur",
+     "text": "« Allah ne regarde ni vos corps ni vos apparences, mais Il regarde <b>vos cœurs et vos actes</b>. »<br><span class='src'>Rapporté par Muslim (2564)</span>"
+    },
+    {
+     "type": "text",
+     "title": "Et tes efforts ?",
+     "text": "« Je ne laisse pas perdre l'œuvre de quiconque parmi vous, homme ou femme. »<br><span class='src'>Sourate Al-Imran, 3:195</span>"
+    },
+    {
+     "type": "cta",
+     "photo": "medias/c4.jpg",
+     "title": "Tu fais de ton mieux",
+     "text": "Et Allah le voit 🌷",
+     "cta": "Partage à une sœur"
+    }
+   ],
+   "caption": "Pour les jours où tu doutes de toi 🤍\n\n🌸 « Allah n'impose à aucune âme une charge supérieure à sa capacité. » (2:286)\n🌸 « Allah ne regarde ni vos corps ni vos apparences, mais Il regarde vos cœurs et vos actes. » (Muslim)\n🌸 « Je ne laisse pas perdre l'œuvre de quiconque parmi vous, homme ou femme. » (3:195)\n\nTu fais de ton mieux, et Allah le voit 🌷\n\n"
+  },
+  {
+   "id": "c5",
+   "date": "2026-11-28T10:00:00",
+   "pilier": "Ramadan",
+   "slides": [
+    {
+     "type": "cover",
+     "kicker": "Tips",
+     "title": "Lire plus de Coran avant Ramadan",
+     "text": "Sans te mettre la pression 📖"
+    },
+    {
+     "type": "step",
+     "num": "1",
+     "title": "Après chaque prière",
+     "text": "2 pages après chaque prière = <b>10 pages par jour</b>."
+    },
+    {
+     "type": "step",
+     "num": "2",
+     "title": "Écoute pendant tes tâches",
+     "text": "Une récitation en cuisinant ou en voiture, ça compte aussi pour ton cœur."
+    },
+    {
+     "type": "step",
+     "num": "3",
+     "title": "Lis la traduction",
+     "text": "Comprendre ce que tu lis change tout."
+    },
+    {
+     "type": "text",
+     "title": "Chaque lettre compte",
+     "text": "« Celui qui lit une lettre du Livre d'Allah obtient une bonne action, et la bonne action est multipliée par dix. »<br><span class='src'>Rapporté par At-Tirmidhi (2910)</span>"
+    },
+    {
+     "type": "cta",
+     "title": "Ton défi",
+     "text": "Ajoute 1 page de plus chaque jour cette semaine 🤍",
+     "cta": "Enregistre"
+    }
+   ],
+   "caption": "Lire plus de Coran avant Ramadan, sans pression 📖\n\n1️⃣ 2 pages après chaque prière = 10 pages par jour\n2️⃣ Écoute une récitation pendant tes tâches\n3️⃣ Lis la traduction pour comprendre\n\n« Celui qui lit une lettre du Livre d'Allah obtient une bonne action, et la bonne action est multipliée par dix. » (At-Tirmidhi 2910)\n\nTon défi : 1 page de plus chaque jour cette semaine 🤍\n\n"
+  }
+ ],
+ "stories": [
+  {
+   "id": "s1",
+   "titre": "Rappel",
+   "slides": [
+    {
+     "type": "cover",
+     "kicker": "Ramadan",
+     "title": "Dans environ 73 jours",
+     "text": "On s'y prépare ensemble ? 🌙"
+    },
+    {
+     "type": "text",
+     "title": "Ton objectif n°1 ?",
+     "text": "",
+     "sticker": "SONDAGE : « Finir le Coran 📖 » / « Être régulière dans mes prières 🤲 »"
+    },
+    {
+     "type": "list",
+     "title": "Cette semaine",
+     "items": [
+      "Rattraper un jour manqué",
+      "1 page de Coran en plus",
+      "Écrire 3 invocations"
+     ]
+    },
+    {
+     "type": "text",
+     "title": "Tu as commencé ?",
+     "text": "",
+     "sticker": "CURSEUR emoji 🌙 « Ma préparation »"
+    },
+    {
+     "type": "cta",
+     "title": "Partage à une sœur",
+     "text": "Pour vous motiver ensemble 🤍",
+     "cta": "Envoie cette story"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "titre": "Créer du lien",
+   "slides": [
+    {
+     "type": "cover",
+     "kicker": "Entre sœurs",
+     "title": "Planner papier ou digital ?",
+     "text": "Je veux savoir 🌷"
+    },
+    {
+     "type": "text",
+     "title": "Tu es plutôt…",
+     "text": "",
+     "sticker": "SONDAGE : « Team papier 📓 » / « Team digital 📱 »"
+    },
+    {
+     "type": "text",
+     "title": "Et moi ?",
+     "text": "Les deux !<br>Mon planner papier pour poser mes idées, et mon appli pour ma foi 🤍"
+    },
+    {
+     "type": "text",
+     "title": "Ton astuce d'organisation ?",
+     "text": "Elle peut aider une autre maman 🫶",
+     "sticker": "QUESTIONS : « Ton astuce ici 🌸 »"
+    },
+    {
+     "type": "cta",
+     "title": "Je partage vos réponses",
+     "text": "Dans une prochaine story, in shaa Allah 🤍",
+     "cta": "À très vite"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "titre": "Mon offre",
+   "slides": [
+    {
+     "type": "cover",
+     "kicker": "Dernière semaine",
+     "title": "L'offre se termine le 30 novembre",
+     "text": "Version complète 🌷"
+    },
+    {
+     "type": "list",
+     "title": "Gratuit pour toujours",
+     "items": [
+      "Coran : plan de lecture et mémorisation",
+      "Apprentissage : leçons, 99 Noms, quiz"
+     ]
+    },
+    {
+     "type": "list",
+     "title": "La version complète",
+     "items": [
+      "Ta journée par prière",
+      "Jeûne & carnet du soir",
+      "Glow up & habitudes",
+      "Défis & aumône"
+     ]
+    },
+    {
+     "type": "text",
+     "title": "Parfait pour préparer Ramadan",
+     "text": "Suis ton jeûne, tes prières et ta lecture au même endroit 🌙"
+    },
+    {
+     "type": "offer",
+     "title": "Jusqu'au 30 novembre",
+     "old": "7,90 €",
+     "price": "2,99 €",
+     "text": "Paiement unique · accès à vie",
+     "cta": "Lien juste en dessous",
+     "sticker": "COMPTE À REBOURS « Fin de l'offre » (30/11)"
+    },
+    {
+     "type": "cta",
+     "title": "Plante ta première graine",
+     "text": "Ton jardin t'attend 🌱",
+     "cta": "Clique ici",
+     "sticker": "LIEN vers ta page de vente"
+    }
+   ]
   }
  ]
 }
