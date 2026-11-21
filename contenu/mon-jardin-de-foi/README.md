@@ -68,3 +68,10 @@ et **3 sans personne, uniquement sur fond aux couleurs de la marque (pas de déc
 - **Plus de « Jumu'a Mubarak »**.
 - Les anciens reels motion courts (`reels.mjs`, 16 s) ne sont plus utilisés seuls ; les reels MRR restent possibles s'ils racontent une histoire.
 - Personnages des histoires : scénarios « POV » / « ma sœur » présentés comme des mises en situation, jamais comme des témoignages réels.
+- **Thèmes** : bien-être, glow up, post-partum, patience… toujours **autour de l'islam, selon la sunnah** (hadiths et versets sourcés).
+- **Styles de référence envoyés par Cha'** (à varier dans la semaine) :
+  1. « X façons de… » : intro avec gros chiffre + puces, puis 1 point par plan (numéro, titre, source, icône animée, points de progression) → plan `points`.
+  2. Checklist qui se coche (cartes empilées + icônes + barre « 3/6 » + sous-titres karaoké surlignés) → plan `checklist`.
+  3. Compte à rebours / compteur à chiffres qui basculent + texte qui s'écrit avec mots surlignés (fond grille rose) → plan `compte`.
+  + histoire SMS/notification/carte (`notif`, `sms`, `carte`) et récitation (`verset`). Fonds : `nuit`, `sombre`, `rose`, `grille`, `mauve`.
+  Icônes disponibles (`ic`) : dents, cheveux, khol, lune, assiette, tasse, lit, dattes, coeur, mains, livre, tasbih, sablier, bebe, soleil, eau, marche.
