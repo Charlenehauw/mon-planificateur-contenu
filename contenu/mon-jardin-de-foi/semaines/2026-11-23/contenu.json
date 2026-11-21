@@ -1,0 +1,80 @@
+{
+ "semaine": "2026-11-23",
+ "hashtags": "#monjardindefoi #muslimah #soeurmusulmane #rappelislam #coran #islam #deen #rappel #sourate #recitation",
+ "histoires": [
+  {
+   "id": "h1",
+   "fond": "nuit",
+   "ambiance": "nuit",
+   "couverture": 4.2,
+   "plans": [
+    {
+     "type": "notif",
+     "d": 2.7,
+     "pov": "POV : 3h du matin, tu n'arrives pas à dormir",
+     "heure": "03:12",
+     "jour": "dimanche 23 novembre",
+     "de": "Ma sœur 🤍",
+     "texte": "Tu dors ? J'ai vu ta story… ça va ?"
+    },
+    {
+     "type": "sms",
+     "contact": "Ma sœur 🤍",
+     "msgs": [
+      [
+       "moi",
+       "Pas vraiment… j'ai l'impression d'être seule avec tout ça"
+      ],
+      [
+       "elle",
+       "Tu n'es pas seule 🤍"
+      ],
+      [
+       "elle",
+       "Écoute ça, les yeux fermés"
+      ]
+     ],
+     "heure": "03:12"
+    },
+    {
+     "type": "carte",
+     "d": 2.0,
+     "kicker": "Elle t'envoie",
+     "titre": "Sourate Ad-Duha",
+     "sous": "versets 3 à 5"
+    },
+    {
+     "type": "verset",
+     "sourate": 93,
+     "kicker": "Écoute",
+     "ref": "Sourate Ad-Duha, 93:3-5",
+     "fin": 0.7,
+     "ayat": [
+      {
+       "n": 3,
+       "ar": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+       "fr": "« Ton Seigneur ne t'a ni abandonné, ni détesté. »"
+      },
+      {
+       "n": 4,
+       "ar": "وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ",
+       "fr": "« La vie dernière t'est, certes, meilleure que la vie présente. »"
+      },
+      {
+       "n": 5,
+       "ar": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+       "fr": "« Ton Seigneur t'accordera certes [Ses faveurs], et alors tu seras satisfait. »"
+      }
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.8,
+     "titre": "Envoie-la à une sœur qui ne dort pas ce soir 🌙",
+     "cta": "Enregistre pour les nuits difficiles"
+    }
+   ],
+   "caption": "POV : 3h du matin, tu n'arrives pas à dormir 🌙\n\nCes versets ont été révélés pour réconforter le Prophète ﷺ, à un moment où il s'inquiétait de ne plus recevoir de révélation (Al-Bukhari 4950) :\n\n« Ton Seigneur ne t'a ni abandonné, ni détesté. La vie dernière t'est, certes, meilleure que la vie présente. Ton Seigneur t'accordera certes [Ses faveurs], et alors tu seras satisfait. » (Ad-Duha, 93:3-5)\n\nÉcoute-les les yeux fermés 🤍\nEt envoie cette vidéo à une sœur qui ne dort pas ce soir.\n\n🎧 Récitation : Mishary Alafasy\n\n"
+  }
+ ]
+}

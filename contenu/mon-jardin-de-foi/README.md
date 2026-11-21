@@ -56,3 +56,15 @@ et **3 sans personne, uniquement sur fond aux couleurs de la marque (pas de déc
 - 7 reels motion (identité) ~18h · 5 carrousels ~10h · 5 reels MRR ~12h30 · 3 séquences de stories (envoyées à Cha').
 - Vocabulaire : pluriel de sunnah = « sunan ».
 - Médias Metricool : URLs raw.githubusercontent.com figées sur le SHA du commit. Vérifier le planning pour éviter les heures déjà prises.
+
+## ⚠️ Nouvelles règles de Cha' (21 novembre 2026), prioritaires sur ce qui précède
+- **Moins de promo** : sur 4 contenus, **1 seul parle de l'appli**. Les 3 autres n'en parlent pas du tout (pas de « lien en bio »,
+  pas de prix) : uniquement des rappels, des versets, des hadiths, de l'audio, de la récitation du Coran.
+- **Vidéos plus dynamiques, de 10 à 30 s, avec une vraie histoire et un fil conducteur** (début → tension → verset/rappel → fin) :
+  effets, animations, bruitages, cartes, SMS, notifications, illustrations. Outil : `node outils/histoires.mjs <semaine> <id>`
+  (section `histoires` du contenu.json ; plans `notif`, `sms`, `carte`, `verset`, `texte`, `liste`, `fin`). Un reel par exécution.
+- **Coran** : plan `verset` = récitation Mishary Alafasy (everyayah.com, verset par verset), **sans bruitage ni ambiance par-dessus**
+  (l'ambiance s'efface automatiquement). Citer la récitation dans la légende.
+- **Plus de « Jumu'a Mubarak »**.
+- Les anciens reels motion courts (`reels.mjs`, 16 s) ne sont plus utilisés seuls ; les reels MRR restent possibles s'ils racontent une histoire.
+- Personnages des histoires : scénarios « POV » / « ma sœur » présentés comme des mises en situation, jamais comme des témoignages réels.

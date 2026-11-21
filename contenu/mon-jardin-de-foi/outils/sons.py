@@ -132,6 +132,25 @@ def effet(type_):
         L = int(0.035 * SR)
         tt = np.arange(L) / SR
         return (hp(rng.standard_normal(L), 2500) * 0.12 + np.sin(2 * np.pi * 2300 * tt) * 0.08) * np.exp(-tt / 0.008)
+    if type_ == 'ding':  # message reçu
+        a = cloche(1568.0, 0.9, 0.10); b2 = cloche(2093.0, 0.8, 0.08)
+        o = np.zeros(int(1.0 * SR)); o[:len(a)] += a; q = int(0.09 * SR); o[q:q + len(b2)] += b2[: len(o) - q]; return o
+    if type_ == 'envoi':  # message envoyé : petit souffle montant
+        L = int(0.28 * SR); tt = np.arange(L) / SR
+        n_ = lp(hp(rng.standard_normal(L), 900), 5000) * np.sin(np.pi * tt / tt[-1]) ** 2 * 0.10
+        f = 600 + 900 * tt / tt[-1]
+        return n_ + np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt / 0.06) * 0.06
+    if type_ == 'touche':  # frappe clavier
+        L = int(0.03 * SR); tt = np.arange(L) / SR
+        return (hp(rng.standard_normal(L), 3000) * 0.10 + np.sin(2 * np.pi * 1800 * tt) * 0.04) * np.exp(-tt / 0.006)
+    if type_ == 'vibre':
+        L = int(0.75 * SR); tt = np.arange(L) / SR
+        env = ((tt % 0.36) < 0.24).astype(float)
+        return lp(np.sign(np.sin(2 * np.pi * 165 * tt)), 600) * env * 0.16
+    if type_ in ('flip', 'whoosh'):
+        L = int((0.35 if type_ == 'flip' else 0.55) * SR); tt = np.arange(L) / SR
+        e = np.sin(np.pi * tt / tt[-1]) ** (2 if type_ == 'flip' else 1.5)
+        return lp(hp(rng.standard_normal(L), 300 if type_ == 'flip' else 150), 3500 if type_ == 'flip' else 2200) * e * (0.16 if type_ == 'flip' else 0.13)
     raise ValueError(type_)
 
 
@@ -150,9 +169,22 @@ def main():
         x = vagues(n) + oiseau(duree, 0.4) * 0.5
     elif amb == 'nuit':
         x = grillons(n) * 1.8 + vent(n, 0.55)
+    elif amb == 'chambre':
+        x = lp(rng.standard_normal(n), 400) * 0.25 + vent(n, 0.25)
     else:
         raise ValueError(amb)
-    for e in json.load(open(evts)):
+    evts_ = json.load(open(evts))
+    # silences (récitation du Coran) : l'ambiance s'efface, aucun bruitage par-dessus
+    tt_ = np.arange(n) / SR
+    gain = np.ones(n)
+    for e in evts_:
+        if e['type'] == 'silence':
+            a0, a1 = e['t'], e['t'] + e['d']
+            gain = np.minimum(gain, np.clip(np.maximum((a0 - tt_) / 0.6, (tt_ - a1) / 0.6), 0, 1))
+    x *= gain
+    for e in evts_:
+        if e['type'] == 'silence':
+            continue
         s = effet(e['type'])
         p = int(e['t'] * SR)
         if p < n:
