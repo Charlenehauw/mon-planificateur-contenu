@@ -554,66 +554,92 @@
    ],
    "caption": "3 choses qui m'aident à rester régulière, même débordée 🤍\n\n1️⃣ Une petite habitude à la fois : « Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. » (Al-Bukhari)\n2️⃣ Organiser ma journée autour des 5 prières\n3️⃣ Mon carnet du soir : une gratitude, une invocation\n\nJ'ai tout réuni dans Mon Jardin de Foi 🌷\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre. Coran + Apprentissage restent gratuits.\n\nLien en bio 🌸\n\n",
    "date": "2026-11-28T12:30:00"
-  }
- ],
- "reels_mrr": [
+  },
   {
    "id": "v1",
    "date": "2026-11-24T12:30:00",
-   "clips": [
-    "v1a",
-    "v1b"
-   ],
-   "ambiance": "mer",
-   "textes": [
-    [
-     "Tu n'as pas à être parfaite",
-     0.4,
-     5.6
-    ],
-    [
-     "« Allah est Doux et Il aime la douceur en toute chose. »",
-     5.9,
-     10.8
-    ],
-    [
-     "Al-Bukhari & Muslim",
-     6.4,
-     10.8,
-     "ref"
-    ]
+   "fond": "fonce",
+   "ambiance": "chambre",
+   "couverture": 1.6,
+   "plans": [
+    {
+     "type": "texte",
+     "d": 2.9,
+     "lignes": [
+      "Tu n'as pas à être *parfaite*"
+     ],
+     "pas": 0.8
+    },
+    {
+     "type": "carte",
+     "d": 3.0,
+     "dessus": "Le Prophète ﷺ a dit :",
+     "kicker": "Al-Bukhari & Muslim",
+     "titre": "Allah est Doux",
+     "sous": "et Il aime la douceur en toute chose"
+    },
+    {
+     "type": "texte",
+     "d": 3.4,
+     "lignes": [
+      "Sois douce avec *les autres*",
+      "et avec *toi-même* 🤍"
+     ],
+     "pas": 1.0
+    },
+    {
+     "type": "fin",
+     "d": 2.8,
+     "titre": "Envoie ça à une sœur trop dure avec elle-même",
+     "cta": "Partage"
+    }
    ],
    "caption": "Tu n'as pas à être parfaite 🤍\n\n« Allah est Doux et Il aime la douceur en toute chose. » (Al-Bukhari 6927, Muslim 2593)\n\nSois douce avec les autres… et avec toi-même. Ta fatigue, tes jours sans, tes efforts invisibles : Allah voit tout 🌸\n\n"
   },
   {
    "id": "v3",
    "date": "2026-11-26T12:30:00",
-   "clips": [
-    "v3a",
-    "v3b"
-   ],
-   "ambiance": "brise",
-   "textes": [
-    [
-     "Arrête de te comparer",
-     0.4,
-     5.6
-    ],
-    [
-     "« Regardez ceux qui sont en dessous de vous, et non ceux qui sont au-dessus. »",
-     5.9,
-     10.8
-    ],
-    [
-     "Rapporté par Muslim",
-     6.4,
-     10.8,
-     "ref"
-    ]
+   "fond": "clair",
+   "ambiance": "chambre",
+   "couverture": 1.6,
+   "plans": [
+    {
+     "type": "texte",
+     "d": 2.6,
+     "lignes": [
+      "Arrête de te *comparer* 🤍"
+     ],
+     "pas": 0.8
+    },
+    {
+     "type": "carte",
+     "d": 2.8,
+     "dessus": "Le Prophète ﷺ a dit :",
+     "kicker": "Rapporté par Muslim",
+     "titre": "Regarde en dessous de toi",
+     "sous": "et non au-dessus, pour ne pas mépriser les bienfaits d'Allah"
+    },
+    {
+     "type": "liste",
+     "titre": "Ce que tu as déjà",
+     "items": [
+      "Ta foi",
+      "Ta famille",
+      "Un toit",
+      "Une nouvelle journée"
+     ]
+    },
+    {
+     "type": "fin",
+     "d": 2.4,
+     "titre": "Dis Alhamdulillah 🤍",
+     "cta": "Enregistre ce rappel"
+    }
    ],
    "caption": "Arrête de te comparer 🤍\n\nLe Prophète ﷺ a dit : « Regardez ceux qui sont en dessous de vous et ne regardez pas ceux qui sont au-dessus de vous : c'est plus digne pour ne pas mépriser les bienfaits d'Allah sur vous. » (Muslim 2963)\n\nTon chemin est le tien. Dis Alhamdulillah pour ce que tu as déjà 🌸\n\n"
   }
  ],
+ "reels_mrr": [],
  "carrousels": [
   {
    "id": "c1",
@@ -622,7 +648,6 @@
    "slides": [
     {
      "type": "cover",
-     "photo": "medias/c1.jpg",
      "kicker": "Ramadan",
      "title": "Prépare ton cœur dès maintenant",
      "text": "5 gestes simples 🌙"
@@ -659,7 +684,6 @@
     },
     {
      "type": "cta",
-     "photo": "medias/c1.jpg",
      "title": "Enregistre ce post",
      "text": "Et commence par un seul geste cette semaine 🤍",
      "cta": "Partage à une sœur"
@@ -771,7 +795,6 @@
    "slides": [
     {
      "type": "cover",
-     "photo": "medias/c4.jpg",
      "kicker": "Rappel doux",
      "title": "Pour les jours où tu doutes de toi",
      "text": "Lis jusqu'au bout 🤍"
@@ -794,7 +817,6 @@
     },
     {
      "type": "cta",
-     "photo": "medias/c4.jpg",
      "title": "Tu fais de ton mieux",
      "text": "Et Allah le voit 🌷",
      "cta": "Partage à une sœur"
