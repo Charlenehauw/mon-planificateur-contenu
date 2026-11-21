@@ -75,3 +75,10 @@ et **3 sans personne, uniquement sur fond aux couleurs de la marque (pas de déc
   3. Compte à rebours / compteur à chiffres qui basculent + texte qui s'écrit avec mots surlignés (fond grille rose) → plan `compte`.
   + histoire SMS/notification/carte (`notif`, `sms`, `carte`) et récitation (`verset`). Fonds : `nuit`, `sombre`, `rose`, `grille`, `mauve`.
   Icônes disponibles (`ic`) : dents, cheveux, khol, lune, assiette, tasse, lit, dattes, coeur, mains, livre, tasbih, sablier, bebe, soleil, eau, marche.
+
+## ⚠️ Règle de Cha' (21 novembre 2026, soir) — prioritaire
+- **Plus de visuels photo** (dossier MRR abandonné) : tout se fait en **rose foncé** (`fonce`) et **rose clair** (`clair`, `grille`).
+- Les vidéos doivent être **très animées**, comme ses exemples : mots qui apparaissent un par un en rebondissant, mots surlignés
+  au feutre (`*mot*`), icônes qui se dessinent puis bougent, étincelles, transitions variées (glisse, monte, zoom),
+  petits « punch » de caméra sur les bruitages, fleurs et étincelles qui flottent en fond. (Moteur `outils/histoires.mjs`.)
+- Les 5 reels de 12h30 se font aussi avec `histoires.mjs` (texte, carte, liste, verset…), sans photo.
