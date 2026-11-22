@@ -24,7 +24,7 @@ régulière, mais elle est débordée, fatiguée et dispersée. Secondaires : no
 | Offre | Contenu | Prix |
 |---|---|---|
 | Gratuite | 📖 Coran (plan de lecture, sourates, mémorisation) + 📚 Apprentissage (leçons, 99 Noms, hadiths, quiz) | Gratuit |
-| Complète | Ma journée par prière, jeûne, carnet du soir, glow up, habitudes, défis, aumône, thèmes | 2,99 € au lieu de 7,90 € jusqu'au 30/11, paiement unique, accès à vie |
+| Complète | Ma journée par prière, jeûne, carnet du soir, glow up, habitudes, défis, aumône, thèmes | **7,90 €** à partir du 1er décembre 2026 (offre de lancement à 2,99 € terminée le 30/11), paiement unique, accès à vie |
 | Bientôt 👀 | Nouveautés | À annoncer |
 
 ## Piliers (rotation sur la semaine)
