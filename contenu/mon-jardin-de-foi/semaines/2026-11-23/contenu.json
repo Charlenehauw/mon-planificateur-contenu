@@ -175,9 +175,9 @@
        "ic": "assiette"
       },
       {
-       "t": "Honorer mes parents",
-       "s": "toujours avec douceur",
-       "ic": "coeur"
+       "t": "Maintenir le lien familial",
+       "s": "ne pas couper les liens · Al-Bukhari",
+       "ic": "mains"
       },
       {
        "t": "Pardonner facilement",
@@ -203,7 +203,7 @@
      "cta": "Enregistre ta checklist"
     }
    ],
-   "caption": "Ma checklist du quotidien 🤍\n\n☑️ Prier à l'heure\n☑️ Ayat al-Kursi après chaque prière : rien n'empêche celui qui la récite d'entrer au Paradis, si ce n'est la mort (An-Nasa'i, Sunan al-Kubra 9848)\n☑️ Lire le Coran chaque jour, même une page\n☑️ Faire de Fajr une priorité\n☑️ Bouger mon corps : « Le croyant fort est meilleur et plus aimé d'Allah que le croyant faible, et en chacun il y a du bien » (Muslim 2664)\n☑️ Manger sainement\n☑️ Honorer mes parents\n☑️ Pardonner facilement\n☑️ Adhkar du matin et du soir\n☑️ Prier sur le Prophète ﷺ : « Celui qui prie sur moi une fois, Allah prie sur lui dix fois » (Muslim 408)\n\nLaquelle tu coches déjà ? Dis-moi en commentaire 🌸\n\n",
+   "caption": "Ma checklist du quotidien 🤍\n\n☑️ Prier à l'heure\n☑️ Ayat al-Kursi après chaque prière : rien n'empêche celui qui la récite d'entrer au Paradis, si ce n'est la mort (An-Nasa'i, Sunan al-Kubra 9848)\n☑️ Lire le Coran chaque jour, même une page\n☑️ Faire de Fajr une priorité\n☑️ Bouger mon corps : « Le croyant fort est meilleur et plus aimé d'Allah que le croyant faible, et en chacun il y a du bien » (Muslim 2664)\n☑️ Manger sainement\n☑️ Maintenir le lien familial : « Que celui qui croit en Allah et au Jour dernier maintienne les liens de parenté » (Al-Bukhari 6138)\n☑️ Pardonner facilement\n☑️ Adhkar du matin et du soir\n☑️ Prier sur le Prophète ﷺ : « Celui qui prie sur moi une fois, Allah prie sur lui dix fois » (Muslim 408)\n\nLaquelle tu coches déjà ? Dis-moi en commentaire 🌸\n\n",
    "date": "2026-11-25T18:00:00"
   },
   {
@@ -553,7 +553,8 @@
     }
    ],
    "caption": "3 choses qui m'aident à rester régulière, même débordée 🤍\n\n1️⃣ Une petite habitude à la fois : « Les œuvres les plus aimées d'Allah sont les plus régulières, même si elles sont peu nombreuses. » (Al-Bukhari)\n2️⃣ Organiser ma journée autour des 5 prières\n3️⃣ Mon carnet du soir : une gratitude, une invocation\n\nJ'ai tout réuni dans Mon Jardin de Foi 🌷\n\n💝 Version complète à 2,99 € au lieu de 7,90 €, paiement unique, accès à vie, jusqu'au 30 novembre. Coran + Apprentissage restent gratuits.\n\nLien en bio 🌸\n\n",
-   "date": "2026-11-28T12:30:00"
+   "date": "2026-11-28T12:30:00",
+   "vitesse": 0.9
   },
   {
    "id": "v1",
@@ -594,7 +595,8 @@
      "cta": "Partage"
     }
    ],
-   "caption": "Tu n'as pas à être parfaite 🤍\n\n« Allah est Doux et Il aime la douceur en toute chose. » (Al-Bukhari 6927, Muslim 2593)\n\nSois douce avec les autres… et avec toi-même. Ta fatigue, tes jours sans, tes efforts invisibles : Allah voit tout 🌸\n\n"
+   "caption": "Tu n'as pas à être parfaite 🤍\n\n« Allah est Doux et Il aime la douceur en toute chose. » (Al-Bukhari 6927, Muslim 2593)\n\nSois douce avec les autres… et avec toi-même. Ta fatigue, tes jours sans, tes efforts invisibles : Allah voit tout 🌸\n\n",
+   "vitesse": 0.95
   },
   {
    "id": "v3",
@@ -636,7 +638,8 @@
      "cta": "Enregistre ce rappel"
     }
    ],
-   "caption": "Arrête de te comparer 🤍\n\nLe Prophète ﷺ a dit : « Regardez ceux qui sont en dessous de vous et ne regardez pas ceux qui sont au-dessus de vous : c'est plus digne pour ne pas mépriser les bienfaits d'Allah sur vous. » (Muslim 2963)\n\nTon chemin est le tien. Dis Alhamdulillah pour ce que tu as déjà 🌸\n\n"
+   "caption": "Arrête de te comparer 🤍\n\nLe Prophète ﷺ a dit : « Regardez ceux qui sont en dessous de vous et ne regardez pas ceux qui sont au-dessus de vous : c'est plus digne pour ne pas mépriser les bienfaits d'Allah sur vous. » (Muslim 2963)\n\nTon chemin est le tien. Dis Alhamdulillah pour ce que tu as déjà 🌸\n\n",
+   "vitesse": 0.95
   }
  ],
  "reels_mrr": [],

@@ -15,7 +15,7 @@ const data = JSON.parse(fs.readFileSync(path.join(dossier, 'contenu.json'), 'utf
 const css = fs.readFileSync(path.join(ici, 'brand.css'), 'utf8');
 const sortie = path.join(dossier, 'reels');
 fs.mkdirSync(sortie, { recursive: true });
-const FPS = 30, TR = 0.4;
+const FPS = 30, TR = 0.3;
 const RECITATEUR = 'Alafasy_128kbps';
 const duree = (f) => parseFloat(spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]).stdout.toString());
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ');
@@ -35,9 +35,11 @@ function recitation(sourate, aya) {
 function compiler(h) {
   let T = 0; const plans = [], sons = [], coran = [];
   const A = (t0, a, d, t1) => `data-a="${a}" data-t0="${t0.toFixed(2)}"${d ? ` data-d="${d}"` : ''}${t1 ? ` data-t1="${t1.toFixed(2)}"` : ''}`;
-  const liste = h.plans.flatMap((p) => p.type !== 'points' ? [p] : [
+  const V = h.vitesse ?? 0.8;
+  const acc = (p) => { if (p.type === 'verset') return p; const q = { ...p }; for (const k of ['d', 'pas', 'dPoint', 'dIntro', 'dDefil']) if (typeof q[k] === 'number') q[k] = +(q[k] * V).toFixed(2); if (q.type === 'checklist' && q.pas == null) q.pas = +(2.2 * V).toFixed(2); return q; };
+  const liste = h.plans.map(acc).flatMap((p) => p.type !== 'points' ? [p] : [
     { type: 'pointsIntro', n: p.items.length, titre: p.titre, sous: p.sous, kicker: p.kicker, d: p.dIntro || 2.6 },
-    ...p.items.map((it, k) => ({ type: 'point', ...it, num: k + 1, total: p.items.length, kicker: p.kicker, d: it.d || p.dPoint || 2.8, transition: 'glisse' }))]);
+    ...p.items.map((it, k) => ({ type: 'point', ...it, num: k + 1, total: p.items.length, kicker: p.kicker, d: it.d || p.dPoint || 2.2, transition: 'glisse' }))]);
   liste.forEach((p, i) => {
     let d = p.d || 3, html = '';
     const t = (x) => T + x;
@@ -53,19 +55,19 @@ function compiler(h) {
       const saisie = [];
       for (const [qui, txt] of p.msgs) {
         if (qui === 'moi') {
-          const dt = Math.min(1.1, 0.25 + txt.length * 0.022);
+          const dt = Math.min(0.9, 0.2 + txt.length * 0.018);
           saisie.push(`<div class="saisie" ${A(t(x), 'type', dt, t(x + dt + 0.05))} data-txt="${esc(txt)}"></div>`);
           for (let k = 0; k < dt - 0.1; k += 0.085) sons.push({ t: t(x + k), type: 'touche' });
           x += dt + 0.1;
           bulles += `<div class="b moi" ${A(t(x), 'bulle', 0.35)}>${esc(txt)}</div>`;
           sons.push({ t: t(x), type: 'envoi' });
-          x += 0.55 + txt.length * 0.012;
+          x += 0.4 + txt.length * 0.01;
         } else {
           bulles += `<div class="dots" ${A(t(x), 'fade', 0.2, t(x + 0.85))}><i></i><i></i><i></i></div>`;
           x += 0.9;
           bulles += `<div class="b elle" ${A(t(x), 'bulle', 0.35)}>${esc(txt)}</div>`;
           sons.push({ t: t(x), type: 'ding' });
-          x += 0.55 + txt.length * 0.015;
+          x += 0.45 + txt.length * 0.012;
         }
       }
       d = p.d || x + 0.9;
@@ -100,14 +102,14 @@ function compiler(h) {
         <div class="rec" ${A(t(0.4), 'fade')}>Récitation : Mishary Alafasy</div></div>`;
     } else if (p.type === 'texte') {
       let x = 0.3, l = '';
-      for (const ligne of p.lignes) { l += `<div class="ln">${mots(ligne, t(x))}</div>`; sons.push({ t: t(x), type: 'pop' }); if (ligne.includes('*')) sons.push({ t: t(x + 0.5), type: 'touche' }); x += Math.max(p.pas || 0.9, ligne.split(' ').length * 0.11 + 0.35); }
+      for (const ligne of p.lignes) { l += `<div class="ln">${mots(ligne, t(x))}</div>`; sons.push({ t: t(x), type: 'pop' }); if (ligne.includes('*')) sons.push({ t: t(x + 0.5), type: 'touche' }); x += Math.max(p.pas || 0.75, ligne.split(' ').length * 0.075 + 0.3); }
       d = p.d || x + 1.4;
       html = `<div class="textes">${l}</div>`;
     } else if (p.type === 'liste') {
       let x = 0.6, l = '';
       for (const it of p.items) {
         l += `<div class="li" ${A(t(x), 'rise')}><svg viewBox="-24 -24 48 48"><circle r="20" class="rond"/><path class="ck" pathLength="1" d="M-9 1 L-2 8 L11 -8" ${A(t(x + 0.45), 'trait', 0.4)}/></svg><span>${esc(it)}</span></div>`;
-        sons.push({ t: t(x + 0.5), type: 'tick' }); x += 0.9;
+        sons.push({ t: t(x + 0.5), type: 'tick' }); x += 0.9 * V;
       }
       d = p.d || x + 1.2;
       html = `<div class="liste"><div class="ti" ${A(t(0.1), 'rise')}>${esc(p.titre)}</div>${l}</div>`;
@@ -175,14 +177,14 @@ function compiler(h) {
 }
 
 // Texte animé mot par mot (les *mots* sont surlignés au feutre)
-function mots(txt, t0, pas = 0.11) {
+function mots(txt, t0, pas = 0.075) {
   let k = 0;
   return esc(txt).split(/(\*[^*]+\*)/).map((seg) => {
     const hl = seg.startsWith('*');
     return seg.replace(/\*/g, '').split(' ').map((m) => {
       if (!m) return '';
       const tt = (t0 + pas * k++).toFixed(2);
-      return `<span class="mp${hl ? ' hl' : ''}" data-a="motpop" data-t0="${tt}" data-d="0.4"${hl ? ` data-hl="${(+tt + 0.25).toFixed(2)}"` : ''}>${m}</span>`;
+      return `<span class="mp${hl ? ' hl' : ''}" data-a="motpop" data-t0="${tt}" data-d="0.3"${hl ? ` data-hl="${(+tt + 0.25).toFixed(2)}"` : ''}>${m}</span>`;
     }).join(' ');
   }).join('');
 }
@@ -335,18 +337,13 @@ function page(h, c) {
   <script>
   const cl=(v)=>Math.max(0,Math.min(1,v)), ease=(p)=>1-Math.pow(1-p,3), back=(p)=>{const c=1.6;return 1+(c+1)*Math.pow(p-1,3)+c*Math.pow(p-1,2)};
   let s=7; const R=()=>(s=(s*16807)%2147483647)/2147483647;
-  const P=Array.from({length:70},()=>({x:R(),y:R(),v:R(),r:R(),k:R()})),FLR=Array.from({length:11},()=>({x:R(),y:R(),v:R(),r:R(),k:R()}));
+  const P=Array.from({length:90},()=>({x:R(),y:R(),v:R(),r:R(),k:R()})),FLR=Array.from({length:11},()=>({x:R(),y:R(),v:R(),r:R(),k:R()}));
   const PUNCH=${JSON.stringify(c.punch)},VIB=${JSON.stringify(c.vibre)};
   const ctx=document.getElementById('fx').getContext('2d');
   const CLAIR=${clair};
-  function fx(t){ctx.clearRect(0,0,1080,1920);
-    for(const f of FLR){const y=((f.y*2200-t*(25+f.v*35))%2200+2200)%2200-140,x=f.x*1080+Math.sin(t*.6+f.k*6)*40,r=34+f.r*46;
-      ctx.save();ctx.translate(x,y);ctx.rotate(t*(.15+f.v*.3)+f.k*6);ctx.strokeStyle=CLAIR?'rgba(163,77,107,.16)':'rgba(253,241,244,.2)';ctx.lineWidth=3;
-      for(let i=0;i<5;i++){ctx.rotate(1.2566);ctx.beginPath();ctx.moveTo(0,0);ctx.bezierCurveTo(r*.5,-r*.35,r*.45,-r,0,-r*1.05);ctx.bezierCurveTo(-r*.45,-r,-r*.5,-r*.35,0,0);ctx.stroke();}
-      ctx.restore();}
-    for(const p of P){const a=Math.pow(Math.abs(Math.sin(t*(.7+p.v*1.4)+p.k*6.28)),3),x=p.x*1080,y=((p.y*1920-t*(10+p.v*20))%1920+1920)%1920,r=4+p.r*10;
-      ctx.fillStyle=CLAIR?'rgba(163,77,107,'+a*.45+')':'rgba(255,245,249,'+a*.85+')';ctx.beginPath();
-      ctx.moveTo(x,y-r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.quadraticCurveTo(x,y,x,y+r);ctx.quadraticCurveTo(x,y,x-r,y);ctx.quadraticCurveTo(x,y,x,y-r);ctx.fill();}}
+  function fx(t){ctx.clearRect(0,0,1080,1920);for(const p of P){const a=.2+.8*Math.abs(Math.sin(t*(.5+p.v)+p.k*6.28));
+    const y=(p.y*1920-t*(8+p.v*16)+1920)%1920;ctx.fillStyle=CLAIR?'rgba(232,163,185,'+a*.35+')':'rgba(255,240,246,'+a*(.25+p.r*.45)+')';
+    ctx.beginPath();ctx.arc(p.x*1080,y,1+p.r*2.6,0,6.29);ctx.fill();}}
   // Icônes : tracé qui se dessine, couleur qui se remplit, puis petite animation propre à chaque icône
   const ICG=[...document.querySelectorAll('.icg')].map(g=>{const host=g.closest('[data-t0]');const sh=[...g.querySelectorAll('path,rect,circle,ellipse,line')];
     sh.forEach(e=>{e.setAttribute('pathLength','1');e.style.strokeDasharray='1 1';e._f=e.getAttribute('fill')});return {g,sh,t0:host?+host.dataset.t0:0,n:g.dataset.ic}});
