@@ -82,3 +82,5 @@ et **3 sans personne, uniquement sur fond aux couleurs de la marque (pas de déc
   au feutre (`*mot*`), icônes qui se dessinent puis bougent, étincelles, transitions variées (glisse, monte, zoom),
   petits « punch » de caméra sur les bruitages, fleurs et étincelles qui flottent en fond. (Moteur `outils/histoires.mjs`.)
 - Les 5 reels de 12h30 se font aussi avec `histoires.mjs` (texte, carte, liste, verset…), sans photo.
+- (22/11) Fond des vidéos : le fond d'avant (dégradé + petits points lumineux), **sans fleurs qui flottent**. Rythme **plus rapide**
+  (facteur `vitesse` 0,8 par défaut ; mettre 0,95–1,15 si une vidéo passe sous 10 s). « Honorer les parents » → « Maintenir le lien familial ».
